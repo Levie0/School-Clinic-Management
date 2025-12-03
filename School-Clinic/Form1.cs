@@ -9,7 +9,7 @@ namespace School_Clinic
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //comment test
         }
     }
 }
