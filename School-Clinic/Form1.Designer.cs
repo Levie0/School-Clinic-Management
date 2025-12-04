@@ -38,16 +38,17 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.DMC_CLINIC1;
-            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(900, 632);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Left;
             textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Location = new Point(143, 313);
@@ -58,6 +59,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.Left;
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Location = new Point(143, 364);
             textBox2.Name = "textBox2";
@@ -67,6 +69,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Left;
             button1.BackColor = Color.FromArgb(51, 111, 63);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.Transparent;
@@ -86,7 +89,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Form1";
             Text = "LOGIN";
             Load += Form1_Load;
