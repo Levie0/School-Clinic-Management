@@ -39,6 +39,7 @@
             materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             imageList1 = new ImageList(components);
             imageList2 = new ImageList(components);
+            materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -60,6 +61,7 @@
             materialTabControl1.SelectedIndex = 0;
             materialTabControl1.Size = new Size(1140, 621);
             materialTabControl1.TabIndex = 0;
+            materialTabControl1.SelectedIndexChanged += materialTabControl1_SelectedIndexChanged;
             // 
             // tabPage1
             // 
@@ -153,18 +155,33 @@
             imageList2.ImageSize = new Size(16, 16);
             imageList2.TransparentColor = Color.Transparent;
             // 
+            // materialTabSelector1
+            // 
+            materialTabSelector1.BaseTabControl = materialTabControl1;
+            materialTabSelector1.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
+            materialTabSelector1.Depth = 0;
+            materialTabSelector1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTabSelector1.ForeColor = SystemColors.ActiveCaptionText;
+            materialTabSelector1.Location = new Point(316, 24);
+            materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialTabSelector1.Name = "materialTabSelector1";
+            materialTabSelector1.Size = new Size(499, 34);
+            materialTabSelector1.TabIndex = 1;
+            materialTabSelector1.Text = "materialTabSelector1";
+            // 
             // MainDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
             ClientSize = new Size(1146, 688);
+            Controls.Add(materialTabSelector1);
             Controls.Add(materialTabControl1);
+            DrawerAutoShow = true;
             DrawerIsOpen = true;
             DrawerShowIconsWhenHidden = true;
-            DrawerTabControl = materialTabControl1;
             Margin = new Padding(2);
             Name = "MainDashboard";
-            Text = "DMC clinic";
             WindowState = FormWindowState.Maximized;
             Load += Form2_Load;
             materialTabControl1.ResumeLayout(false);
@@ -190,5 +207,6 @@
         private ImageList imageList2;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
     }
 }

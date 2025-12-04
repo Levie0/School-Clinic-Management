@@ -23,6 +23,9 @@ namespace School_Clinic
             skin.AddFormToManage(this);
             skin.Theme = MaterialSkinManager.Themes.LIGHT;
             skin.ColorScheme = new ColorScheme(Primary.LightGreen800, Primary.LightGreen900, Primary.LightGreen500, Accent.Green700, TextShade.WHITE);
+
+            materialTabSelector1.BaseTabControl = materialTabControl1;
+          
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -30,8 +33,8 @@ namespace School_Clinic
             this.WindowState = FormWindowState.Maximized;
 
             //DrawerTabControl = materialTabControl1;
-            DrawerIsOpen = true;
-            DrawerShowIconsWhenHidden = true;
+            //DrawerIsOpen = true;
+            //DrawerShowIconsWhenHidden = true;
         }
 
         private void returnButton_Click(object sender, EventArgs e)
@@ -60,6 +63,11 @@ namespace School_Clinic
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
