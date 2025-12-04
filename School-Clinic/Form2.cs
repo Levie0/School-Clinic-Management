@@ -10,9 +10,22 @@ namespace School_Clinic
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private Form1 _loginForm;
+        public Form2(Form1 callingForm)
         {
             InitializeComponent();
+            _loginForm = callingForm;
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void returnButton_Click(object sender, EventArgs e)
+        {
+            _loginForm.Show();
+            this.Close();
         }
     }
 }
