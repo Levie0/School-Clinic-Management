@@ -7,12 +7,12 @@ namespace School_Clinic
         public Form1()
         {
             InitializeComponent();
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -39,8 +39,23 @@ namespace School_Clinic
                 }
 
             }
-            
-                
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (textBox1.Text != "2024-0049" && textBox2.Text != "password")
+            {
+                MessageBox.Show("Incorrect UserID or Password");
+            }
+            else 
+            {
+                Form2 nextPage = new Form2();
+                nextPage.Show();
+                this.Hide();
+            }
         }
     }
 }

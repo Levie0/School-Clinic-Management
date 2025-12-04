@@ -73,6 +73,7 @@
             // 
             button1.BackColor = Color.FromArgb(51, 111, 63);
             button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Transparent;
             button1.Location = new Point(251, 599);
             button1.Margin = new Padding(4, 5, 4, 5);
@@ -81,6 +82,7 @@
             button1.TabIndex = 3;
             button1.Text = "LOGIN";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
