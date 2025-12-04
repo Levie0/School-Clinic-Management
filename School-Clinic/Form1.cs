@@ -52,7 +52,7 @@ namespace School_Clinic
             }
             else 
             {
-                Form2 nextPage = new Form2(this);
+                MainDashboard nextPage = new MainDashboard(this);
                 nextPage.Show();
                 this.Hide();
             }

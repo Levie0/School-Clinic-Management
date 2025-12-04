@@ -73,6 +73,16 @@ namespace School_Clinic.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DMC_CLINIC_2 {
+            get {
+                object obj = ResourceManager.GetObject("DMC CLINIC 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DMC_CLINIC1 {
             get {
                 object obj = ResourceManager.GetObject("DMC CLINIC1", resourceCulture);
