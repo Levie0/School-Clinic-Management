@@ -33,11 +33,14 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // returnButton
             // 
-            returnButton.Location = new Point(683, 672);
+            returnButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            returnButton.Location = new Point(422, 672);
             returnButton.Name = "returnButton";
             returnButton.Size = new Size(75, 23);
             returnButton.TabIndex = 0;
@@ -47,6 +50,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Location = new Point(1318, 683);
             label1.Name = "label1";
@@ -56,6 +60,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label2.AutoSize = true;
             label2.Location = new Point(3, 683);
             label2.Name = "label2";
@@ -74,6 +79,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Location = new Point(1318, 2);
             label4.Name = "label4";
@@ -81,21 +87,32 @@
             label4.TabIndex = 4;
             label4.Text = "label4";
             // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(returnButton);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1365, 707);
+            panel1.TabIndex = 5;
+            panel1.Paint += panel1_Paint;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1284, 701);
+            ClientSize = new Size(1365, 707);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(returnButton);
+            Controls.Add(panel1);
             Margin = new Padding(2);
             Name = "Form2";
             Text = "Form2";
             WindowState = FormWindowState.Maximized;
             Load += Form2_Load;
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -108,5 +125,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Panel panel1;
     }
 }

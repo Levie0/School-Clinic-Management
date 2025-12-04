@@ -19,13 +19,18 @@ namespace School_Clinic
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void returnButton_Click(object sender, EventArgs e)
         {
             _loginForm.Show();
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
