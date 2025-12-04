@@ -21,7 +21,7 @@ namespace School_Clinic
         {
             this.WindowState = FormWindowState.Maximized;
         }
-
+        
         private void returnButton_Click(object sender, EventArgs e)
         {
             _loginForm.Show();
