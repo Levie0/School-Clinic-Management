@@ -1,3 +1,5 @@
+
+
 namespace School_Clinic
 {
     public partial class Form1 : Form
@@ -5,11 +7,12 @@ namespace School_Clinic
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //comment test
+            
 
         }
 

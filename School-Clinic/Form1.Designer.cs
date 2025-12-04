@@ -67,12 +67,15 @@
             // 
             // button1
             // 
-            button1.Location = new Point(178, 426);
+            button1.BackColor = Color.FromArgb(51, 111, 63);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Transparent;
+            button1.Location = new Point(165, 438);
             button1.Name = "button1";
             button1.Size = new Size(125, 41);
             button1.TabIndex = 3;
             button1.Text = "LOGIN";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
