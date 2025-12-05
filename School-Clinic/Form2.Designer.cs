@@ -157,6 +157,7 @@
             // 
             // materialTabSelector1
             // 
+            materialTabSelector1.Anchor = AnchorStyles.Top;
             materialTabSelector1.BaseTabControl = materialTabControl1;
             materialTabSelector1.CharacterCasing = MaterialSkin.Controls.MaterialTabSelector.CustomCharacterCasing.Normal;
             materialTabSelector1.Depth = 0;

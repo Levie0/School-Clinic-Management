@@ -52,7 +52,11 @@ namespace School_Clinic
             }
             else 
             {
-                MainDashboard nextPage = new MainDashboard(this);
+                //MainDashboard nextPage = new MainDashboard(this);
+                //nextPage.Show();
+                //this.Hide();
+
+                mianDashBoard nextPage = new mianDashBoard(this);
                 nextPage.Show();
                 this.Hide();
             }
