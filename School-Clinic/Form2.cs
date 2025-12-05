@@ -25,7 +25,7 @@ namespace School_Clinic
             skin.ColorScheme = new ColorScheme(Primary.LightGreen800, Primary.LightGreen900, Primary.LightGreen500, Accent.Green700, TextShade.WHITE);
 
             materialTabSelector1.BaseTabControl = materialTabControl1;
-          
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -67,7 +67,12 @@ namespace School_Clinic
 
         private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

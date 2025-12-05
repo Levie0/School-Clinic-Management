@@ -34,6 +34,9 @@
             tabPage1 = new TabPage();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             tabPage2 = new TabPage();
+            materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            dataGridView1 = new DataGridView();
+            Student = new DataGridViewTextBoxColumn();
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             tabPage3 = new TabPage();
             materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
@@ -43,6 +46,7 @@
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage3.SuspendLayout();
             SuspendLayout();
             // 
@@ -93,6 +97,8 @@
             // tabPage2
             // 
             tabPage2.BackColor = Color.White;
+            tabPage2.Controls.Add(materialButton1);
+            tabPage2.Controls.Add(dataGridView1);
             tabPage2.Controls.Add(materialLabel2);
             tabPage2.ImageKey = "590136278_1175111911497662_2432221814990234730_n (1).png";
             tabPage2.Location = new Point(4, 24);
@@ -102,13 +108,48 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECENT VISITS";
             // 
+            // materialButton1
+            // 
+            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton1.BackColor = Color.YellowGreen;
+            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton1.Depth = 0;
+            materialButton1.HighEmphasis = true;
+            materialButton1.Icon = null;
+            materialButton1.Location = new Point(96, 415);
+            materialButton1.Margin = new Padding(4, 6, 4, 6);
+            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton1.Name = "materialButton1";
+            materialButton1.NoAccentTextColor = Color.Empty;
+            materialButton1.Size = new Size(64, 36);
+            materialButton1.TabIndex = 3;
+            materialButton1.Text = "ADD";
+            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton1.UseAccentColor = false;
+            materialButton1.UseVisualStyleBackColor = false;
+            materialButton1.Click += materialButton1_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Student });
+            dataGridView1.Location = new Point(66, 35);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(936, 272);
+            dataGridView1.TabIndex = 2;
+            // 
+            // Student
+            // 
+            Student.HeaderText = "Name";
+            Student.Name = "Student";
+            // 
             // materialLabel2
             // 
             materialLabel2.AutoSize = true;
             materialLabel2.Depth = 0;
             materialLabel2.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            materialLabel2.Location = new Point(28, 19);
+            materialLabel2.Location = new Point(985, 3);
             materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel2.Name = "materialLabel2";
             materialLabel2.Size = new Size(141, 29);
@@ -189,6 +230,7 @@
             tabPage1.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
             ResumeLayout(false);
@@ -208,5 +250,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Student;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }
