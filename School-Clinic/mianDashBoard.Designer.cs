@@ -35,6 +35,7 @@
             materialCard8 = new MaterialSkin.Controls.MaterialCard();
             materialCard7 = new MaterialSkin.Controls.MaterialCard();
             materialCard6 = new MaterialSkin.Controls.MaterialCard();
+            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             materialCard4 = new MaterialSkin.Controls.MaterialCard();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             tabPage2 = new TabPage();
@@ -52,7 +53,6 @@
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
-            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             materialCard6.SuspendLayout();
@@ -138,6 +138,20 @@
             materialCard6.Padding = new Padding(14);
             materialCard6.Size = new Size(308, 122);
             materialCard6.TabIndex = 2;
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            materialLabel1.Location = new Point(43, 14);
+            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(220, 41);
+            materialLabel1.TabIndex = 0;
+            materialLabel1.Text = "SAVE RECORD";
+            materialLabel1.Click += materialLabel1_Click_1;
             // 
             // materialCard4
             // 
@@ -389,20 +403,6 @@
             // 
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // materialLabel1
-            // 
-            materialLabel1.AutoSize = true;
-            materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            materialLabel1.Location = new Point(50, 39);
-            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(220, 41);
-            materialLabel1.TabIndex = 0;
-            materialLabel1.Text = "SAVE RECORD";
-            materialLabel1.Click += materialLabel1_Click_1;
             // 
             // mianDashBoard
             // 
