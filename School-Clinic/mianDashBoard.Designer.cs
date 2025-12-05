@@ -32,11 +32,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mianDashBoard));
             materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             tabPage1 = new TabPage();
-            materialCard8 = new MaterialSkin.Controls.MaterialCard();
-            materialCard7 = new MaterialSkin.Controls.MaterialCard();
-            materialCard6 = new MaterialSkin.Controls.MaterialCard();
-            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             materialCard4 = new MaterialSkin.Controls.MaterialCard();
+            materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            dateTimePicker4 = new DateTimePicker();
+            textBox16 = new TextBox();
+            textBox15 = new TextBox();
+            textBox14 = new TextBox();
+            textBox8 = new TextBox();
+            textBox5 = new TextBox();
+            label18 = new Label();
+            label17 = new Label();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            textBox7 = new TextBox();
+            textBox6 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            label1 = new Label();
+            textBox1 = new TextBox();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             tabPage2 = new TabPage();
             materialButton1 = new MaterialSkin.Controls.MaterialButton();
@@ -55,7 +80,7 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            materialCard6.SuspendLayout();
+            materialCard4.SuspendLayout();
             tabPage2.SuspendLayout();
             materialCard5.SuspendLayout();
             materialCard2.SuspendLayout();
@@ -76,96 +101,330 @@
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(1338, 673);
+            materialTabControl1.Size = new Size(1338, 706);
             materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             tabPage1.BackColor = Color.White;
-            tabPage1.Controls.Add(materialCard8);
-            tabPage1.Controls.Add(materialCard7);
-            tabPage1.Controls.Add(materialCard6);
             tabPage1.Controls.Add(materialCard4);
             tabPage1.Controls.Add(materialCard1);
             tabPage1.ImageKey = "home.png";
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1330, 645);
+            tabPage1.Size = new Size(1330, 678);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
             // 
-            // materialCard8
-            // 
-            materialCard8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            materialCard8.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard8.Depth = 0;
-            materialCard8.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard8.Location = new Point(992, 505);
-            materialCard8.Margin = new Padding(14);
-            materialCard8.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard8.Name = "materialCard8";
-            materialCard8.Padding = new Padding(14);
-            materialCard8.Size = new Size(308, 126);
-            materialCard8.TabIndex = 4;
-            // 
-            // materialCard7
-            // 
-            materialCard7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            materialCard7.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard7.Depth = 0;
-            materialCard7.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard7.Location = new Point(992, 359);
-            materialCard7.Margin = new Padding(14);
-            materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard7.Name = "materialCard7";
-            materialCard7.Padding = new Padding(14);
-            materialCard7.Size = new Size(308, 126);
-            materialCard7.TabIndex = 3;
-            // 
-            // materialCard6
-            // 
-            materialCard6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            materialCard6.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard6.Controls.Add(materialLabel1);
-            materialCard6.Depth = 0;
-            materialCard6.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard6.Location = new Point(992, 219);
-            materialCard6.Margin = new Padding(14);
-            materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard6.Name = "materialCard6";
-            materialCard6.Padding = new Padding(14);
-            materialCard6.Size = new Size(308, 122);
-            materialCard6.TabIndex = 2;
-            // 
-            // materialLabel1
-            // 
-            materialLabel1.AutoSize = true;
-            materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            materialLabel1.Location = new Point(43, 14);
-            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(220, 41);
-            materialLabel1.TabIndex = 0;
-            materialLabel1.Text = "SAVE RECORD";
-            materialLabel1.Click += materialLabel1_Click_1;
-            // 
             // materialCard4
             // 
-            materialCard4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            materialCard4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             materialCard4.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard4.Controls.Add(materialButton5);
+            materialCard4.Controls.Add(dateTimePicker4);
+            materialCard4.Controls.Add(textBox16);
+            materialCard4.Controls.Add(textBox15);
+            materialCard4.Controls.Add(textBox14);
+            materialCard4.Controls.Add(textBox8);
+            materialCard4.Controls.Add(textBox5);
+            materialCard4.Controls.Add(label18);
+            materialCard4.Controls.Add(label17);
+            materialCard4.Controls.Add(label11);
+            materialCard4.Controls.Add(label10);
+            materialCard4.Controls.Add(label9);
+            materialCard4.Controls.Add(label8);
+            materialCard4.Controls.Add(materialLabel4);
+            materialCard4.Controls.Add(dateTimePicker3);
+            materialCard4.Controls.Add(dateTimePicker1);
+            materialCard4.Controls.Add(textBox7);
+            materialCard4.Controls.Add(textBox6);
+            materialCard4.Controls.Add(textBox4);
+            materialCard4.Controls.Add(textBox3);
+            materialCard4.Controls.Add(label7);
+            materialCard4.Controls.Add(label6);
+            materialCard4.Controls.Add(label5);
+            materialCard4.Controls.Add(label4);
+            materialCard4.Controls.Add(label3);
+            materialCard4.Controls.Add(label2);
+            materialCard4.Controls.Add(materialLabel2);
+            materialCard4.Controls.Add(label1);
+            materialCard4.Controls.Add(textBox1);
             materialCard4.Depth = 0;
             materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard4.Location = new Point(17, 219);
+            materialCard4.Location = new Point(17, 149);
             materialCard4.Margin = new Padding(14);
             materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard4.Name = "materialCard4";
             materialCard4.Padding = new Padding(14);
-            materialCard4.Size = new Size(956, 416);
+            materialCard4.Size = new Size(1296, 519);
             materialCard4.TabIndex = 1;
+            materialCard4.Paint += materialCard4_Paint;
+            // 
+            // materialButton5
+            // 
+            materialButton5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            materialButton5.AutoSize = false;
+            materialButton5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton5.Depth = 0;
+            materialButton5.HighEmphasis = true;
+            materialButton5.Icon = null;
+            materialButton5.Location = new Point(1009, 14);
+            materialButton5.Margin = new Padding(4, 6, 4, 6);
+            materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton5.Name = "materialButton5";
+            materialButton5.NoAccentTextColor = Color.Empty;
+            materialButton5.Size = new Size(269, 36);
+            materialButton5.TabIndex = 45;
+            materialButton5.Text = "SAVE";
+            materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton5.UseAccentColor = false;
+            materialButton5.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker4
+            // 
+            dateTimePicker4.Location = new Point(473, 72);
+            dateTimePicker4.Name = "dateTimePicker4";
+            dateTimePicker4.Size = new Size(200, 23);
+            dateTimePicker4.TabIndex = 44;
+            // 
+            // textBox16
+            // 
+            textBox16.Location = new Point(471, 400);
+            textBox16.Multiline = true;
+            textBox16.Name = "textBox16";
+            textBox16.Size = new Size(271, 55);
+            textBox16.TabIndex = 43;
+            // 
+            // textBox15
+            // 
+            textBox15.Location = new Point(473, 310);
+            textBox15.Multiline = true;
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(269, 51);
+            textBox15.TabIndex = 42;
+            // 
+            // textBox14
+            // 
+            textBox14.Location = new Point(473, 227);
+            textBox14.Multiline = true;
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(269, 47);
+            textBox14.TabIndex = 41;
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(473, 173);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(343, 23);
+            textBox8.TabIndex = 35;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(473, 122);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(200, 23);
+            textBox5.TabIndex = 34;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(471, 382);
+            label18.Name = "label18";
+            label18.Size = new Size(102, 15);
+            label18.TabIndex = 32;
+            label18.Text = "Recommendation";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(471, 292);
+            label17.Name = "label17";
+            label17.Size = new Size(75, 15);
+            label17.TabIndex = 31;
+            label17.Text = "Action Taken";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(471, 209);
+            label11.Name = "label11";
+            label11.Size = new Size(96, 15);
+            label11.TabIndex = 30;
+            label11.Text = "Initial Assesment";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(473, 155);
+            label10.Name = "label10";
+            label10.Size = new Size(254, 15);
+            label10.TabIndex = 22;
+            label10.Text = "Chief Complaint ( Symptoms/Reason for Visit )";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(473, 104);
+            label9.Name = "label9";
+            label9.Size = new Size(72, 15);
+            label9.TabIndex = 21;
+            label9.Text = "Time of Visit";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(471, 54);
+            label8.Name = "label8";
+            label8.Size = new Size(70, 15);
+            label8.TabIndex = 20;
+            label8.Text = "Date of Visit";
+            // 
+            // materialLabel4
+            // 
+            materialLabel4.AutoSize = true;
+            materialLabel4.Depth = 0;
+            materialLabel4.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            materialLabel4.Location = new Point(473, 14);
+            materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel4.Name = "materialLabel4";
+            materialLabel4.Size = new Size(343, 24);
+            materialLabel4.TabIndex = 19;
+            materialLabel4.Text = "Chief Complient & Medical Assesment";
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Location = new Point(17, 224);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(200, 23);
+            dateTimePicker3.TabIndex = 18;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(17, 124);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 17;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(17, 173);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(200, 23);
+            textBox7.TabIndex = 16;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(17, 277);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(200, 23);
+            textBox6.TabIndex = 15;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(17, 324);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(200, 23);
+            textBox4.TabIndex = 13;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(17, 380);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(321, 23);
+            textBox3.TabIndex = 12;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(17, 362);
+            label7.Name = "label7";
+            label7.Size = new Size(92, 15);
+            label7.TabIndex = 10;
+            label7.Text = "Known Allergies";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(17, 306);
+            label6.Name = "label6";
+            label6.Size = new Size(111, 15);
+            label6.TabIndex = 9;
+            label6.Text = "Emergency Contact";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(17, 259);
+            label5.Name = "label5";
+            label5.Size = new Size(132, 15);
+            label5.TabIndex = 8;
+            label5.Text = "Parent/Guardian Name ";
+            label5.Click += label5_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(17, 206);
+            label4.Name = "label4";
+            label4.Size = new Size(73, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Date of Birth";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(17, 155);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Grade/Class";
+            label3.Click += label3_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(17, 104);
+            label2.Name = "label2";
+            label2.Size = new Size(28, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Age";
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            materialLabel2.Location = new Point(17, 14);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(180, 24);
+            materialLabel2.TabIndex = 4;
+            materialLabel2.Text = "Student Information";
+            materialLabel2.Click += materialLabel2_Click_1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(17, 54);
+            label1.Name = "label1";
+            label1.Size = new Size(39, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Name";
+            label1.Click += label1_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(17, 70);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(321, 23);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // materialCard1
             // 
@@ -178,7 +437,7 @@
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(1296, 183);
+            materialCard1.Size = new Size(1296, 111);
             materialCard1.TabIndex = 0;
             materialCard1.Paint += materialCard1_Paint;
             // 
@@ -196,7 +455,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1330, 645);
+            tabPage2.Size = new Size(1330, 678);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECORDS";
             tabPage2.Click += tabPage2_Click;
@@ -209,7 +468,7 @@
             materialButton1.Depth = 0;
             materialButton1.HighEmphasis = true;
             materialButton1.Icon = null;
-            materialButton1.Location = new Point(1239, 131);
+            materialButton1.Location = new Point(1252, 131);
             materialButton1.Margin = new Padding(4, 6, 4, 6);
             materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton1.Name = "materialButton1";
@@ -230,7 +489,7 @@
             materialButton4.Depth = 0;
             materialButton4.HighEmphasis = true;
             materialButton4.Icon = null;
-            materialButton4.Location = new Point(1159, 131);
+            materialButton4.Location = new Point(1172, 131);
             materialButton4.Margin = new Padding(4, 6, 4, 6);
             materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton4.Name = "materialButton4";
@@ -250,7 +509,7 @@
             materialButton3.Depth = 0;
             materialButton3.HighEmphasis = true;
             materialButton3.Icon = null;
-            materialButton3.Location = new Point(1087, 131);
+            materialButton3.Location = new Point(1100, 131);
             materialButton3.Margin = new Padding(4, 6, 4, 6);
             materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton3.Name = "materialButton3";
@@ -271,7 +530,7 @@
             materialButton2.Depth = 0;
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = null;
-            materialButton2.Location = new Point(940, 131);
+            materialButton2.Location = new Point(953, 131);
             materialButton2.Margin = new Padding(4, 6, 4, 6);
             materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton2.Name = "materialButton2";
@@ -297,13 +556,13 @@
             materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard5.Name = "materialCard5";
             materialCard5.Padding = new Padding(14);
-            materialCard5.Size = new Size(911, 36);
+            materialCard5.Size = new Size(932, 36);
             materialCard5.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            dateTimePicker2.Location = new Point(670, 6);
+            dateTimePicker2.Location = new Point(691, 6);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(227, 23);
             dateTimePicker2.TabIndex = 2;
@@ -319,7 +578,7 @@
             materialMultiLineTextBox1.Location = new Point(15, 6);
             materialMultiLineTextBox1.MouseState = MaterialSkin.MouseState.HOVER;
             materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
-            materialMultiLineTextBox1.Size = new Size(649, 23);
+            materialMultiLineTextBox1.Size = new Size(670, 23);
             materialMultiLineTextBox1.TabIndex = 1;
             materialMultiLineTextBox1.Text = "search";
             // 
@@ -368,7 +627,7 @@
             tabPage3.ImageKey = "medical-records.png";
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1330, 645);
+            tabPage3.Size = new Size(1330, 678);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "MEDICATION ";
             tabPage3.UseVisualStyleBackColor = true;
@@ -408,7 +667,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1344, 740);
+            ClientSize = new Size(1344, 773);
             Controls.Add(materialTabControl1);
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = materialTabControl1;
@@ -417,8 +676,8 @@
             WindowState = FormWindowState.Maximized;
             materialTabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            materialCard6.ResumeLayout(false);
-            materialCard6.PerformLayout();
+            materialCard4.ResumeLayout(false);
+            materialCard4.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             materialCard5.ResumeLayout(false);
@@ -443,8 +702,6 @@
         private PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialCard materialCard4;
         private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
@@ -453,9 +710,33 @@
         private DateTimePicker dateTimePicker2;
         private MaterialSkin.Controls.MaterialButton materialButton3;
         private MaterialSkin.Controls.MaterialButton materialButton4;
-        private MaterialSkin.Controls.MaterialCard materialCard7;
-        private MaterialSkin.Controls.MaterialCard materialCard6;
-        private MaterialSkin.Controls.MaterialCard materialCard8;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private TextBox textBox1;
+        private Label label1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label6;
+        private Label label5;
+        private Label label7;
+        private TextBox textBox7;
+        private TextBox textBox6;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private DateTimePicker dateTimePicker3;
+        private Label label8;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private Label label10;
+        private Label label9;
+        private Label label18;
+        private Label label17;
+        private Label label11;
+        private TextBox textBox8;
+        private TextBox textBox5;
+        private DateTimePicker dateTimePicker4;
+        private TextBox textBox16;
+        private TextBox textBox15;
+        private TextBox textBox14;
+        private MaterialSkin.Controls.MaterialButton materialButton5;
     }
 }
