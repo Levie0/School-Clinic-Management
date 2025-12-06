@@ -33,7 +33,9 @@
             materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             tabPage1 = new TabPage();
             materialCard4 = new MaterialSkin.Controls.MaterialCard();
-            materialButton5 = new MaterialSkin.Controls.MaterialButton();
+            comboBox1 = new ComboBox();
+            textBox2 = new TextBox();
+            savebtn = new MaterialSkin.Controls.MaterialButton();
             dateTimePicker4 = new DateTimePicker();
             textBox16 = new TextBox();
             textBox15 = new TextBox();
@@ -76,8 +78,18 @@
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
+            Name = new DataGridViewTextBoxColumn();
+            Age = new DataGridViewTextBoxColumn();
+            Course = new DataGridViewTextBoxColumn();
+            DateofBirth = new DataGridViewTextBoxColumn();
+            Parent = new DataGridViewTextBoxColumn();
+            Contact = new DataGridViewTextBoxColumn();
+            Allergies = new DataGridViewTextBoxColumn();
+            Date = new DataGridViewTextBoxColumn();
+            Time = new DataGridViewTextBoxColumn();
+            Complaint = new DataGridViewTextBoxColumn();
+            Assesment = new DataGridViewTextBoxColumn();
+            Action = new DataGridViewTextBoxColumn();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             materialCard4.SuspendLayout();
@@ -124,7 +136,7 @@
             materialCard4.BackColor = Color.FromArgb(255, 255, 255);
             materialCard4.Controls.Add(comboBox1);
             materialCard4.Controls.Add(textBox2);
-            materialCard4.Controls.Add(materialButton5);
+            materialCard4.Controls.Add(savebtn);
             materialCard4.Controls.Add(dateTimePicker4);
             materialCard4.Controls.Add(textBox16);
             materialCard4.Controls.Add(textBox15);
@@ -162,26 +174,43 @@
             materialCard4.TabIndex = 1;
             materialCard4.Paint += materialCard4_Paint;
             // 
-            // materialButton5
+            // comboBox1
             // 
-            materialButton5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            materialButton5.AutoSize = false;
-            materialButton5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton5.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton5.Depth = 0;
-            materialButton5.HighEmphasis = true;
-            materialButton5.Icon = null;
-            materialButton5.Location = new Point(1009, 14);
-            materialButton5.Margin = new Padding(4, 6, 4, 6);
-            materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton5.Name = "materialButton5";
-            materialButton5.NoAccentTextColor = Color.Empty;
-            materialButton5.Size = new Size(269, 36);
-            materialButton5.TabIndex = 45;
-            materialButton5.Text = "SAVE";
-            materialButton5.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton5.UseAccentColor = false;
-            materialButton5.UseVisualStyleBackColor = true;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "BSIT", "BSN", "BSMT", "BSA", "BSBA" });
+            comboBox1.Location = new Point(17, 173);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(200, 23);
+            comboBox1.TabIndex = 47;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(17, 122);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(200, 23);
+            textBox2.TabIndex = 46;
+            // 
+            // savebtn
+            // 
+            savebtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            savebtn.AutoSize = false;
+            savebtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            savebtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            savebtn.Depth = 0;
+            savebtn.HighEmphasis = true;
+            savebtn.Icon = null;
+            savebtn.Location = new Point(1009, 14);
+            savebtn.Margin = new Padding(4, 6, 4, 6);
+            savebtn.MouseState = MaterialSkin.MouseState.HOVER;
+            savebtn.Name = "savebtn";
+            savebtn.NoAccentTextColor = Color.Empty;
+            savebtn.Size = new Size(269, 36);
+            savebtn.TabIndex = 45;
+            savebtn.Text = "SAVE";
+            savebtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            savebtn.UseAccentColor = false;
+            savebtn.UseVisualStyleBackColor = true;
+            savebtn.Click += savebtn_Click;
             // 
             // dateTimePicker4
             // 
@@ -602,9 +631,10 @@
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(15, 30);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Name, Age, Course, DateofBirth, Parent, Contact, Allergies, Date, Time, Complaint, Assesment, Action });
+            dataGridView1.Location = new Point(33, 23);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1281, 326);
+            dataGridView1.Size = new Size(1243, 326);
             dataGridView1.TabIndex = 0;
             // 
             // tabPage3
@@ -649,20 +679,77 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // textBox2
+            // Name
             // 
-            textBox2.Location = new Point(17, 122);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 23);
-            textBox2.TabIndex = 46;
+            Name.DataPropertyName = "thisName";
+            Name.HeaderText = "Name";
+            Name.Name = "Name";
             // 
-            // comboBox1
+            // Age
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(17, 173);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(200, 23);
-            comboBox1.TabIndex = 47;
+            Age.DataPropertyName = "thisAge";
+            Age.HeaderText = "Age";
+            Age.Name = "Age";
+            // 
+            // Course
+            // 
+            Course.DataPropertyName = "thisCourse";
+            Course.HeaderText = "Cours";
+            Course.Name = "Course";
+            // 
+            // DateofBirth
+            // 
+            DateofBirth.DataPropertyName = "thisBirth";
+            DateofBirth.HeaderText = "Date of Birth";
+            DateofBirth.Name = "DateofBirth";
+            // 
+            // Parent
+            // 
+            Parent.DataPropertyName = "thisParent";
+            Parent.HeaderText = "Parent/Guardian Name";
+            Parent.Name = "Parent";
+            // 
+            // Contact
+            // 
+            Contact.DataPropertyName = "thisContact";
+            Contact.HeaderText = "Emergency Contact";
+            Contact.Name = "Contact";
+            // 
+            // Allergies
+            // 
+            Allergies.DataPropertyName = "thisAllergies";
+            Allergies.HeaderText = "Know Allergies";
+            Allergies.Name = "Allergies";
+            // 
+            // Date
+            // 
+            Date.DataPropertyName = "thisDate";
+            Date.HeaderText = "Date of Visit";
+            Date.Name = "Date";
+            // 
+            // Time
+            // 
+            Time.DataPropertyName = "thisTime";
+            Time.HeaderText = "Time of Visit";
+            Time.Name = "Time";
+            // 
+            // Complaint
+            // 
+            Complaint.DataPropertyName = "thisComplaint";
+            Complaint.HeaderText = "Chief Complaint";
+            Complaint.Name = "Complaint";
+            // 
+            // Assesment
+            // 
+            Assesment.DataPropertyName = "thisAssesment";
+            Assesment.HeaderText = "Initial Assesment";
+            Assesment.Name = "Assesment";
+            // 
+            // Action
+            // 
+            Action.DataPropertyName = "thisAction";
+            Action.HeaderText = "Action Taken";
+            Action.Name = "Action";
             // 
             // mianDashBoard
             // 
@@ -672,9 +759,9 @@
             Controls.Add(materialTabControl1);
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = materialTabControl1;
-            Name = "mianDashBoard";
             Text = "DMC clinic managent";
             WindowState = FormWindowState.Maximized;
+            Load += mianDashBoard_Load;
             materialTabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             materialCard4.ResumeLayout(false);
@@ -736,8 +823,20 @@
         private TextBox textBox16;
         private TextBox textBox15;
         private TextBox textBox14;
-        private MaterialSkin.Controls.MaterialButton materialButton5;
+        private MaterialSkin.Controls.MaterialButton savebtn;
         private TextBox textBox2;
         private ComboBox comboBox1;
+        private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn Age;
+        private DataGridViewTextBoxColumn Course;
+        private DataGridViewTextBoxColumn DateofBirth;
+        private DataGridViewTextBoxColumn Parent;
+        private DataGridViewTextBoxColumn Contact;
+        private DataGridViewTextBoxColumn Allergies;
+        private DataGridViewTextBoxColumn Date;
+        private DataGridViewTextBoxColumn Time;
+        private DataGridViewTextBoxColumn Complaint;
+        private DataGridViewTextBoxColumn Assesment;
+        private DataGridViewTextBoxColumn Action;
     }
 }
