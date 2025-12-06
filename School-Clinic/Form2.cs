@@ -17,8 +17,6 @@ namespace School_Clinic
         {
             InitializeComponent();
             _loginForm = callingForm;
-
-            InitializeComponent();
             var skin = MaterialSkinManager.Instance;
             skin.AddFormToManage(this);
             skin.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -72,7 +70,28 @@ namespace School_Clinic
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text)) return;
 
+            // 2. Create the Item explicitly
+            ListViewItem item = new ListViewItem(textBox1.Text);
+
+            // 3. Add to the MaterialListView
+            materialListView1.Items.Add(item);
+
+            // 4. Force a UI Refresh (Crucial for MaterialSkin)
+            materialListView1.Refresh();
+
+            // 5. Clear the textbox
+            textBox1.Clear();
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text)) return;
+
+            dataGridView1.Rows.Add(textBox2.Text);
+            textBox2.Clear();
+            
         }
     }
 }
