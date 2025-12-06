@@ -48,8 +48,6 @@
             label8 = new Label();
             materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             dateTimePicker3 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            textBox7 = new TextBox();
             textBox6 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
@@ -78,6 +76,8 @@
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
+            textBox2 = new TextBox();
+            comboBox1 = new ComboBox();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             materialCard4.SuspendLayout();
@@ -122,6 +122,8 @@
             // 
             materialCard4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             materialCard4.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard4.Controls.Add(comboBox1);
+            materialCard4.Controls.Add(textBox2);
             materialCard4.Controls.Add(materialButton5);
             materialCard4.Controls.Add(dateTimePicker4);
             materialCard4.Controls.Add(textBox16);
@@ -137,8 +139,6 @@
             materialCard4.Controls.Add(label8);
             materialCard4.Controls.Add(materialLabel4);
             materialCard4.Controls.Add(dateTimePicker3);
-            materialCard4.Controls.Add(dateTimePicker1);
-            materialCard4.Controls.Add(textBox7);
             materialCard4.Controls.Add(textBox6);
             materialCard4.Controls.Add(textBox4);
             materialCard4.Controls.Add(textBox3);
@@ -187,7 +187,7 @@
             // 
             dateTimePicker4.Location = new Point(473, 72);
             dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(200, 23);
+            dateTimePicker4.Size = new Size(218, 23);
             dateTimePicker4.TabIndex = 44;
             // 
             // textBox16
@@ -300,22 +300,8 @@
             // 
             dateTimePicker3.Location = new Point(17, 224);
             dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(200, 23);
+            dateTimePicker3.Size = new Size(228, 23);
             dateTimePicker3.TabIndex = 18;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(17, 124);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 17;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(17, 173);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(200, 23);
-            textBox7.TabIndex = 16;
             // 
             // textBox6
             // 
@@ -663,6 +649,21 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(17, 122);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(200, 23);
+            textBox2.TabIndex = 46;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(17, 173);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(200, 23);
+            comboBox1.TabIndex = 47;
+            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -701,7 +702,6 @@
         private DataGridView dataGridView1;
         private PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialCard materialCard4;
-        private DateTimePicker dateTimePicker1;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
@@ -719,7 +719,6 @@
         private Label label6;
         private Label label5;
         private Label label7;
-        private TextBox textBox7;
         private TextBox textBox6;
         private TextBox textBox4;
         private TextBox textBox3;
@@ -738,5 +737,7 @@
         private TextBox textBox15;
         private TextBox textBox14;
         private MaterialSkin.Controls.MaterialButton materialButton5;
+        private TextBox textBox2;
+        private ComboBox comboBox1;
     }
 }
