@@ -117,6 +117,8 @@ namespace School_Clinic
             _records.Add(records);
             SaveData();
 
+            MessageBox.Show("Information has been saved successfully!");
+
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.SelectedIndex = -1;
