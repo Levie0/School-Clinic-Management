@@ -34,11 +34,19 @@ namespace School_Clinic
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mianDashBoard));
             materialTabControl1 = new MaterialTabControl();
             tabPage1 = new TabPage();
+            panel3 = new Panel();
+            materialLabel1 = new MaterialLabel();
+            materialButton4 = new MaterialButton();
+            materialButton3 = new MaterialButton();
+            label27 = new Label();
+            materialComboBox2 = new MaterialComboBox();
+            materialComboBox1 = new MaterialComboBox();
+            materialCard1 = new MaterialCard();
             materialCard4 = new MaterialCard();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            savebtn = new MaterialButton();
-            materialLabel4 = new MaterialLabel();
+            panel2 = new Panel();
+            materialButton5 = new MaterialButton();
             textBox16 = new TextBox();
             label8 = new Label();
             label17 = new Label();
@@ -49,8 +57,9 @@ namespace School_Clinic
             label10 = new Label();
             textBox14 = new TextBox();
             label11 = new Label();
-            label18 = new Label();
             textBox15 = new TextBox();
+            materialLabel4 = new MaterialLabel();
+            savebtn = new MaterialButton();
             tableLayoutPanel1 = new TableLayoutPanel();
             materialLabel2 = new MaterialLabel();
             label1 = new Label();
@@ -67,8 +76,7 @@ namespace School_Clinic
             label6 = new Label();
             label5 = new Label();
             textBox6 = new TextBox();
-            panel2 = new Panel();
-            materialCard1 = new MaterialCard();
+            materialCard6 = new MaterialCard();
             tabPage2 = new TabPage();
             panel1 = new Panel();
             cancelBtn = new MaterialButton();
@@ -125,11 +133,12 @@ namespace School_Clinic
             contextMenuStrip1 = new ContextMenuStrip(components);
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            panel3.SuspendLayout();
             materialCard4.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             tabPage2.SuspendLayout();
             panel1.SuspendLayout();
             materialCard5.SuspendLayout();
@@ -157,8 +166,9 @@ namespace School_Clinic
             // tabPage1
             // 
             tabPage1.BackColor = Color.White;
+            tabPage1.Controls.Add(panel3);
+            tabPage1.Controls.Add(materialCard1);
             tabPage1.Controls.Add(materialCard4);
-            tabPage1.Controls.Add(panel2);
             tabPage1.ImageKey = "home.png";
             tabPage1.Location = new Point(4, 24);
             tabPage1.Margin = new Padding(10);
@@ -169,6 +179,144 @@ namespace School_Clinic
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
             // 
+            // panel3
+            // 
+            panel3.Anchor = AnchorStyles.None;
+            panel3.BackColor = SystemColors.ButtonFace;
+            panel3.Controls.Add(materialLabel1);
+            panel3.Controls.Add(materialButton4);
+            panel3.Controls.Add(materialButton3);
+            panel3.Controls.Add(label27);
+            panel3.Controls.Add(materialComboBox2);
+            panel3.Controls.Add(materialComboBox1);
+            panel3.Location = new Point(450, 115);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(282, 304);
+            panel3.TabIndex = 0;
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            materialLabel1.Location = new Point(21, 27);
+            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(162, 24);
+            materialLabel1.TabIndex = 6;
+            materialLabel1.Text = "Medicine Selector";
+            // 
+            // materialButton4
+            // 
+            materialButton4.AutoSize = false;
+            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton4.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButton4.Depth = 0;
+            materialButton4.HighEmphasis = true;
+            materialButton4.Icon = null;
+            materialButton4.Location = new Point(21, 245);
+            materialButton4.Margin = new Padding(4, 6, 4, 6);
+            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton4.Name = "materialButton4";
+            materialButton4.NoAccentTextColor = Color.Empty;
+            materialButton4.Size = new Size(109, 36);
+            materialButton4.TabIndex = 5;
+            materialButton4.Text = "Cancel";
+            materialButton4.Type = MaterialButton.MaterialButtonType.Contained;
+            materialButton4.UseAccentColor = false;
+            materialButton4.UseVisualStyleBackColor = true;
+            // 
+            // materialButton3
+            // 
+            materialButton3.AutoSize = false;
+            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton3.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButton3.Depth = 0;
+            materialButton3.HighEmphasis = true;
+            materialButton3.Icon = null;
+            materialButton3.Location = new Point(152, 245);
+            materialButton3.Margin = new Padding(4, 6, 4, 6);
+            materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton3.Name = "materialButton3";
+            materialButton3.NoAccentTextColor = Color.Empty;
+            materialButton3.Size = new Size(109, 36);
+            materialButton3.TabIndex = 4;
+            materialButton3.Text = "Add";
+            materialButton3.Type = MaterialButton.MaterialButtonType.Contained;
+            materialButton3.UseAccentColor = false;
+            materialButton3.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label27.Location = new Point(19, 51);
+            label27.Name = "label27";
+            label27.Size = new Size(141, 17);
+            label27.TabIndex = 1;
+            label27.Text = "Please select medicine.";
+            // 
+            // materialComboBox2
+            // 
+            materialComboBox2.Anchor = AnchorStyles.None;
+            materialComboBox2.AutoResize = false;
+            materialComboBox2.BackColor = Color.FromArgb(255, 255, 255);
+            materialComboBox2.Depth = 0;
+            materialComboBox2.DrawMode = DrawMode.OwnerDrawVariable;
+            materialComboBox2.DropDownHeight = 174;
+            materialComboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            materialComboBox2.DropDownWidth = 121;
+            materialComboBox2.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialComboBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialComboBox2.FormattingEnabled = true;
+            materialComboBox2.IntegralHeight = false;
+            materialComboBox2.ItemHeight = 43;
+            materialComboBox2.Location = new Point(21, 163);
+            materialComboBox2.MaxDropDownItems = 4;
+            materialComboBox2.MouseState = MaterialSkin.MouseState.OUT;
+            materialComboBox2.Name = "materialComboBox2";
+            materialComboBox2.Size = new Size(241, 49);
+            materialComboBox2.StartIndex = 0;
+            materialComboBox2.TabIndex = 3;
+            // 
+            // materialComboBox1
+            // 
+            materialComboBox1.Anchor = AnchorStyles.None;
+            materialComboBox1.AutoResize = false;
+            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
+            materialComboBox1.Depth = 0;
+            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
+            materialComboBox1.DropDownHeight = 174;
+            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            materialComboBox1.DropDownWidth = 121;
+            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialComboBox1.FormattingEnabled = true;
+            materialComboBox1.IntegralHeight = false;
+            materialComboBox1.ItemHeight = 43;
+            materialComboBox1.Location = new Point(21, 94);
+            materialComboBox1.MaxDropDownItems = 4;
+            materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
+            materialComboBox1.Name = "materialComboBox1";
+            materialComboBox1.Size = new Size(241, 49);
+            materialComboBox1.StartIndex = 0;
+            materialComboBox1.TabIndex = 2;
+            // 
+            // materialCard1
+            // 
+            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.Depth = 0;
+            materialCard1.Dock = DockStyle.Top;
+            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard1.Location = new Point(8, 8);
+            materialCard1.Margin = new Padding(14);
+            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard1.Name = "materialCard1";
+            materialCard1.Padding = new Padding(14);
+            materialCard1.Size = new Size(1159, 100);
+            materialCard1.TabIndex = 49;
+            // 
             // materialCard4
             // 
             materialCard4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -176,7 +324,7 @@ namespace School_Clinic
             materialCard4.Controls.Add(tableLayoutPanel3);
             materialCard4.Depth = 0;
             materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard4.Location = new Point(7, 132);
+            materialCard4.Location = new Point(7, 120);
             materialCard4.Margin = new Padding(14);
             materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard4.Name = "materialCard4";
@@ -206,8 +354,7 @@ namespace School_Clinic
             tableLayoutPanel2.ColumnCount = 2;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Controls.Add(savebtn, 1, 7);
-            tableLayoutPanel2.Controls.Add(materialLabel4, 0, 0);
+            tableLayoutPanel2.Controls.Add(panel2, 1, 5);
             tableLayoutPanel2.Controls.Add(textBox16, 1, 6);
             tableLayoutPanel2.Controls.Add(label8, 0, 1);
             tableLayoutPanel2.Controls.Add(label17, 1, 3);
@@ -218,8 +365,9 @@ namespace School_Clinic
             tableLayoutPanel2.Controls.Add(label10, 0, 5);
             tableLayoutPanel2.Controls.Add(textBox14, 1, 2);
             tableLayoutPanel2.Controls.Add(label11, 1, 1);
-            tableLayoutPanel2.Controls.Add(label18, 1, 5);
             tableLayoutPanel2.Controls.Add(textBox15, 1, 4);
+            tableLayoutPanel2.Controls.Add(materialLabel4, 0, 0);
+            tableLayoutPanel2.Controls.Add(savebtn, 1, 8);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(569, 3);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -236,41 +384,34 @@ namespace School_Clinic
             tableLayoutPanel2.Size = new Size(560, 426);
             tableLayoutPanel2.TabIndex = 1;
             // 
-            // savebtn
+            // panel2
             // 
-            savebtn.AutoSize = false;
-            savebtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            savebtn.Density = MaterialButton.MaterialButtonDensity.Default;
-            savebtn.Depth = 0;
-            savebtn.Dock = DockStyle.Fill;
-            savebtn.HighEmphasis = true;
-            savebtn.Icon = null;
-            savebtn.Location = new Point(284, 335);
-            savebtn.Margin = new Padding(4, 6, 4, 6);
-            savebtn.MouseState = MaterialSkin.MouseState.HOVER;
-            savebtn.Name = "savebtn";
-            savebtn.NoAccentTextColor = Color.Empty;
-            savebtn.Size = new Size(272, 35);
-            savebtn.TabIndex = 45;
-            savebtn.Text = "SAVE";
-            savebtn.Type = MaterialButton.MaterialButtonType.Contained;
-            savebtn.UseAccentColor = false;
-            savebtn.UseVisualStyleBackColor = true;
-            savebtn.Click += savebtn_Click;
+            panel2.Controls.Add(materialButton5);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(283, 238);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(274, 41);
+            panel2.TabIndex = 1;
             // 
-            // materialLabel4
+            // materialButton5
             // 
-            materialLabel4.Anchor = AnchorStyles.Top;
-            materialLabel4.AutoSize = true;
-            materialLabel4.Depth = 0;
-            materialLabel4.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel4.Location = new Point(3, 0);
-            materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel4.Name = "materialLabel4";
-            materialLabel4.Size = new Size(274, 24);
-            materialLabel4.TabIndex = 19;
-            materialLabel4.Text = "Chief Complient & Medical Assesment";
+            materialButton5.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton5.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButton5.Depth = 0;
+            materialButton5.Dock = DockStyle.Fill;
+            materialButton5.HighEmphasis = true;
+            materialButton5.Icon = null;
+            materialButton5.Location = new Point(0, 0);
+            materialButton5.Margin = new Padding(4, 6, 4, 6);
+            materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton5.Name = "materialButton5";
+            materialButton5.NoAccentTextColor = Color.Empty;
+            materialButton5.Size = new Size(274, 41);
+            materialButton5.TabIndex = 0;
+            materialButton5.Text = "Add Medicine";
+            materialButton5.Type = MaterialButton.MaterialButtonType.Contained;
+            materialButton5.UseAccentColor = false;
+            materialButton5.UseVisualStyleBackColor = true;
             // 
             // textBox16
             // 
@@ -368,16 +509,6 @@ namespace School_Clinic
             label11.TabIndex = 30;
             label11.Text = "Initial Assesment";
             // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Dock = DockStyle.Bottom;
-            label18.Location = new Point(283, 267);
-            label18.Name = "label18";
-            label18.Size = new Size(274, 15);
-            label18.TabIndex = 32;
-            label18.Text = "Recommendation";
-            // 
             // textBox15
             // 
             textBox15.Dock = DockStyle.Fill;
@@ -386,6 +517,42 @@ namespace School_Clinic
             textBox15.Name = "textBox15";
             textBox15.Size = new Size(274, 41);
             textBox15.TabIndex = 42;
+            // 
+            // materialLabel4
+            // 
+            materialLabel4.Anchor = AnchorStyles.Top;
+            materialLabel4.AutoSize = true;
+            materialLabel4.Depth = 0;
+            materialLabel4.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            materialLabel4.Location = new Point(3, 0);
+            materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel4.Name = "materialLabel4";
+            materialLabel4.Size = new Size(274, 24);
+            materialLabel4.TabIndex = 19;
+            materialLabel4.Text = "Chief Complient & Medical Assesment";
+            // 
+            // savebtn
+            // 
+            savebtn.AutoSize = false;
+            savebtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            savebtn.Density = MaterialButton.MaterialButtonDensity.Default;
+            savebtn.Depth = 0;
+            savebtn.Dock = DockStyle.Fill;
+            savebtn.HighEmphasis = true;
+            savebtn.Icon = null;
+            savebtn.Location = new Point(284, 382);
+            savebtn.Margin = new Padding(4, 6, 4, 6);
+            savebtn.MouseState = MaterialSkin.MouseState.HOVER;
+            savebtn.Name = "savebtn";
+            savebtn.NoAccentTextColor = Color.Empty;
+            savebtn.Size = new Size(272, 38);
+            savebtn.TabIndex = 45;
+            savebtn.Text = "SAVE";
+            savebtn.Type = MaterialButton.MaterialButtonType.Contained;
+            savebtn.UseAccentColor = false;
+            savebtn.UseVisualStyleBackColor = true;
+            savebtn.Click += savebtn_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -409,6 +576,7 @@ namespace School_Clinic
             tableLayoutPanel1.Controls.Add(label6, 1, 5);
             tableLayoutPanel1.Controls.Add(label5, 1, 3);
             tableLayoutPanel1.Controls.Add(textBox6, 1, 4);
+            tableLayoutPanel1.Controls.Add(materialCard6, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -576,29 +744,18 @@ namespace School_Clinic
             textBox6.TabIndex = 15;
             textBox6.TextChanged += textBox6_TextChanged;
             // 
-            // panel2
+            // materialCard6
             // 
-            panel2.Controls.Add(materialCard1);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(8, -376);
-            panel2.Margin = new Padding(5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1159, 989);
-            panel2.TabIndex = 0;
-            // 
-            // materialCard1
-            // 
-            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Depth = 0;
-            materialCard1.Dock = DockStyle.Top;
-            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(0, 0);
-            materialCard1.Margin = new Padding(25);
-            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard1.Name = "materialCard1";
-            materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(1159, 117);
-            materialCard1.TabIndex = 2;
+            materialCard6.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard6.Depth = 0;
+            materialCard6.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard6.Location = new Point(294, 19);
+            materialCard6.Margin = new Padding(14);
+            materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard6.Name = "materialCard6";
+            materialCard6.Padding = new Padding(14);
+            materialCard6.Size = new Size(200, 18);
+            materialCard6.TabIndex = 48;
             // 
             // tabPage2
             // 
@@ -622,6 +779,7 @@ namespace School_Clinic
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(99, 115, 55);
             panel1.Controls.Add(cancelBtn);
             panel1.Controls.Add(comboBox2);
@@ -649,7 +807,7 @@ namespace School_Clinic
             panel1.Controls.Add(textBox11);
             panel1.Controls.Add(textBox9);
             panel1.Controls.Add(textBox7);
-            panel1.Location = new Point(277, 166);
+            panel1.Location = new Point(302, 111);
             panel1.Name = "panel1";
             panel1.Size = new Size(645, 312);
             panel1.TabIndex = 1;
@@ -1044,7 +1202,7 @@ namespace School_Clinic
             // 
             // materialCard2
             // 
-            materialCard2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            materialCard2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             materialCard2.BackColor = Color.FromArgb(255, 255, 255);
             materialCard2.Controls.Add(dataGridView1);
             materialCard2.Depth = 0;
@@ -1198,13 +1356,16 @@ namespace School_Clinic
             Load += mianDashBoard_Load;
             materialTabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             materialCard4.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            panel2.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             panel1.ResumeLayout(false);
@@ -1289,7 +1450,6 @@ namespace School_Clinic
         private TextBox textBox14;
         private TextBox textBox8;
         private TextBox textBox5;
-        private Label label18;
         private Label label17;
         private Label label11;
         private Label label10;
@@ -1307,13 +1467,23 @@ namespace School_Clinic
         private Label label2;
         private Label label1;
         private TextBox textBox1;
-        private Panel panel2;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialCard materialCard4;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
+        private MaterialCard materialCard1;
+        private MaterialCard materialCard6;
+        private MaterialComboBox materialComboBox1;
+        private Label label27;
+        private Label label26;
+        private MaterialButton materialButton4;
+        private MaterialButton materialButton3;
+        private MaterialComboBox materialComboBox2;
+        private MaterialButton materialButton5;
+        private Panel panel2;
+        private Panel panel3;
+        private MaterialLabel materialLabel1;
     }
 }
