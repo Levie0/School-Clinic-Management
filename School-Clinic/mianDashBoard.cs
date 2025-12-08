@@ -159,6 +159,7 @@ namespace School_Clinic
         {
             panel1.Visible = true;
             panel1.BringToFront();
+           
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
