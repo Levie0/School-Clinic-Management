@@ -16,7 +16,7 @@ namespace School_Clinic
         private BindingList<Records> _records = new BindingList<Records>();
         private readonly string _filePath = "School-Clinic_thisjson.json";
 
-      
+
 
         public mianDashBoard(Form1 callingForm)
         {
@@ -108,10 +108,10 @@ namespace School_Clinic
                 thisContact = textBox4.Text,
                 thisAllergies = textBox3.Text,
                 thisDate = dateTimePicker4.Text,
-                thisTime = textBox5.Text, 
-                thisComplaint = textBox8.Text, 
-                thisAssesment = textBox14.Text, 
-                thisAction = textBox15.Text 
+                thisTime = textBox5.Text,
+                thisComplaint = textBox8.Text,
+                thisAssesment = textBox14.Text,
+                thisAction = textBox15.Text
             };
 
             _records.Add(records);
@@ -134,7 +134,7 @@ namespace School_Clinic
         //Tig load sa na save nga Data(Ayaw Hilabti)
         private void mianDashBoard_Load(object sender, EventArgs e)
         {
-            if (File.Exists(_filePath)) 
+            if (File.Exists(_filePath))
             {
                 string json = File.ReadAllText(_filePath);
                 var list = JsonSerializer.Deserialize<List<Records>>(json) ?? new List<Records>();
@@ -153,6 +153,63 @@ namespace School_Clinic
 
             string json = JsonSerializer.Serialize(_records.ToList(), new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(_filePath, json);
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            panel1.BringToFront();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null) return;
+
+            var records = dataGridView1.CurrentRow.DataBoundItem as Records;
+            if (records != null) 
+            {
+                textBox7.Text = records.thisName;
+                textBox9.Text = records.thisAge;
+                comboBox2.SelectedItem = records.thisCourse;
+                textBox12.Text = records.thisParent;
+                textBox11.Text = records.thisContact;
+                textBox13.Text = records.thisAllergies;
+                textBox17.Text = records.thisTime;
+                textBox18.Text = records.thisComplaint;
+                textBox19.Text = records.thisAssesment;
+                textBox20.Text = records.thisAction;
+                dateTimePicker3.Text = records.thisBirth;
+                dateTimePicker4.Text = records.thisDate;
+
+
+            }
+        }
+
+        private void saveEditBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null) return;
+
+            var records = dataGridView1.CurrentRow.DataBoundItem as Records;
+            if (records != null) 
+            {
+                records.thisName = textBox7.Text;
+                records.thisAge = textBox9.Text;
+                records.thisCourse = comboBox2.SelectedItem?.ToString();
+                records.thisParent = textBox12.Text;
+                records.thisContact = textBox11.Text;
+                records.thisAllergies = textBox13.Text;
+                records.thisTime = textBox17.Text;
+                records.thisComplaint = textBox18.Text;
+                records.thisAssesment = textBox19.Text;
+                records.thisAction = textBox20.Text;
+                records.thisBirth = dateTimePicker3.Text;
+                records.thisDate = dateTimePicker4.Text;
+
+                dataGridView1.Refresh();
+                SaveData();
+
+                panel1.Visible = false;
+            }
         }
     }
 }
