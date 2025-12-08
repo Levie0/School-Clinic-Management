@@ -254,7 +254,7 @@ namespace School_Clinic
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
-
+            //gubaon kaau ang material skin
         }
     }
 }
