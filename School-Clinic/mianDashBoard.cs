@@ -234,13 +234,13 @@ namespace School_Clinic
             if (dataGridView1.CurrentRow == null) return;
 
             var records = dataGridView1.CurrentRow.DataBoundItem as Records;
-            if (records != null) 
+            if (records != null)
             {
                 DialogResult result = MessageBox.Show(
-               "Are you sure you want to delete this data?",  
-               "Confirm Delete",                              
-                MessageBoxButtons.YesNo,                       
-                MessageBoxIcon.Warning                         
+               "Are you sure you want to delete this data?",
+               "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
         );
                 if (result == DialogResult.Yes)
                 {
@@ -305,6 +305,11 @@ namespace School_Clinic
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
             //gubaon kaau ang material skin
+        }
+
+        private void materialCard3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
