@@ -507,7 +507,6 @@ namespace School_Clinic
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(269, 23);
             textBox3.TabIndex = 12;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label7
             // 
