@@ -166,7 +166,7 @@ namespace School_Clinic
             if (dataGridView1.CurrentRow == null) return;
 
             var records = dataGridView1.CurrentRow.DataBoundItem as Records;
-            if (records != null) 
+            if (records != null)
             {
                 textBox7.Text = records.thisName;
                 textBox9.Text = records.thisAge;
@@ -190,7 +190,7 @@ namespace School_Clinic
             if (dataGridView1.CurrentRow == null) return;
 
             var records = dataGridView1.CurrentRow.DataBoundItem as Records;
-            if (records != null) 
+            if (records != null)
             {
                 records.thisName = textBox7.Text;
                 records.thisAge = textBox9.Text;
@@ -210,6 +210,16 @@ namespace School_Clinic
 
                 panel1.Visible = false;
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
