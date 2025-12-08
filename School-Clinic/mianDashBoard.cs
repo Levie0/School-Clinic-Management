@@ -212,6 +212,56 @@ namespace School_Clinic
             }
         }
 
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            textBox7.Clear();
+            textBox9.Clear();
+            comboBox2.SelectedIndex = -1;
+            textBox12.Clear();
+            textBox11.Clear();
+            textBox13.Clear();
+            textBox17.Clear();
+            textBox18.Clear();
+            textBox19.Clear();
+            textBox20.Clear();
+
+            panel1.Visible = false;
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.CurrentRow == null) return;
+
+            var records = dataGridView1.CurrentRow.DataBoundItem as Records;
+            if (records != null) 
+            {
+                DialogResult result = MessageBox.Show(
+               "Are you sure you want to delete this data?",  
+               "Confirm Delete",                              
+                MessageBoxButtons.YesNo,                       
+                MessageBoxIcon.Warning                         
+        );
+                if (result == DialogResult.Yes)
+                {
+                    _records.Remove(records);
+                    SaveData();
+
+                    textBox7.Clear();
+                    textBox9.Clear();
+                    comboBox2.SelectedIndex = -1;
+                    textBox12.Clear();
+                    textBox11.Clear();
+                    textBox13.Clear();
+                    textBox17.Clear();
+                    textBox18.Clear();
+                    textBox19.Clear();
+                    textBox20.Clear();
+                }
+            }
+        }
+
+
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -221,5 +271,7 @@ namespace School_Clinic
         {
 
         }
+
+       
     }
 }

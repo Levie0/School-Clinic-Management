@@ -65,6 +65,7 @@
             dateTimePicker3 = new DateTimePicker();
             tabPage2 = new TabPage();
             panel1 = new Panel();
+            cancelBtn = new MaterialSkin.Controls.MaterialButton();
             comboBox2 = new ComboBox();
             saveEditBtn = new MaterialSkin.Controls.MaterialButton();
             label25 = new Label();
@@ -91,7 +92,7 @@
             textBox9 = new TextBox();
             textBox7 = new TextBox();
             materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            deleteBtn = new MaterialSkin.Controls.MaterialButton();
             editBtn = new MaterialSkin.Controls.MaterialButton();
             materialButton2 = new MaterialSkin.Controls.MaterialButton();
             materialCard5 = new MaterialSkin.Controls.MaterialCard();
@@ -498,7 +499,7 @@
             tabPage2.BackColor = Color.White;
             tabPage2.Controls.Add(panel1);
             tabPage2.Controls.Add(materialButton1);
-            tabPage2.Controls.Add(materialButton4);
+            tabPage2.Controls.Add(deleteBtn);
             tabPage2.Controls.Add(editBtn);
             tabPage2.Controls.Add(materialButton2);
             tabPage2.Controls.Add(materialCard5);
@@ -516,6 +517,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(99, 115, 55);
+            panel1.Controls.Add(cancelBtn);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(saveEditBtn);
             panel1.Controls.Add(label25);
@@ -547,6 +549,26 @@
             panel1.TabIndex = 1;
             panel1.Visible = false;
             // 
+            // cancelBtn
+            // 
+            cancelBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cancelBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            cancelBtn.Depth = 0;
+            cancelBtn.HighEmphasis = true;
+            cancelBtn.Icon = null;
+            cancelBtn.Location = new Point(415, 245);
+            cancelBtn.Margin = new Padding(4, 6, 4, 6);
+            cancelBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            cancelBtn.Name = "cancelBtn";
+            cancelBtn.NoAccentTextColor = Color.Empty;
+            cancelBtn.Size = new Size(77, 36);
+            cancelBtn.TabIndex = 26;
+            cancelBtn.Text = "cancel";
+            cancelBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            cancelBtn.UseAccentColor = false;
+            cancelBtn.UseVisualStyleBackColor = true;
+            cancelBtn.Click += cancelBtn_Click;
+            // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
@@ -564,12 +586,12 @@
             saveEditBtn.Depth = 0;
             saveEditBtn.HighEmphasis = true;
             saveEditBtn.Icon = null;
-            saveEditBtn.Location = new Point(359, 240);
+            saveEditBtn.Location = new Point(525, 245);
             saveEditBtn.Margin = new Padding(4, 6, 4, 6);
             saveEditBtn.MouseState = MaterialSkin.MouseState.HOVER;
             saveEditBtn.Name = "saveEditBtn";
             saveEditBtn.NoAccentTextColor = Color.Empty;
-            saveEditBtn.Size = new Size(186, 36);
+            saveEditBtn.Size = new Size(101, 36);
             saveEditBtn.TabIndex = 24;
             saveEditBtn.Text = "Save";
             saveEditBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -796,25 +818,26 @@
             materialButton1.UseVisualStyleBackColor = true;
             materialButton1.Click += materialButton1_Click_1;
             // 
-            // materialButton4
+            // deleteBtn
             // 
-            materialButton4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton4.Depth = 0;
-            materialButton4.HighEmphasis = true;
-            materialButton4.Icon = null;
-            materialButton4.Location = new Point(984, 131);
-            materialButton4.Margin = new Padding(4, 6, 4, 6);
-            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton4.Name = "materialButton4";
-            materialButton4.NoAccentTextColor = Color.Empty;
-            materialButton4.Size = new Size(73, 36);
-            materialButton4.TabIndex = 5;
-            materialButton4.Text = "delete";
-            materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton4.UseAccentColor = false;
-            materialButton4.UseVisualStyleBackColor = true;
+            deleteBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            deleteBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            deleteBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            deleteBtn.Depth = 0;
+            deleteBtn.HighEmphasis = true;
+            deleteBtn.Icon = null;
+            deleteBtn.Location = new Point(984, 131);
+            deleteBtn.Margin = new Padding(4, 6, 4, 6);
+            deleteBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.NoAccentTextColor = Color.Empty;
+            deleteBtn.Size = new Size(73, 36);
+            deleteBtn.TabIndex = 5;
+            deleteBtn.Text = "delete";
+            deleteBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            deleteBtn.UseAccentColor = false;
+            deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // editBtn
             // 
@@ -1098,7 +1121,7 @@
         public MaterialSkin.Controls.MaterialCard materialCard5;
         private DateTimePicker dateTimePicker2;
         private MaterialSkin.Controls.MaterialButton editBtn;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
+        private MaterialSkin.Controls.MaterialButton deleteBtn;
         private DataGridViewTextBoxColumn colName;
         private DataGridViewTextBoxColumn Age;
         private DataGridViewTextBoxColumn Course;
@@ -1169,5 +1192,6 @@
         private TextBox textBox1;
         private Panel panel2;
         private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialButton cancelBtn;
     }
 }
