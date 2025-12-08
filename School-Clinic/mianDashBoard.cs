@@ -260,7 +260,7 @@ namespace School_Clinic
                 }
             }
         }
-
+        //lklklk
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
