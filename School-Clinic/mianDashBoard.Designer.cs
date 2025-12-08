@@ -32,37 +32,41 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mianDashBoard));
             materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             tabPage1 = new TabPage();
-            panel2 = new Panel();
+            materialCard4 = new MaterialSkin.Controls.MaterialCard();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            tableLayoutPanel2 = new TableLayoutPanel();
             savebtn = new MaterialSkin.Controls.MaterialButton();
-            dateTimePicker4 = new DateTimePicker();
-            comboBox1 = new ComboBox();
-            textBox16 = new TextBox();
-            materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            textBox15 = new TextBox();
-            textBox2 = new TextBox();
-            textBox14 = new TextBox();
-            textBox1 = new TextBox();
-            textBox8 = new TextBox();
-            label1 = new Label();
-            textBox5 = new TextBox();
-            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            label18 = new Label();
-            label2 = new Label();
-            label17 = new Label();
-            label3 = new Label();
-            label11 = new Label();
-            label4 = new Label();
-            label10 = new Label();
-            label5 = new Label();
-            label9 = new Label();
-            label6 = new Label();
-            label8 = new Label();
-            label7 = new Label();
             materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            textBox16 = new TextBox();
+            label8 = new Label();
+            label17 = new Label();
+            textBox8 = new TextBox();
+            textBox5 = new TextBox();
+            dateTimePicker4 = new DateTimePicker();
+            label9 = new Label();
+            label10 = new Label();
+            textBox14 = new TextBox();
+            label11 = new Label();
+            label18 = new Label();
+            textBox15 = new TextBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            label3 = new Label();
+            comboBox1 = new ComboBox();
             textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox6 = new TextBox();
+            label7 = new Label();
+            label4 = new Label();
             dateTimePicker3 = new DateTimePicker();
+            textBox4 = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            textBox6 = new TextBox();
+            panel2 = new Panel();
+            materialCard1 = new MaterialSkin.Controls.MaterialCard();
             tabPage2 = new TabPage();
             panel1 = new Panel();
             comboBox2 = new ComboBox();
@@ -118,6 +122,10 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            materialCard4.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
             tabPage2.SuspendLayout();
             panel1.SuspendLayout();
@@ -140,77 +148,106 @@
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(1156, 672);
+            materialTabControl1.Size = new Size(1183, 649);
             materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             tabPage1.BackColor = Color.White;
+            tabPage1.Controls.Add(materialCard4);
             tabPage1.Controls.Add(panel2);
             tabPage1.ImageKey = "home.png";
             tabPage1.Location = new Point(4, 24);
             tabPage1.Margin = new Padding(10);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(8);
-            tabPage1.Size = new Size(1148, 644);
+            tabPage1.Size = new Size(1175, 621);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
             // 
-            // panel2
+            // materialCard4
             // 
-            panel2.Controls.Add(savebtn);
-            panel2.Controls.Add(dateTimePicker4);
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(textBox16);
-            panel2.Controls.Add(materialCard1);
-            panel2.Controls.Add(textBox15);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox14);
-            panel2.Controls.Add(textBox1);
-            panel2.Controls.Add(textBox8);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(materialLabel2);
-            panel2.Controls.Add(label18);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label17);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label11);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(materialLabel4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox6);
-            panel2.Controls.Add(dateTimePicker3);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(8, 8);
-            panel2.Margin = new Padding(5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1132, 628);
-            panel2.TabIndex = 0;
+            materialCard4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            materialCard4.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard4.Controls.Add(tableLayoutPanel3);
+            materialCard4.Depth = 0;
+            materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard4.Location = new Point(7, 132);
+            materialCard4.Margin = new Padding(14);
+            materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard4.Name = "materialCard4";
+            materialCard4.Padding = new Padding(14);
+            materialCard4.Size = new Size(1160, 460);
+            materialCard4.TabIndex = 48;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(tableLayoutPanel2, 1, 0);
+            tableLayoutPanel3.Controls.Add(tableLayoutPanel1, 0, 0);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(14, 14);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Size = new Size(1132, 432);
+            tableLayoutPanel3.TabIndex = 0;
+            tableLayoutPanel3.Paint += tableLayoutPanel3_Paint;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(savebtn, 1, 7);
+            tableLayoutPanel2.Controls.Add(materialLabel4, 0, 0);
+            tableLayoutPanel2.Controls.Add(textBox16, 1, 6);
+            tableLayoutPanel2.Controls.Add(label8, 0, 1);
+            tableLayoutPanel2.Controls.Add(label17, 1, 3);
+            tableLayoutPanel2.Controls.Add(textBox8, 0, 6);
+            tableLayoutPanel2.Controls.Add(textBox5, 0, 4);
+            tableLayoutPanel2.Controls.Add(dateTimePicker4, 0, 2);
+            tableLayoutPanel2.Controls.Add(label9, 0, 3);
+            tableLayoutPanel2.Controls.Add(label10, 0, 5);
+            tableLayoutPanel2.Controls.Add(textBox14, 1, 2);
+            tableLayoutPanel2.Controls.Add(label11, 1, 1);
+            tableLayoutPanel2.Controls.Add(label18, 1, 5);
+            tableLayoutPanel2.Controls.Add(textBox15, 1, 4);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(569, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 9;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel2.Size = new Size(560, 426);
+            tableLayoutPanel2.TabIndex = 1;
             // 
             // savebtn
             // 
-            savebtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             savebtn.AutoSize = false;
             savebtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             savebtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             savebtn.Depth = 0;
+            savebtn.Dock = DockStyle.Fill;
             savebtn.HighEmphasis = true;
             savebtn.Icon = null;
-            savebtn.Location = new Point(824, 508);
+            savebtn.Location = new Point(284, 335);
             savebtn.Margin = new Padding(4, 6, 4, 6);
             savebtn.MouseState = MaterialSkin.MouseState.HOVER;
             savebtn.Name = "savebtn";
             savebtn.NoAccentTextColor = Color.Empty;
-            savebtn.Size = new Size(269, 36);
+            savebtn.Size = new Size(272, 35);
             savebtn.TabIndex = 45;
             savebtn.Text = "SAVE";
             savebtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -218,32 +255,334 @@
             savebtn.UseVisualStyleBackColor = true;
             savebtn.Click += savebtn_Click;
             // 
-            // dateTimePicker4
+            // materialLabel4
             // 
-            dateTimePicker4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            dateTimePicker4.Format = DateTimePickerFormat.Short;
-            dateTimePicker4.Location = new Point(523, 198);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(200, 23);
-            dateTimePicker4.TabIndex = 44;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "BSIT", "BSN", "BSMT", "BSA", "BSBA" });
-            comboBox1.Location = new Point(23, 299);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(200, 23);
-            comboBox1.TabIndex = 47;
+            materialLabel4.Anchor = AnchorStyles.Top;
+            materialLabel4.AutoSize = true;
+            materialLabel4.Depth = 0;
+            materialLabel4.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            materialLabel4.Location = new Point(3, 0);
+            materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel4.Name = "materialLabel4";
+            materialLabel4.Size = new Size(274, 24);
+            materialLabel4.TabIndex = 19;
+            materialLabel4.Text = "Chief Complient & Medical Assesment";
             // 
             // textBox16
             // 
-            textBox16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox16.Location = new Point(824, 413);
+            textBox16.Dock = DockStyle.Fill;
+            textBox16.Location = new Point(283, 285);
             textBox16.Multiline = true;
             textBox16.Name = "textBox16";
-            textBox16.Size = new Size(271, 55);
+            textBox16.Size = new Size(274, 41);
             textBox16.TabIndex = 43;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Dock = DockStyle.Bottom;
+            label8.Location = new Point(3, 79);
+            label8.Name = "label8";
+            label8.Size = new Size(274, 15);
+            label8.TabIndex = 20;
+            label8.Text = "Date of Visit";
+            label8.Click += label8_Click;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Dock = DockStyle.Bottom;
+            label17.Location = new Point(283, 173);
+            label17.Name = "label17";
+            label17.Size = new Size(274, 15);
+            label17.TabIndex = 31;
+            label17.Text = "Action Taken";
+            // 
+            // textBox8
+            // 
+            textBox8.Dock = DockStyle.Fill;
+            textBox8.Location = new Point(3, 285);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(274, 41);
+            textBox8.TabIndex = 35;
+            // 
+            // textBox5
+            // 
+            textBox5.Dock = DockStyle.Fill;
+            textBox5.Location = new Point(3, 191);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(274, 23);
+            textBox5.TabIndex = 34;
+            // 
+            // dateTimePicker4
+            // 
+            dateTimePicker4.Dock = DockStyle.Fill;
+            dateTimePicker4.Format = DateTimePickerFormat.Short;
+            dateTimePicker4.Location = new Point(3, 97);
+            dateTimePicker4.Name = "dateTimePicker4";
+            dateTimePicker4.Size = new Size(274, 23);
+            dateTimePicker4.TabIndex = 44;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Dock = DockStyle.Bottom;
+            label9.Location = new Point(3, 173);
+            label9.Name = "label9";
+            label9.Size = new Size(274, 15);
+            label9.TabIndex = 21;
+            label9.Text = "Time of Visit";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Dock = DockStyle.Bottom;
+            label10.Location = new Point(3, 257);
+            label10.Name = "label10";
+            label10.Padding = new Padding(5);
+            label10.Size = new Size(274, 25);
+            label10.TabIndex = 22;
+            label10.Text = "Chief Complaint ( Symptoms/Reason for Visit )";
+            // 
+            // textBox14
+            // 
+            textBox14.Dock = DockStyle.Fill;
+            textBox14.Location = new Point(283, 97);
+            textBox14.Multiline = true;
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(274, 41);
+            textBox14.TabIndex = 41;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Dock = DockStyle.Bottom;
+            label11.Location = new Point(283, 79);
+            label11.Name = "label11";
+            label11.Size = new Size(274, 15);
+            label11.TabIndex = 30;
+            label11.Text = "Initial Assesment";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Dock = DockStyle.Bottom;
+            label18.Location = new Point(283, 267);
+            label18.Name = "label18";
+            label18.Size = new Size(274, 15);
+            label18.TabIndex = 32;
+            label18.Text = "Recommendation";
+            // 
+            // textBox15
+            // 
+            textBox15.Dock = DockStyle.Fill;
+            textBox15.Location = new Point(283, 191);
+            textBox15.Multiline = true;
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(274, 41);
+            textBox15.TabIndex = 42;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Controls.Add(materialLabel2, 0, 0);
+            tableLayoutPanel1.Controls.Add(label1, 0, 1);
+            tableLayoutPanel1.Controls.Add(textBox1, 0, 2);
+            tableLayoutPanel1.Controls.Add(label2, 0, 3);
+            tableLayoutPanel1.Controls.Add(textBox2, 0, 4);
+            tableLayoutPanel1.Controls.Add(label3, 0, 5);
+            tableLayoutPanel1.Controls.Add(comboBox1, 0, 6);
+            tableLayoutPanel1.Controls.Add(textBox3, 1, 8);
+            tableLayoutPanel1.Controls.Add(label7, 1, 7);
+            tableLayoutPanel1.Controls.Add(label4, 1, 1);
+            tableLayoutPanel1.Controls.Add(dateTimePicker3, 1, 2);
+            tableLayoutPanel1.Controls.Add(textBox4, 1, 6);
+            tableLayoutPanel1.Controls.Add(label6, 1, 5);
+            tableLayoutPanel1.Controls.Add(label5, 1, 3);
+            tableLayoutPanel1.Controls.Add(textBox6, 1, 4);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(3, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.Padding = new Padding(5);
+            tableLayoutPanel1.RowCount = 9;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
+            tableLayoutPanel1.Size = new Size(560, 426);
+            tableLayoutPanel1.TabIndex = 0;
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            materialLabel2.Location = new Point(8, 5);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(180, 24);
+            materialLabel2.TabIndex = 4;
+            materialLabel2.Text = "Student Information";
+            materialLabel2.Click += materialLabel2_Click_1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Bottom;
+            label1.Location = new Point(8, 82);
+            label1.Name = "label1";
+            label1.Size = new Size(269, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Name";
+            label1.Click += label1_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Dock = DockStyle.Top;
+            textBox1.Location = new Point(8, 100);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(269, 23);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged_1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Bottom;
+            label2.Location = new Point(8, 174);
+            label2.Name = "label2";
+            label2.Size = new Size(269, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Age";
+            // 
+            // textBox2
+            // 
+            textBox2.Dock = DockStyle.Top;
+            textBox2.Location = new Point(8, 192);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(269, 23);
+            textBox2.TabIndex = 46;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Bottom;
+            label3.Location = new Point(8, 266);
+            label3.Name = "label3";
+            label3.Size = new Size(269, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Grade/Class";
+            label3.Click += label3_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Dock = DockStyle.Top;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "BSIT", "BSN", "BSMT", "BSA", "BSBA" });
+            comboBox1.Location = new Point(8, 284);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(269, 23);
+            comboBox1.TabIndex = 47;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // textBox3
+            // 
+            textBox3.Dock = DockStyle.Top;
+            textBox3.Location = new Point(283, 376);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(269, 23);
+            textBox3.TabIndex = 12;
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Dock = DockStyle.Bottom;
+            label7.Location = new Point(283, 358);
+            label7.Name = "label7";
+            label7.Size = new Size(269, 15);
+            label7.TabIndex = 10;
+            label7.Text = "Known Allergies";
+            label7.Click += label7_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Dock = DockStyle.Bottom;
+            label4.Location = new Point(283, 82);
+            label4.Name = "label4";
+            label4.Size = new Size(269, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Date of Birth";
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Dock = DockStyle.Top;
+            dateTimePicker3.Format = DateTimePickerFormat.Short;
+            dateTimePicker3.Location = new Point(283, 100);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(269, 23);
+            dateTimePicker3.TabIndex = 18;
+            // 
+            // textBox4
+            // 
+            textBox4.Dock = DockStyle.Top;
+            textBox4.Location = new Point(283, 284);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(269, 23);
+            textBox4.TabIndex = 13;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Dock = DockStyle.Bottom;
+            label6.Location = new Point(283, 266);
+            label6.Name = "label6";
+            label6.Size = new Size(269, 15);
+            label6.TabIndex = 9;
+            label6.Text = "Emergency Contact";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Dock = DockStyle.Bottom;
+            label5.Location = new Point(283, 174);
+            label5.Name = "label5";
+            label5.Size = new Size(269, 15);
+            label5.TabIndex = 8;
+            label5.Text = "Parent/Guardian Name ";
+            label5.Click += label5_Click;
+            // 
+            // textBox6
+            // 
+            textBox6.Dock = DockStyle.Top;
+            textBox6.Location = new Point(283, 192);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(269, 23);
+            textBox6.TabIndex = 15;
+            textBox6.TextChanged += textBox6_TextChanged;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(materialCard1);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(8, -376);
+            panel2.Margin = new Padding(5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1159, 989);
+            panel2.TabIndex = 0;
             // 
             // materialCard1
             // 
@@ -256,242 +595,8 @@
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(1132, 117);
+            materialCard1.Size = new Size(1159, 117);
             materialCard1.TabIndex = 2;
-            // 
-            // textBox15
-            // 
-            textBox15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox15.Location = new Point(824, 300);
-            textBox15.Multiline = true;
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(269, 51);
-            textBox15.TabIndex = 42;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(23, 248);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 23);
-            textBox2.TabIndex = 46;
-            // 
-            // textBox14
-            // 
-            textBox14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox14.Location = new Point(824, 198);
-            textBox14.Multiline = true;
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(269, 47);
-            textBox14.TabIndex = 41;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(23, 196);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged_1;
-            // 
-            // textBox8
-            // 
-            textBox8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox8.Location = new Point(523, 299);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(271, 23);
-            textBox8.TabIndex = 35;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(23, 180);
-            label1.Name = "label1";
-            label1.Size = new Size(39, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Name";
-            label1.Click += label1_Click;
-            // 
-            // textBox5
-            // 
-            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox5.Location = new Point(523, 248);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(200, 23);
-            textBox5.TabIndex = 34;
-            // 
-            // materialLabel2
-            // 
-            materialLabel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            materialLabel2.AutoSize = true;
-            materialLabel2.Depth = 0;
-            materialLabel2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel2.Location = new Point(23, 140);
-            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(180, 24);
-            materialLabel2.TabIndex = 4;
-            materialLabel2.Text = "Student Information";
-            materialLabel2.Click += materialLabel2_Click_1;
-            // 
-            // label18
-            // 
-            label18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label18.AutoSize = true;
-            label18.Location = new Point(824, 395);
-            label18.Name = "label18";
-            label18.Size = new Size(102, 15);
-            label18.TabIndex = 32;
-            label18.Text = "Recommendation";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(23, 230);
-            label2.Name = "label2";
-            label2.Size = new Size(28, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Age";
-            // 
-            // label17
-            // 
-            label17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label17.AutoSize = true;
-            label17.Location = new Point(824, 282);
-            label17.Name = "label17";
-            label17.Size = new Size(75, 15);
-            label17.TabIndex = 31;
-            label17.Text = "Action Taken";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(23, 281);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 15);
-            label3.TabIndex = 6;
-            label3.Text = "Grade/Class";
-            label3.Click += label3_Click;
-            // 
-            // label11
-            // 
-            label11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label11.AutoSize = true;
-            label11.Location = new Point(824, 180);
-            label11.Name = "label11";
-            label11.Size = new Size(96, 15);
-            label11.TabIndex = 30;
-            label11.Text = "Initial Assesment";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(262, 180);
-            label4.Name = "label4";
-            label4.Size = new Size(73, 15);
-            label4.TabIndex = 7;
-            label4.Text = "Date of Birth";
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label10.AutoSize = true;
-            label10.Location = new Point(523, 281);
-            label10.Name = "label10";
-            label10.Size = new Size(254, 15);
-            label10.TabIndex = 22;
-            label10.Text = "Chief Complaint ( Symptoms/Reason for Visit )";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(262, 230);
-            label5.Name = "label5";
-            label5.Size = new Size(132, 15);
-            label5.TabIndex = 8;
-            label5.Text = "Parent/Guardian Name ";
-            label5.Click += label5_Click;
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label9.AutoSize = true;
-            label9.Location = new Point(523, 230);
-            label9.Name = "label9";
-            label9.Size = new Size(72, 15);
-            label9.TabIndex = 21;
-            label9.Text = "Time of Visit";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(262, 281);
-            label6.Name = "label6";
-            label6.Size = new Size(111, 15);
-            label6.TabIndex = 9;
-            label6.Text = "Emergency Contact";
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label8.AutoSize = true;
-            label8.Location = new Point(523, 180);
-            label8.Name = "label8";
-            label8.Size = new Size(70, 15);
-            label8.TabIndex = 20;
-            label8.Text = "Date of Visit";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(262, 336);
-            label7.Name = "label7";
-            label7.Size = new Size(92, 15);
-            label7.TabIndex = 10;
-            label7.Text = "Known Allergies";
-            // 
-            // materialLabel4
-            // 
-            materialLabel4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            materialLabel4.AutoSize = true;
-            materialLabel4.Depth = 0;
-            materialLabel4.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel4.Location = new Point(523, 140);
-            materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel4.Name = "materialLabel4";
-            materialLabel4.Size = new Size(343, 24);
-            materialLabel4.TabIndex = 19;
-            materialLabel4.Text = "Chief Complient & Medical Assesment";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(262, 354);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 23);
-            textBox3.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(262, 299);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 23);
-            textBox4.TabIndex = 13;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(262, 248);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(200, 23);
-            textBox6.TabIndex = 15;
-            // 
-            // dateTimePicker3
-            // 
-            dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(262, 198);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(200, 23);
-            dateTimePicker3.TabIndex = 18;
             // 
             // tabPage2
             // 
@@ -508,7 +613,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1148, 644);
+            tabPage2.Size = new Size(1175, 621);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECORDS";
             tabPage2.Click += tabPage2_Click;
@@ -1017,7 +1122,7 @@
             tabPage3.ImageKey = "medical-records.png";
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1148, 644);
+            tabPage3.Size = new Size(1175, 621);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "MEDICATION ";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1057,7 +1162,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1162, 739);
+            ClientSize = new Size(1189, 716);
             Controls.Add(materialTabControl1);
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = materialTabControl1;
@@ -1067,8 +1172,13 @@
             Load += mianDashBoard_Load;
             materialTabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            materialCard4.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             panel1.ResumeLayout(false);
@@ -1078,6 +1188,11 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage3.ResumeLayout(false);
             ResumeLayout(false);
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -1153,7 +1268,6 @@
         private Label label10;
         private Label label9;
         private Label label8;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private DateTimePicker dateTimePicker3;
         private TextBox textBox6;
         private TextBox textBox4;
@@ -1164,10 +1278,15 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private Label label1;
         private TextBox textBox1;
         private Panel panel2;
         private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialCard materialCard4;
+        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel2;
+        private TableLayoutPanel tableLayoutPanel3;
     }
 }
