@@ -657,17 +657,18 @@ namespace School_Clinic
             // 
             // cancelBtn
             // 
+            cancelBtn.AutoSize = false;
             cancelBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             cancelBtn.Density = MaterialButton.MaterialButtonDensity.Default;
             cancelBtn.Depth = 0;
             cancelBtn.HighEmphasis = true;
             cancelBtn.Icon = null;
-            cancelBtn.Location = new Point(415, 245);
+            cancelBtn.Location = new Point(359, 240);
             cancelBtn.Margin = new Padding(4, 6, 4, 6);
             cancelBtn.MouseState = MaterialSkin.MouseState.HOVER;
             cancelBtn.Name = "cancelBtn";
             cancelBtn.NoAccentTextColor = Color.Empty;
-            cancelBtn.Size = new Size(77, 36);
+            cancelBtn.Size = new Size(122, 36);
             cancelBtn.TabIndex = 26;
             cancelBtn.Text = "cancel";
             cancelBtn.Type = MaterialButton.MaterialButtonType.Contained;
@@ -692,12 +693,12 @@ namespace School_Clinic
             saveEditBtn.Depth = 0;
             saveEditBtn.HighEmphasis = true;
             saveEditBtn.Icon = null;
-            saveEditBtn.Location = new Point(525, 245);
+            saveEditBtn.Location = new Point(488, 240);
             saveEditBtn.Margin = new Padding(4, 6, 4, 6);
             saveEditBtn.MouseState = MaterialSkin.MouseState.HOVER;
             saveEditBtn.Name = "saveEditBtn";
             saveEditBtn.NoAccentTextColor = Color.Empty;
-            saveEditBtn.Size = new Size(101, 36);
+            saveEditBtn.Size = new Size(122, 36);
             saveEditBtn.TabIndex = 24;
             saveEditBtn.Text = "Save";
             saveEditBtn.Type = MaterialButton.MaterialButtonType.Contained;
@@ -829,7 +830,7 @@ namespace School_Clinic
             // 
             dateTimePicker5.Location = new Point(359, 93);
             dateTimePicker5.Name = "dateTimePicker5";
-            dateTimePicker5.Size = new Size(186, 23);
+            dateTimePicker5.Size = new Size(251, 23);
             dateTimePicker5.TabIndex = 11;
             // 
             // textBox20
@@ -871,7 +872,7 @@ namespace School_Clinic
             // 
             dateTimePicker1.Location = new Point(359, 38);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(186, 23);
+            dateTimePicker1.Size = new Size(251, 23);
             dateTimePicker1.TabIndex = 5;
             dateTimePicker1.Value = new DateTime(2025, 12, 7, 0, 0, 0, 0);
             // 
@@ -1157,13 +1158,14 @@ namespace School_Clinic
             materialCard3.BackColor = Color.FromArgb(255, 255, 255);
             materialCard3.Depth = 0;
             materialCard3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard3.Location = new Point(1116, 14);
+            materialCard3.Location = new Point(900, 35);
             materialCard3.Margin = new Padding(14);
             materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard3.Name = "materialCard3";
             materialCard3.Padding = new Padding(14);
             materialCard3.Size = new Size(200, 100);
             materialCard3.TabIndex = 0;
+            materialCard3.Paint += materialCard3_Paint;
             // 
             // imageList1
             // 
