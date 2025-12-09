@@ -326,5 +326,22 @@ namespace School_Clinic
         {
 
         }
+
+        private void searchbar1_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = searchbar1.Text.ToLower().Trim();
+
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                dataGridView1.DataSource = _records;
+                return;
+            }
+
+            var filteredList = _records.Where(r =>
+            r.thisName != null && r.thisName.ToLower().Contains(searchTerm)
+            ).ToList();
+
+            dataGridView1.DataSource = filteredList;
+        }
     }
 }

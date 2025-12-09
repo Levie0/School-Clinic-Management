@@ -103,7 +103,7 @@ namespace School_Clinic
             materialButton2 = new MaterialButton();
             materialCard5 = new MaterialCard();
             dateTimePicker2 = new DateTimePicker();
-            materialMultiLineTextBox1 = new MaterialMultiLineTextBox();
+            searchbar1 = new MaterialMultiLineTextBox();
             materialLabel3 = new MaterialLabel();
             materialCard2 = new MaterialCard();
             dataGridView1 = new DataGridView();
@@ -172,9 +172,9 @@ namespace School_Clinic
             tabPage1.Controls.Add(panel2);
             tabPage1.ImageKey = "home.png";
             tabPage1.Location = new Point(4, 24);
-            tabPage1.Margin = new Padding(10, 10, 10, 10);
+            tabPage1.Margin = new Padding(10);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(8, 8, 8, 8);
+            tabPage1.Padding = new Padding(8);
             tabPage1.Size = new Size(1175, 621);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "HOME";
@@ -188,10 +188,10 @@ namespace School_Clinic
             materialCard4.Depth = 0;
             materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard4.Location = new Point(7, 132);
-            materialCard4.Margin = new Padding(14, 14, 14, 14);
+            materialCard4.Margin = new Padding(14);
             materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard4.Name = "materialCard4";
-            materialCard4.Padding = new Padding(14, 14, 14, 14);
+            materialCard4.Padding = new Padding(14);
             materialCard4.Size = new Size(1160, 460);
             materialCard4.TabIndex = 48;
             // 
@@ -355,7 +355,7 @@ namespace School_Clinic
             label10.Dock = DockStyle.Bottom;
             label10.Location = new Point(3, 257);
             label10.Name = "label10";
-            label10.Padding = new Padding(5, 5, 5, 5);
+            label10.Padding = new Padding(5);
             label10.Size = new Size(274, 25);
             label10.TabIndex = 22;
             label10.Text = "Chief Complaint ( Symptoms/Reason for Visit )";
@@ -423,7 +423,7 @@ namespace School_Clinic
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(5, 5, 5, 5);
+            tableLayoutPanel1.Padding = new Padding(5);
             tableLayoutPanel1.RowCount = 9;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
@@ -592,7 +592,7 @@ namespace School_Clinic
             panel2.Controls.Add(materialCard1);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(8, -376);
-            panel2.Margin = new Padding(5, 5, 5, 5);
+            panel2.Margin = new Padding(5);
             panel2.Name = "panel2";
             panel2.Size = new Size(1159, 989);
             panel2.TabIndex = 0;
@@ -604,10 +604,10 @@ namespace School_Clinic
             materialCard1.Dock = DockStyle.Top;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard1.Location = new Point(0, 0);
-            materialCard1.Margin = new Padding(25, 25, 25, 25);
+            materialCard1.Margin = new Padding(25);
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
-            materialCard1.Padding = new Padding(14, 14, 14, 14);
+            materialCard1.Padding = new Padding(14);
             materialCard1.Size = new Size(1159, 117);
             materialCard1.TabIndex = 2;
             // 
@@ -625,7 +625,7 @@ namespace School_Clinic
             tabPage2.ImageKey = "history.png";
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 3, 3, 3);
+            tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1175, 621);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECORDS";
@@ -1005,14 +1005,14 @@ namespace School_Clinic
             materialCard5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             materialCard5.BackColor = Color.FromArgb(255, 255, 255);
             materialCard5.Controls.Add(dateTimePicker2);
-            materialCard5.Controls.Add(materialMultiLineTextBox1);
+            materialCard5.Controls.Add(searchbar1);
             materialCard5.Depth = 0;
             materialCard5.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard5.Location = new Point(10, 131);
-            materialCard5.Margin = new Padding(14, 14, 14, 14);
+            materialCard5.Margin = new Padding(14);
             materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard5.Name = "materialCard5";
-            materialCard5.Padding = new Padding(14, 14, 14, 14);
+            materialCard5.Padding = new Padding(14);
             materialCard5.Size = new Size(737, 36);
             materialCard5.TabIndex = 2;
             // 
@@ -1024,20 +1024,21 @@ namespace School_Clinic
             dateTimePicker2.Size = new Size(227, 23);
             dateTimePicker2.TabIndex = 2;
             // 
-            // materialMultiLineTextBox1
+            // searchbar1
             // 
-            materialMultiLineTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            materialMultiLineTextBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialMultiLineTextBox1.BorderStyle = BorderStyle.None;
-            materialMultiLineTextBox1.Depth = 0;
-            materialMultiLineTextBox1.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            materialMultiLineTextBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialMultiLineTextBox1.Location = new Point(15, 6);
-            materialMultiLineTextBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
-            materialMultiLineTextBox1.Size = new Size(475, 23);
-            materialMultiLineTextBox1.TabIndex = 1;
-            materialMultiLineTextBox1.Text = "search";
+            searchbar1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            searchbar1.BackColor = Color.FromArgb(255, 255, 255);
+            searchbar1.BorderStyle = BorderStyle.None;
+            searchbar1.Depth = 0;
+            searchbar1.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            searchbar1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            searchbar1.Location = new Point(15, 6);
+            searchbar1.MouseState = MaterialSkin.MouseState.HOVER;
+            searchbar1.Name = "searchbar1";
+            searchbar1.Size = new Size(475, 23);
+            searchbar1.TabIndex = 1;
+            searchbar1.Text = "search";
+            searchbar1.TextChanged += searchbar1_TextChanged;
             // 
             // materialLabel3
             // 
@@ -1061,10 +1062,10 @@ namespace School_Clinic
             materialCard2.Depth = 0;
             materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard2.Location = new Point(10, 176);
-            materialCard2.Margin = new Padding(14, 14, 14, 14);
+            materialCard2.Margin = new Padding(14);
             materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard2.Name = "materialCard2";
-            materialCard2.Padding = new Padding(14, 14, 14, 14);
+            materialCard2.Padding = new Padding(14);
             materialCard2.Size = new Size(1121, 366);
             materialCard2.TabIndex = 0;
             materialCard2.Paint += materialCard2_Paint;
@@ -1199,7 +1200,7 @@ namespace School_Clinic
             materialButton3.HighEmphasis = true;
             materialButton3.Icon = null;
             materialButton3.Location = new Point(1010, 174);
-            materialButton3.Margin = new Padding(4, 4, 4, 4);
+            materialButton3.Margin = new Padding(4);
             materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton3.Name = "materialButton3";
             materialButton3.NoAccentTextColor = Color.Empty;
@@ -1388,7 +1389,7 @@ namespace School_Clinic
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox1;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox searchbar1;
         public MaterialSkin.Controls.MaterialCard materialCard5;
         private DateTimePicker dateTimePicker2;
         private MaterialSkin.Controls.MaterialButton editBtn;
