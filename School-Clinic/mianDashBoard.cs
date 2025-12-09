@@ -311,5 +311,20 @@ namespace School_Clinic
         {
 
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void materialCard9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
