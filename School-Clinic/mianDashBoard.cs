@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Text.Json;
+using System.Linq;
 
 namespace School_Clinic
 {
@@ -94,6 +95,23 @@ namespace School_Clinic
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialMultiLineTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searchTerm = materialMultiLineTextBox1.Text.ToLower().Trim();
+
+            if (string.IsNullOrWhiteSpace(searchTerm)) 
+            {
+                dataGridView1.DataSource = _records;
+                return;
+            }
+
+            var filteredList = _records.Where(r =>
+            r.thisName != null && r.thisName.ToLower().Contains(searchTerm)
+            ).ToList();
+
+            dataGridView1.DataSource = filteredList;
         }
 
         private void savebtn_Click(object sender, EventArgs e)
@@ -326,5 +344,7 @@ namespace School_Clinic
         {
 
         }
+
+        
     }
 }
