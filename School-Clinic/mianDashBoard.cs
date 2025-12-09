@@ -326,5 +326,12 @@ namespace School_Clinic
         {
 
         }
+
+        private void materialComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
