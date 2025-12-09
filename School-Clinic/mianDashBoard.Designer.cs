@@ -1037,7 +1037,7 @@ namespace School_Clinic
             searchbar1.Name = "searchbar1";
             searchbar1.Size = new Size(475, 23);
             searchbar1.TabIndex = 1;
-            searchbar1.Text = "search";
+            searchbar1.Text = "";
             searchbar1.TextChanged += searchbar1_TextChanged;
             // 
             // materialLabel3
