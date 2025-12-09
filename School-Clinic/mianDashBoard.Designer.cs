@@ -166,6 +166,7 @@ namespace School_Clinic
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
+            materialTabControl1.Size = new Size(1183, 639);
             materialTabControl1.Size = new Size(1183, 649);
             materialTabControl1.TabIndex = 0;
             // 
@@ -179,6 +180,7 @@ namespace School_Clinic
             tabPage1.Margin = new Padding(10);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(8);
+            tabPage1.Size = new Size(1175, 611);
             tabPage1.Size = new Size(1175, 621);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Home";
@@ -313,6 +315,7 @@ namespace School_Clinic
             materialCard4.Controls.Add(tableLayoutPanel3);
             materialCard4.Depth = 0;
             materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard4.Location = new Point(7, 132);
             materialCard4.Location = new Point(7, 131);
             materialCard4.Margin = new Padding(14);
             materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -505,6 +508,16 @@ namespace School_Clinic
             label11.Size = new Size(274, 15);
             label11.TabIndex = 30;
             label11.Text = "Initial Assesment";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Dock = DockStyle.Bottom;
+            label18.Location = new Point(283, 267);
+            label18.Name = "label18";
+            label18.Size = new Size(274, 15);
+            label18.TabIndex = 32;
+            label18.Text = "Recommendation";
             // 
             // textBox15
             // 
@@ -704,6 +717,30 @@ namespace School_Clinic
             textBox6.TabIndex = 15;
             textBox6.TextChanged += textBox6_TextChanged;
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(materialCard1);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(8, -386);
+            panel2.Margin = new Padding(5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1159, 989);
+            panel2.TabIndex = 0;
+            // 
+            // materialCard1
+            // 
+            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.Depth = 0;
+            materialCard1.Dock = DockStyle.Top;
+            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard1.Location = new Point(0, 0);
+            materialCard1.Margin = new Padding(25);
+            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard1.Name = "materialCard1";
+            materialCard1.Padding = new Padding(14);
+            materialCard1.Size = new Size(1159, 117);
+            materialCard1.TabIndex = 2;
+            // 
             // tabPage2
             // 
             tabPage2.BackColor = Color.White;
@@ -719,6 +756,7 @@ namespace School_Clinic
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1175, 611);
             tabPage2.Size = new Size(1175, 621);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECORDS";
@@ -753,6 +791,7 @@ namespace School_Clinic
             panel1.Controls.Add(textBox11);
             panel1.Controls.Add(textBox9);
             panel1.Controls.Add(textBox7);
+            panel1.Location = new Point(287, 176);
             panel1.Location = new Point(277, 166);
             panel1.Name = "panel1";
             panel1.Size = new Size(645, 312);
@@ -1130,7 +1169,8 @@ namespace School_Clinic
             materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
             materialMultiLineTextBox1.Size = new Size(475, 23);
             materialMultiLineTextBox1.TabIndex = 1;
-            materialMultiLineTextBox1.Text = "search";
+            materialMultiLineTextBox1.Text = "";
+            materialMultiLineTextBox1.TextChanged += materialMultiLineTextBox1_TextChanged;
             // 
             // materialLabel3
             // 
@@ -1158,6 +1198,7 @@ namespace School_Clinic
             materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard2.Name = "materialCard2";
             materialCard2.Padding = new Padding(14);
+            materialCard2.Size = new Size(1121, 356);
             materialCard2.Size = new Size(1121, 366);
             materialCard2.TabIndex = 0;
             materialCard2.Paint += materialCard2_Paint;
@@ -1170,6 +1211,7 @@ namespace School_Clinic
             dataGridView1.Location = new Point(33, 23);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1058, 316);
             dataGridView1.Size = new Size(1058, 326);
             dataGridView1.TabIndex = 0;
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
@@ -1277,11 +1319,31 @@ namespace School_Clinic
             tabPage3.ImageKey = "medical-records.png";
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(1175, 611);
             tabPage3.Size = new Size(1175, 621);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "INVENTORY";
             tabPage3.UseVisualStyleBackColor = true;
             tabPage3.Click += tabPage3_Click;
+            // 
+            // materialButton3
+            // 
+            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton3.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButton3.Depth = 0;
+            materialButton3.HighEmphasis = true;
+            materialButton3.Icon = null;
+            materialButton3.Location = new Point(1010, 174);
+            materialButton3.Margin = new Padding(4);
+            materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton3.Name = "materialButton3";
+            materialButton3.NoAccentTextColor = Color.Empty;
+            materialButton3.Size = new Size(142, 36);
+            materialButton3.TabIndex = 4;
+            materialButton3.Text = "Add medication";
+            materialButton3.Type = MaterialButton.MaterialButtonType.Contained;
+            materialButton3.UseAccentColor = false;
+            materialButton3.UseVisualStyleBackColor = true;
             // 
             // materialCard9
             // 
@@ -1295,6 +1357,7 @@ namespace School_Clinic
             materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard9.Name = "materialCard9";
             materialCard9.Padding = new Padding(12, 10, 12, 10);
+            materialCard9.Size = new Size(1173, 390);
             materialCard9.Size = new Size(1172, 390);
             materialCard9.TabIndex = 3;
             materialCard9.Paint += materialCard9_Paint;
@@ -1308,6 +1371,7 @@ namespace School_Clinic
             dataGridView2.Margin = new Padding(3, 2, 3, 2);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(1124, 329);
             dataGridView2.Size = new Size(1123, 329);
             dataGridView2.TabIndex = 2;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
@@ -1430,6 +1494,11 @@ namespace School_Clinic
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1189, 706);
+            Controls.Add(materialTabControl1);
+            DrawerShowIconsWhenHidden = true;
+            DrawerTabControl = materialTabControl1;
+            MinimumSize = new Size(800, 544);
             ClientSize = new Size(1189, 716);
             Controls.Add(materialTabControl1);
             DrawerShowIconsWhenHidden = true;
