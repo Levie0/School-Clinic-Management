@@ -122,7 +122,6 @@ namespace School_Clinic
             tabPage3 = new TabPage();
             materialButton3 = new MaterialButton();
             materialCard9 = new MaterialCard();
-            dataGridView2 = new DataGridView();
             materialCard3 = new MaterialCard();
             tableLayoutPanel4 = new TableLayoutPanel();
             materialCard8 = new MaterialCard();
@@ -130,6 +129,7 @@ namespace School_Clinic
             materialCard7 = new MaterialCard();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
+            dataGridView2 = new DataGridView();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             materialCard4.SuspendLayout();
@@ -144,9 +144,9 @@ namespace School_Clinic
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage3.SuspendLayout();
             materialCard9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             materialCard3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // materialTabControl1
@@ -1227,19 +1227,6 @@ namespace School_Clinic
             materialCard9.TabIndex = 3;
             materialCard9.Paint += materialCard9_Paint;
             // 
-            // dataGridView2
-            // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.GridColor = SystemColors.MenuBar;
-            dataGridView2.Location = new Point(24, 34);
-            dataGridView2.Margin = new Padding(3, 2, 3, 2);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(1123, 329);
-            dataGridView2.TabIndex = 2;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
-            // 
             // materialCard3
             // 
             materialCard3.BackColor = Color.FromArgb(255, 255, 255);
@@ -1334,6 +1321,19 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // dataGridView2
+            // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.GridColor = SystemColors.MenuBar;
+            dataGridView2.Location = new Point(24, 34);
+            dataGridView2.Margin = new Padding(3, 2, 3, 2);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(1123, 329);
+            dataGridView2.TabIndex = 2;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1365,9 +1365,9 @@ namespace School_Clinic
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
             materialCard9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             materialCard3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -1475,7 +1475,7 @@ namespace School_Clinic
         private MaterialCard materialCard8;
         private MaterialCard materialCard7;
         private MaterialCard materialCard9;
-        private DataGridView dataGridView2;
         private MaterialButton materialButton3;
+        private DataGridView dataGridView2;
     }
 }
