@@ -39,7 +39,6 @@ namespace School_Clinic
             tableLayoutPanel2 = new TableLayoutPanel();
             savebtn = new MaterialButton();
             materialLabel4 = new MaterialLabel();
-            textBox16 = new TextBox();
             label8 = new Label();
             label17 = new Label();
             textBox8 = new TextBox();
@@ -49,7 +48,6 @@ namespace School_Clinic
             label10 = new Label();
             textBox14 = new TextBox();
             label11 = new Label();
-            label18 = new Label();
             textBox15 = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             materialLabel2 = new MaterialLabel();
@@ -218,7 +216,6 @@ namespace School_Clinic
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.Controls.Add(savebtn, 1, 7);
             tableLayoutPanel2.Controls.Add(materialLabel4, 0, 0);
-            tableLayoutPanel2.Controls.Add(textBox16, 1, 6);
             tableLayoutPanel2.Controls.Add(label8, 0, 1);
             tableLayoutPanel2.Controls.Add(label17, 1, 3);
             tableLayoutPanel2.Controls.Add(textBox8, 0, 6);
@@ -228,7 +225,6 @@ namespace School_Clinic
             tableLayoutPanel2.Controls.Add(label10, 0, 5);
             tableLayoutPanel2.Controls.Add(textBox14, 1, 2);
             tableLayoutPanel2.Controls.Add(label11, 1, 1);
-            tableLayoutPanel2.Controls.Add(label18, 1, 5);
             tableLayoutPanel2.Controls.Add(textBox15, 1, 4);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(569, 3);
@@ -281,15 +277,6 @@ namespace School_Clinic
             materialLabel4.Size = new Size(274, 24);
             materialLabel4.TabIndex = 19;
             materialLabel4.Text = "Chief Complient & Medical Assesment";
-            // 
-            // textBox16
-            // 
-            textBox16.Dock = DockStyle.Fill;
-            textBox16.Location = new Point(283, 285);
-            textBox16.Multiline = true;
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(274, 41);
-            textBox16.TabIndex = 43;
             // 
             // label8
             // 
@@ -377,16 +364,6 @@ namespace School_Clinic
             label11.Size = new Size(274, 15);
             label11.TabIndex = 30;
             label11.Text = "Initial Assesment";
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Dock = DockStyle.Bottom;
-            label18.Location = new Point(283, 267);
-            label18.Name = "label18";
-            label18.Size = new Size(274, 15);
-            label18.TabIndex = 32;
-            label18.Text = "Recommendation";
             // 
             // textBox15
             // 
@@ -1413,12 +1390,10 @@ namespace School_Clinic
         private TextBox textBox2;
         private MaterialSkin.Controls.MaterialButton savebtn;
         private DateTimePicker dateTimePicker4;
-        private TextBox textBox16;
         private TextBox textBox15;
         private TextBox textBox14;
         private TextBox textBox8;
         private TextBox textBox5;
-        private Label label18;
         private Label label17;
         private Label label11;
         private Label label10;
