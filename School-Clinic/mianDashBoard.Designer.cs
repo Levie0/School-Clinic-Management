@@ -100,7 +100,6 @@ namespace School_Clinic
             materialButton1 = new MaterialButton();
             deleteBtn = new MaterialButton();
             editBtn = new MaterialButton();
-            materialButton2 = new MaterialButton();
             materialCard5 = new MaterialCard();
             dateTimePicker2 = new DateTimePicker();
             searchbar1 = new MaterialMultiLineTextBox();
@@ -122,6 +121,7 @@ namespace School_Clinic
             tabPage3 = new TabPage();
             materialButton3 = new MaterialButton();
             materialCard9 = new MaterialCard();
+            dataGridView2 = new DataGridView();
             materialCard3 = new MaterialCard();
             tableLayoutPanel4 = new TableLayoutPanel();
             materialCard8 = new MaterialCard();
@@ -129,7 +129,6 @@ namespace School_Clinic
             materialCard7 = new MaterialCard();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
-            dataGridView2 = new DataGridView();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             materialCard4.SuspendLayout();
@@ -144,9 +143,9 @@ namespace School_Clinic
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage3.SuspendLayout();
             materialCard9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             materialCard3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // materialTabControl1
@@ -618,7 +617,6 @@ namespace School_Clinic
             tabPage2.Controls.Add(materialButton1);
             tabPage2.Controls.Add(deleteBtn);
             tabPage2.Controls.Add(editBtn);
-            tabPage2.Controls.Add(materialButton2);
             tabPage2.Controls.Add(materialCard5);
             tabPage2.Controls.Add(materialLabel3);
             tabPage2.Controls.Add(materialCard2);
@@ -923,7 +921,7 @@ namespace School_Clinic
             materialButton1.Depth = 0;
             materialButton1.HighEmphasis = true;
             materialButton1.Icon = null;
-            materialButton1.Location = new Point(1064, 131);
+            materialButton1.Location = new Point(935, 131);
             materialButton1.Margin = new Padding(4, 6, 4, 6);
             materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton1.Name = "materialButton1";
@@ -944,7 +942,7 @@ namespace School_Clinic
             deleteBtn.Depth = 0;
             deleteBtn.HighEmphasis = true;
             deleteBtn.Icon = null;
-            deleteBtn.Location = new Point(984, 131);
+            deleteBtn.Location = new Point(845, 131);
             deleteBtn.Margin = new Padding(4, 6, 4, 6);
             deleteBtn.MouseState = MaterialSkin.MouseState.HOVER;
             deleteBtn.Name = "deleteBtn";
@@ -965,7 +963,7 @@ namespace School_Clinic
             editBtn.Depth = 0;
             editBtn.HighEmphasis = true;
             editBtn.Icon = null;
-            editBtn.Location = new Point(911, 131);
+            editBtn.Location = new Point(765, 131);
             editBtn.Margin = new Padding(4, 6, 4, 6);
             editBtn.MouseState = MaterialSkin.MouseState.HOVER;
             editBtn.Name = "editBtn";
@@ -977,28 +975,6 @@ namespace School_Clinic
             editBtn.UseAccentColor = false;
             editBtn.UseVisualStyleBackColor = true;
             editBtn.Click += editBtn_Click;
-            // 
-            // materialButton2
-            // 
-            materialButton2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            materialButton2.AutoSize = false;
-            materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton2.Density = MaterialButton.MaterialButtonDensity.Default;
-            materialButton2.Depth = 0;
-            materialButton2.HighEmphasis = true;
-            materialButton2.Icon = null;
-            materialButton2.Location = new Point(765, 131);
-            materialButton2.Margin = new Padding(4, 6, 4, 6);
-            materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton2.Name = "materialButton2";
-            materialButton2.NoAccentTextColor = Color.Empty;
-            materialButton2.Size = new Size(138, 36);
-            materialButton2.TabIndex = 3;
-            materialButton2.Text = "Search";
-            materialButton2.Type = MaterialButton.MaterialButtonType.Contained;
-            materialButton2.UseAccentColor = false;
-            materialButton2.UseVisualStyleBackColor = true;
-            materialButton2.Click += materialButton2_Click;
             // 
             // materialCard5
             // 
@@ -1227,6 +1203,19 @@ namespace School_Clinic
             materialCard9.TabIndex = 3;
             materialCard9.Paint += materialCard9_Paint;
             // 
+            // dataGridView2
+            // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.GridColor = SystemColors.MenuBar;
+            dataGridView2.Location = new Point(24, 34);
+            dataGridView2.Margin = new Padding(3, 2, 3, 2);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(1123, 329);
+            dataGridView2.TabIndex = 2;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            // 
             // materialCard3
             // 
             materialCard3.BackColor = Color.FromArgb(255, 255, 255);
@@ -1321,19 +1310,6 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // dataGridView2
-            // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.GridColor = SystemColors.MenuBar;
-            dataGridView2.Location = new Point(24, 34);
-            dataGridView2.Margin = new Padding(3, 2, 3, 2);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(1123, 329);
-            dataGridView2.TabIndex = 2;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
-            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1365,9 +1341,9 @@ namespace School_Clinic
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
             materialCard9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             materialCard3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -1387,7 +1363,6 @@ namespace School_Clinic
         private DataGridView dataGridView1;
         private PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialMultiLineTextBox searchbar1;
         public MaterialSkin.Controls.MaterialCard materialCard5;
