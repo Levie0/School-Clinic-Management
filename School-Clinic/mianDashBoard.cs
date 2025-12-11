@@ -16,7 +16,13 @@ namespace School_Clinic
         private BindingList<Records> _records = new BindingList<Records>();
         private readonly string _filePath = "School-Clinic_thisjson.json";
 
+        private BindingList<MedicineItem> _inventory = new BindingList<MedicineItem>();
+        private readonly string _inventoryFilePath = "Inventory_Data.json";
 
+        private MedicineItem _selectedMedicine = null;
+        private Panel _selectedPanel = null;
+
+        private const int LOW_STOCK_THRESHOLD = 10;
 
         public mianDashBoard(Form1 callingForm)
         {
@@ -140,6 +146,21 @@ namespace School_Clinic
             dataGridView1.DataSource = _records;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            if (System.IO.File.Exists(_inventoryFilePath))
+            {
+                string json = System.IO.File.ReadAllText(_inventoryFilePath);
+                _inventory = JsonSerializer.Deserialize<BindingList<MedicineItem>>(json) ?? new BindingList<MedicineItem>();
+            }
+
+            // 2. Display the loaded items visually
+            foreach (var item in _inventory)
+            {
+                AddItemToVisualList(item);
+            }
+
+            // 3. Update the stock numbers immediately
+            UpdateDashboardStats();
         }
 
         //Tig Save ni nga function(Ayaw Hilabti Nigga!)
@@ -348,6 +369,172 @@ namespace School_Clinic
             label26.BackColor = Color.DarkGreen;
             label18.ForeColor = Color.White;
             label26.ForeColor = Color.White;
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            MedicineItem newItem = new MedicineItem
+            {
+                Name = textBox10.Text,
+                Quantity = int.Parse(textBox16.Text) 
+            };
+
+            
+            _inventory.Add(newItem);
+
+            
+            SaveInventory();
+
+            
+            AddItemToVisualList(newItem);
+
+           
+            UpdateDashboardStats();
+
+           
+            textBox10.Clear();
+            textBox16.Clear();
+            panel5.Visible = false;
+        }
+
+        private void AddItemToVisualList(MedicineItem item)
+        {
+           
+            Panel rowPanel = new Panel();
+            rowPanel.Size = new Size(410, 50);
+            rowPanel.BackColor = Color.White;
+            rowPanel.Margin = new Padding(5);
+            rowPanel.BorderStyle = BorderStyle.FixedSingle;
+
+           
+            Label nameLbl = new Label();
+            nameLbl.Text = item.Name;
+            nameLbl.Location = new Point(10, 15);
+            nameLbl.AutoSize = true;
+            nameLbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+           
+            Label qtyLbl = new Label();
+            qtyLbl.Text = item.Quantity.ToString();
+            qtyLbl.Location = new Point(340, 15);
+            qtyLbl.AutoSize = true;
+            qtyLbl.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+
+            
+            EventHandler selectAction = (s, e) =>
+            {
+                
+                if (_selectedPanel != null)
+                {
+                    _selectedPanel.BackColor = Color.White;
+                }
+
+                
+                _selectedMedicine = item;
+                _selectedPanel = rowPanel;
+                _selectedPanel.BackColor = Color.LightGreen;
+            };
+
+            
+            rowPanel.Click += selectAction;
+            nameLbl.Click += selectAction;
+            qtyLbl.Click += selectAction;
+            
+
+           
+            Button btnMinus = new Button();
+            btnMinus.Text = "-";
+            btnMinus.Size = new Size(30, 30);
+            btnMinus.Location = new Point(300, 10);
+            btnMinus.Click += (s, e) =>
+            {
+                if (item.Quantity > 0)
+                {
+                    item.Quantity--;
+                    qtyLbl.Text = item.Quantity.ToString();
+                    UpdateDashboardStats();
+                    SaveInventory();
+                }
+            };
+
+            
+            Button btnPlus = new Button();
+            btnPlus.Text = "+";
+            btnPlus.Size = new Size(30, 30);
+            btnPlus.Location = new Point(370, 10);
+            btnPlus.Click += (s, e) =>
+            {
+                item.Quantity++;
+                qtyLbl.Text = item.Quantity.ToString();
+                UpdateDashboardStats();
+                SaveInventory();
+            };
+
+            
+            rowPanel.Controls.Add(nameLbl);
+            rowPanel.Controls.Add(btnMinus);
+            rowPanel.Controls.Add(qtyLbl);
+            rowPanel.Controls.Add(btnPlus);
+
+           
+            pnlInventoryList.Controls.Add(rowPanel);
+        }
+
+        private void UpdateDashboardStats()
+        {
+            
+            int totalStock = _inventory.Sum(x => x.Quantity);
+            allstockNumber.Text = totalStock.ToString();
+
+           
+            int lowStockCount = _inventory.Count(x => x.Quantity > 0 && x.Quantity <= LOW_STOCK_THRESHOLD);
+            LowstockNumber.Text = lowStockCount.ToString();
+
+            
+            int outStockCount = _inventory.Count(x => x.Quantity == 0);
+            outofstockNumber.Text = outStockCount.ToString();
+        }
+
+        private void SaveInventory()
+        {
+            string json = JsonSerializer.Serialize(_inventory);
+            System.IO.File.WriteAllText(_inventoryFilePath, json);
+        }
+
+        private void removeMedicBtn_Click(object sender, EventArgs e)
+        {
+            if (_selectedMedicine == null)
+            {
+                MessageBox.Show("Please select a medicine to remove first.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            var result = MessageBox.Show($"Are you sure you want to remove '{_selectedMedicine.Name}'?",
+                                         "Confirm Delete",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+               
+                _inventory.Remove(_selectedMedicine);
+
+                
+                if (_selectedPanel != null)
+                {
+                    pnlInventoryList.Controls.Remove(_selectedPanel);
+                    _selectedPanel.Dispose(); 
+                }
+
+               
+                SaveInventory();
+                UpdateDashboardStats();
+
+               
+                _selectedMedicine = null;
+                _selectedPanel = null;
+            }
         }
     }
 }
