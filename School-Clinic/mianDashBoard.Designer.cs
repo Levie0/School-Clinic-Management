@@ -34,6 +34,15 @@ namespace School_Clinic
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mianDashBoard));
             materialTabControl1 = new MaterialTabControl();
             tabPage1 = new TabPage();
+            panel2 = new Panel();
+            materialButton4 = new MaterialButton();
+            materialButton3 = new MaterialButton();
+            label30 = new Label();
+            materialMaskedTextBox1 = new MaterialMaskedTextBox();
+            label29 = new Label();
+            materialComboBox1 = new MaterialComboBox();
+            label28 = new Label();
+            label27 = new Label();
             materialCard4 = new MaterialCard();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -65,8 +74,6 @@ namespace School_Clinic
             label6 = new Label();
             label5 = new Label();
             textBox6 = new TextBox();
-            panel2 = new Panel();
-            materialCard1 = new MaterialCard();
             tabPage2 = new TabPage();
             panel1 = new Panel();
             cancelBtn = new MaterialButton();
@@ -104,6 +111,19 @@ namespace School_Clinic
             materialLabel3 = new MaterialLabel();
             materialCard2 = new MaterialCard();
             dataGridView1 = new DataGridView();
+            colName = new DataGridViewTextBoxColumn();
+            Age = new DataGridViewTextBoxColumn();
+            Course = new DataGridViewTextBoxColumn();
+            DateofBirth = new DataGridViewTextBoxColumn();
+            Parent = new DataGridViewTextBoxColumn();
+            Contact = new DataGridViewTextBoxColumn();
+            Allergies = new DataGridViewTextBoxColumn();
+            Date = new DataGridViewTextBoxColumn();
+            Time = new DataGridViewTextBoxColumn();
+            Complaint = new DataGridViewTextBoxColumn();
+            Assesment = new DataGridViewTextBoxColumn();
+            Action = new DataGridViewTextBoxColumn();
+            Medication = new DataGridViewTextBoxColumn();
             tabPage3 = new TabPage();
             removeMedicBtn = new MaterialButton();
             panel5 = new Panel();
@@ -129,26 +149,13 @@ namespace School_Clinic
             materialLabel5 = new MaterialLabel();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
-            colName = new DataGridViewTextBoxColumn();
-            Age = new DataGridViewTextBoxColumn();
-            Course = new DataGridViewTextBoxColumn();
-            DateofBirth = new DataGridViewTextBoxColumn();
-            Parent = new DataGridViewTextBoxColumn();
-            Contact = new DataGridViewTextBoxColumn();
-            Allergies = new DataGridViewTextBoxColumn();
-            Date = new DataGridViewTextBoxColumn();
-            Time = new DataGridViewTextBoxColumn();
-            Complaint = new DataGridViewTextBoxColumn();
-            Assesment = new DataGridViewTextBoxColumn();
-            Action = new DataGridViewTextBoxColumn();
-            Medication = new DataGridViewTextBoxColumn();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            panel2.SuspendLayout();
             materialCard4.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            panel2.SuspendLayout();
             tabPage2.SuspendLayout();
             panel1.SuspendLayout();
             materialCard5.SuspendLayout();
@@ -183,8 +190,8 @@ namespace School_Clinic
             // tabPage1
             // 
             tabPage1.BackColor = Color.White;
-            tabPage1.Controls.Add(materialCard4);
             tabPage1.Controls.Add(panel2);
+            tabPage1.Controls.Add(materialCard4);
             tabPage1.ImageKey = "home.png";
             tabPage1.Location = new Point(4, 24);
             tabPage1.Margin = new Padding(10);
@@ -194,6 +201,165 @@ namespace School_Clinic
             tabPage1.TabIndex = 0;
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
+            // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.None;
+            panel2.BackColor = Color.WhiteSmoke;
+            panel2.Controls.Add(materialButton4);
+            panel2.Controls.Add(materialButton3);
+            panel2.Controls.Add(label30);
+            panel2.Controls.Add(materialMaskedTextBox1);
+            panel2.Controls.Add(label29);
+            panel2.Controls.Add(materialComboBox1);
+            panel2.Controls.Add(label28);
+            panel2.Controls.Add(label27);
+            panel2.Location = new Point(496, 107);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(267, 349);
+            panel2.TabIndex = 49;
+            // 
+            // materialButton4
+            // 
+            materialButton4.AutoSize = false;
+            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton4.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButton4.Depth = 0;
+            materialButton4.HighEmphasis = true;
+            materialButton4.Icon = null;
+            materialButton4.Location = new Point(21, 281);
+            materialButton4.Margin = new Padding(4, 6, 4, 6);
+            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton4.Name = "materialButton4";
+            materialButton4.NoAccentTextColor = Color.Empty;
+            materialButton4.Size = new Size(107, 36);
+            materialButton4.TabIndex = 51;
+            materialButton4.Text = "Cancel";
+            materialButton4.Type = MaterialButton.MaterialButtonType.Contained;
+            materialButton4.UseAccentColor = false;
+            materialButton4.UseVisualStyleBackColor = true;
+            // 
+            // materialButton3
+            // 
+            materialButton3.AutoSize = false;
+            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton3.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButton3.Depth = 0;
+            materialButton3.HighEmphasis = true;
+            materialButton3.Icon = null;
+            materialButton3.Location = new Point(141, 281);
+            materialButton3.Margin = new Padding(4, 6, 4, 6);
+            materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton3.Name = "materialButton3";
+            materialButton3.NoAccentTextColor = Color.Empty;
+            materialButton3.Size = new Size(107, 36);
+            materialButton3.TabIndex = 50;
+            materialButton3.Text = "Add";
+            materialButton3.Type = MaterialButton.MaterialButtonType.Contained;
+            materialButton3.UseAccentColor = false;
+            materialButton3.UseVisualStyleBackColor = true;
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new Point(21, 174);
+            label30.Name = "label30";
+            label30.Size = new Size(51, 15);
+            label30.TabIndex = 5;
+            label30.Text = "Amount";
+            // 
+            // materialMaskedTextBox1
+            // 
+            materialMaskedTextBox1.AllowPromptAsInput = true;
+            materialMaskedTextBox1.AnimateReadOnly = false;
+            materialMaskedTextBox1.AsciiOnly = false;
+            materialMaskedTextBox1.BackgroundImageLayout = ImageLayout.None;
+            materialMaskedTextBox1.BeepOnError = false;
+            materialMaskedTextBox1.CutCopyMaskFormat = MaskFormat.IncludeLiterals;
+            materialMaskedTextBox1.Depth = 0;
+            materialMaskedTextBox1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialMaskedTextBox1.HidePromptOnLeave = false;
+            materialMaskedTextBox1.HideSelection = true;
+            materialMaskedTextBox1.InsertKeyMode = InsertKeyMode.Default;
+            materialMaskedTextBox1.LeadingIcon = null;
+            materialMaskedTextBox1.Location = new Point(21, 192);
+            materialMaskedTextBox1.Mask = "";
+            materialMaskedTextBox1.MaxLength = 32767;
+            materialMaskedTextBox1.MouseState = MaterialSkin.MouseState.OUT;
+            materialMaskedTextBox1.Name = "materialMaskedTextBox1";
+            materialMaskedTextBox1.PasswordChar = '\0';
+            materialMaskedTextBox1.PrefixSuffixText = null;
+            materialMaskedTextBox1.PromptChar = '_';
+            materialMaskedTextBox1.ReadOnly = false;
+            materialMaskedTextBox1.RejectInputOnFirstFailure = false;
+            materialMaskedTextBox1.ResetOnPrompt = true;
+            materialMaskedTextBox1.ResetOnSpace = true;
+            materialMaskedTextBox1.RightToLeft = RightToLeft.No;
+            materialMaskedTextBox1.SelectedText = "";
+            materialMaskedTextBox1.SelectionLength = 0;
+            materialMaskedTextBox1.SelectionStart = 0;
+            materialMaskedTextBox1.ShortcutsEnabled = true;
+            materialMaskedTextBox1.Size = new Size(227, 48);
+            materialMaskedTextBox1.SkipLiterals = true;
+            materialMaskedTextBox1.TabIndex = 4;
+            materialMaskedTextBox1.TabStop = false;
+            materialMaskedTextBox1.TextAlign = HorizontalAlignment.Left;
+            materialMaskedTextBox1.TextMaskFormat = MaskFormat.IncludeLiterals;
+            materialMaskedTextBox1.TrailingIcon = null;
+            materialMaskedTextBox1.UseSystemPasswordChar = false;
+            materialMaskedTextBox1.ValidatingType = null;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label29.ForeColor = SystemColors.ControlDarkDark;
+            label29.Location = new Point(21, 74);
+            label29.Name = "label29";
+            label29.Size = new Size(56, 15);
+            label29.TabIndex = 3;
+            label29.Text = "Medicine";
+            // 
+            // materialComboBox1
+            // 
+            materialComboBox1.AutoResize = false;
+            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
+            materialComboBox1.Depth = 0;
+            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
+            materialComboBox1.DropDownHeight = 174;
+            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            materialComboBox1.DropDownWidth = 121;
+            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialComboBox1.FormattingEnabled = true;
+            materialComboBox1.IntegralHeight = false;
+            materialComboBox1.ItemHeight = 43;
+            materialComboBox1.Location = new Point(21, 92);
+            materialComboBox1.MaxDropDownItems = 4;
+            materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
+            materialComboBox1.Name = "materialComboBox1";
+            materialComboBox1.Size = new Size(227, 49);
+            materialComboBox1.StartIndex = 0;
+            materialComboBox1.TabIndex = 2;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(9, 37);
+            label28.Name = "label28";
+            label28.Size = new Size(126, 15);
+            label28.TabIndex = 1;
+            label28.Text = "Please Select Medicine";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label27.Location = new Point(3, 4);
+            label27.Name = "label27";
+            label27.Size = new Size(208, 32);
+            label27.TabIndex = 0;
+            label27.Text = "Medicine Selector";
             // 
             // materialCard4
             // 
@@ -580,30 +746,6 @@ namespace School_Clinic
             textBox6.Size = new Size(292, 23);
             textBox6.TabIndex = 15;
             textBox6.TextChanged += textBox6_TextChanged;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(materialCard1);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(8, -410);
-            panel2.Margin = new Padding(5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1283, 989);
-            panel2.TabIndex = 0;
-            // 
-            // materialCard1
-            // 
-            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Depth = 0;
-            materialCard1.Dock = DockStyle.Top;
-            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(0, 0);
-            materialCard1.Margin = new Padding(25);
-            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard1.Name = "materialCard1";
-            materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(1283, 117);
-            materialCard1.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -1053,6 +1195,108 @@ namespace School_Clinic
             dataGridView1.TabIndex = 0;
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
+            // colName
+            // 
+            colName.DataPropertyName = "thisName";
+            colName.HeaderText = "Name";
+            colName.MinimumWidth = 6;
+            colName.Name = "colName";
+            colName.Width = 125;
+            // 
+            // Age
+            // 
+            Age.DataPropertyName = "thisAge";
+            Age.HeaderText = "Age";
+            Age.MinimumWidth = 6;
+            Age.Name = "Age";
+            Age.Width = 125;
+            // 
+            // Course
+            // 
+            Course.DataPropertyName = "thisCourse";
+            Course.HeaderText = "Cours";
+            Course.MinimumWidth = 6;
+            Course.Name = "Course";
+            Course.Width = 125;
+            // 
+            // DateofBirth
+            // 
+            DateofBirth.DataPropertyName = "thisBirth";
+            DateofBirth.HeaderText = "Date of Birth";
+            DateofBirth.MinimumWidth = 6;
+            DateofBirth.Name = "DateofBirth";
+            DateofBirth.Width = 125;
+            // 
+            // Parent
+            // 
+            Parent.DataPropertyName = "thisParent";
+            Parent.HeaderText = "Parent/Guardian Name";
+            Parent.MinimumWidth = 6;
+            Parent.Name = "Parent";
+            Parent.Width = 125;
+            // 
+            // Contact
+            // 
+            Contact.DataPropertyName = "thisContact";
+            Contact.HeaderText = "Emergency Contact";
+            Contact.MinimumWidth = 6;
+            Contact.Name = "Contact";
+            Contact.Width = 125;
+            // 
+            // Allergies
+            // 
+            Allergies.DataPropertyName = "thisAllergies";
+            Allergies.HeaderText = "Know Allergies";
+            Allergies.MinimumWidth = 6;
+            Allergies.Name = "Allergies";
+            Allergies.Width = 125;
+            // 
+            // Date
+            // 
+            Date.DataPropertyName = "thisDate";
+            Date.HeaderText = "Date of Visit";
+            Date.MinimumWidth = 6;
+            Date.Name = "Date";
+            Date.Width = 125;
+            // 
+            // Time
+            // 
+            Time.DataPropertyName = "thisTime";
+            Time.HeaderText = "Time of Visit";
+            Time.MinimumWidth = 6;
+            Time.Name = "Time";
+            Time.Width = 125;
+            // 
+            // Complaint
+            // 
+            Complaint.DataPropertyName = "thisComplaint";
+            Complaint.HeaderText = "Chief Complaint";
+            Complaint.MinimumWidth = 6;
+            Complaint.Name = "Complaint";
+            Complaint.Width = 125;
+            // 
+            // Assesment
+            // 
+            Assesment.DataPropertyName = "thisAssesment";
+            Assesment.HeaderText = "Initial Assesment";
+            Assesment.MinimumWidth = 6;
+            Assesment.Name = "Assesment";
+            Assesment.Width = 125;
+            // 
+            // Action
+            // 
+            Action.DataPropertyName = "thisAction";
+            Action.HeaderText = "Action Taken";
+            Action.MinimumWidth = 6;
+            Action.Name = "Action";
+            Action.Width = 125;
+            // 
+            // Medication
+            // 
+            Medication.DataPropertyName = "thisMedication";
+            Medication.HeaderText = "Medication";
+            Medication.Name = "Medication";
+            // 
             // tabPage3
             // 
             tabPage3.Controls.Add(removeMedicBtn);
@@ -1392,108 +1636,6 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // colName
-            // 
-            colName.DataPropertyName = "thisName";
-            colName.HeaderText = "Name";
-            colName.MinimumWidth = 6;
-            colName.Name = "colName";
-            colName.Width = 125;
-            // 
-            // Age
-            // 
-            Age.DataPropertyName = "thisAge";
-            Age.HeaderText = "Age";
-            Age.MinimumWidth = 6;
-            Age.Name = "Age";
-            Age.Width = 125;
-            // 
-            // Course
-            // 
-            Course.DataPropertyName = "thisCourse";
-            Course.HeaderText = "Cours";
-            Course.MinimumWidth = 6;
-            Course.Name = "Course";
-            Course.Width = 125;
-            // 
-            // DateofBirth
-            // 
-            DateofBirth.DataPropertyName = "thisBirth";
-            DateofBirth.HeaderText = "Date of Birth";
-            DateofBirth.MinimumWidth = 6;
-            DateofBirth.Name = "DateofBirth";
-            DateofBirth.Width = 125;
-            // 
-            // Parent
-            // 
-            Parent.DataPropertyName = "thisParent";
-            Parent.HeaderText = "Parent/Guardian Name";
-            Parent.MinimumWidth = 6;
-            Parent.Name = "Parent";
-            Parent.Width = 125;
-            // 
-            // Contact
-            // 
-            Contact.DataPropertyName = "thisContact";
-            Contact.HeaderText = "Emergency Contact";
-            Contact.MinimumWidth = 6;
-            Contact.Name = "Contact";
-            Contact.Width = 125;
-            // 
-            // Allergies
-            // 
-            Allergies.DataPropertyName = "thisAllergies";
-            Allergies.HeaderText = "Know Allergies";
-            Allergies.MinimumWidth = 6;
-            Allergies.Name = "Allergies";
-            Allergies.Width = 125;
-            // 
-            // Date
-            // 
-            Date.DataPropertyName = "thisDate";
-            Date.HeaderText = "Date of Visit";
-            Date.MinimumWidth = 6;
-            Date.Name = "Date";
-            Date.Width = 125;
-            // 
-            // Time
-            // 
-            Time.DataPropertyName = "thisTime";
-            Time.HeaderText = "Time of Visit";
-            Time.MinimumWidth = 6;
-            Time.Name = "Time";
-            Time.Width = 125;
-            // 
-            // Complaint
-            // 
-            Complaint.DataPropertyName = "thisComplaint";
-            Complaint.HeaderText = "Chief Complaint";
-            Complaint.MinimumWidth = 6;
-            Complaint.Name = "Complaint";
-            Complaint.Width = 125;
-            // 
-            // Assesment
-            // 
-            Assesment.DataPropertyName = "thisAssesment";
-            Assesment.HeaderText = "Initial Assesment";
-            Assesment.MinimumWidth = 6;
-            Assesment.Name = "Assesment";
-            Assesment.Width = 125;
-            // 
-            // Action
-            // 
-            Action.DataPropertyName = "thisAction";
-            Action.HeaderText = "Action Taken";
-            Action.MinimumWidth = 6;
-            Action.Name = "Action";
-            Action.Width = 125;
-            // 
-            // Medication
-            // 
-            Medication.DataPropertyName = "thisMedication";
-            Medication.HeaderText = "Medication";
-            Medication.Name = "Medication";
-            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1508,13 +1650,14 @@ namespace School_Clinic
             Load += mianDashBoard_Load;
             materialTabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             materialCard4.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            panel2.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             panel1.ResumeLayout(false);
@@ -1613,8 +1756,6 @@ namespace School_Clinic
         private Label label2;
         private Label label1;
         private TextBox textBox1;
-        private Panel panel2;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialCard materialCard4;
@@ -1656,5 +1797,14 @@ namespace School_Clinic
         private DataGridViewTextBoxColumn Assesment;
         private DataGridViewTextBoxColumn Action;
         private DataGridViewTextBoxColumn Medication;
+        private Panel panel2;
+        private Label label30;
+        private MaterialMaskedTextBox materialMaskedTextBox1;
+        private Label label29;
+        private MaterialComboBox materialComboBox1;
+        private Label label28;
+        private Label label27;
+        private MaterialButton materialButton4;
+        private MaterialButton materialButton3;
     }
 }
