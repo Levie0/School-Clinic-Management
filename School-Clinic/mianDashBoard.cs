@@ -22,7 +22,7 @@ namespace School_Clinic
         private MedicineItem _selectedMedicine = null;
         private Panel _selectedPanel = null;
 
-        private const int LOW_STOCK_THRESHOLD = 10;
+        private const int LOW_STOCK_THRESHOLD = 3;
 
         public mianDashBoard(Form1 callingForm)
         {
@@ -99,6 +99,20 @@ namespace School_Clinic
 
         private void savebtn_Click(object sender, EventArgs e)
         {
+            List<string> medList = new List<string>();
+
+            foreach (ListViewItem item in listView1.Items)
+            {
+                // item.Text is the Name, item.SubItems[1].Text is the Quantity
+                string medInfo = $"{item.Text} ({item.SubItems[1].Text})";
+                medList.Add(medInfo);
+            }
+
+            // Join them with a comma and space
+            string medicationString = string.Join(", ", medList);
+
+
+            // 2. CREATE THE RECORD object
             var records = new Records
             {
                 thisName = textBox1.Text,
@@ -112,14 +126,19 @@ namespace School_Clinic
                 thisTime = textBox5.Text,
                 thisComplaint = textBox8.Text,
                 thisAssesment = textBox14.Text,
-                thisAction = textBox15.Text
+                thisAction = textBox15.Text,
+
+                // NEW: Save the combined string we created above
+                thisMedication = medicationString
             };
 
+            // 3. ADD TO LIST AND SAVE
             _records.Add(records);
             SaveData();
 
             MessageBox.Show("Information has been saved successfully!");
 
+            // 4. CLEAR ALL CONTROLS (Reset the form)
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.SelectedIndex = -1;
@@ -130,6 +149,10 @@ namespace School_Clinic
             textBox8.Clear();
             textBox14.Clear();
             textBox15.Clear();
+
+            // NEW: Clear the ListView so it is empty for the next student
+            listView1.Items.Clear();
+            listView1.Items.Clear();
         }
 
         //Tig load sa na save nga Data(Ayaw Hilabti)
@@ -157,6 +180,17 @@ namespace School_Clinic
             foreach (var item in _inventory)
             {
                 AddItemToVisualList(item);
+            }
+
+            listView1.View = View.Details;
+            listView1.GridLines = true;
+            listView1.FullRowSelect = true;
+
+            // Add columns if they are missing (prevents duplication if you reload)
+            if (listView1.Columns.Count == 0)
+            {
+                listView1.Columns.Add("Medicine Name", 200);
+                listView1.Columns.Add("Qty", 50);
             }
 
             // 3. Update the stock numbers immediately
@@ -376,22 +410,22 @@ namespace School_Clinic
             MedicineItem newItem = new MedicineItem
             {
                 Name = textBox10.Text,
-                Quantity = int.Parse(textBox16.Text) 
+                Quantity = int.Parse(textBox16.Text)
             };
 
-            
+
             _inventory.Add(newItem);
 
-            
+
             SaveInventory();
 
-            
+
             AddItemToVisualList(newItem);
 
-           
+
             UpdateDashboardStats();
 
-           
+
             textBox10.Clear();
             textBox16.Clear();
             panel5.Visible = false;
@@ -399,49 +433,49 @@ namespace School_Clinic
 
         private void AddItemToVisualList(MedicineItem item)
         {
-           
+
             Panel rowPanel = new Panel();
-            rowPanel.Size = new Size(410, 50);
+            rowPanel.Size = new Size(405, 50);
             rowPanel.BackColor = Color.White;
             rowPanel.Margin = new Padding(5);
             rowPanel.BorderStyle = BorderStyle.FixedSingle;
 
-           
+
             Label nameLbl = new Label();
             nameLbl.Text = item.Name;
             nameLbl.Location = new Point(10, 15);
             nameLbl.AutoSize = true;
             nameLbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
 
-           
+
             Label qtyLbl = new Label();
             qtyLbl.Text = item.Quantity.ToString();
             qtyLbl.Location = new Point(340, 15);
             qtyLbl.AutoSize = true;
             qtyLbl.Font = new Font("Segoe UI", 12, FontStyle.Bold);
 
-            
+
             EventHandler selectAction = (s, e) =>
             {
-                
+
                 if (_selectedPanel != null)
                 {
                     _selectedPanel.BackColor = Color.White;
                 }
 
-                
+
                 _selectedMedicine = item;
                 _selectedPanel = rowPanel;
                 _selectedPanel.BackColor = Color.LightGreen;
             };
 
-            
+
             rowPanel.Click += selectAction;
             nameLbl.Click += selectAction;
             qtyLbl.Click += selectAction;
-            
 
-           
+
+
             Button btnMinus = new Button();
             btnMinus.Text = "-";
             btnMinus.Size = new Size(30, 30);
@@ -457,7 +491,7 @@ namespace School_Clinic
                 }
             };
 
-            
+
             Button btnPlus = new Button();
             btnPlus.Text = "+";
             btnPlus.Size = new Size(30, 30);
@@ -470,27 +504,27 @@ namespace School_Clinic
                 SaveInventory();
             };
 
-            
+
             rowPanel.Controls.Add(nameLbl);
             rowPanel.Controls.Add(btnMinus);
             rowPanel.Controls.Add(qtyLbl);
             rowPanel.Controls.Add(btnPlus);
 
-           
+
             pnlInventoryList.Controls.Add(rowPanel);
         }
 
         private void UpdateDashboardStats()
         {
-            
+
             int totalStock = _inventory.Sum(x => x.Quantity);
             allstockNumber.Text = totalStock.ToString();
 
-           
+
             int lowStockCount = _inventory.Count(x => x.Quantity > 0 && x.Quantity <= LOW_STOCK_THRESHOLD);
             LowstockNumber.Text = lowStockCount.ToString();
 
-            
+
             int outStockCount = _inventory.Count(x => x.Quantity == 0);
             outofstockNumber.Text = outStockCount.ToString();
         }
@@ -509,7 +543,7 @@ namespace School_Clinic
                 return;
             }
 
-            
+
             var result = MessageBox.Show($"Are you sure you want to remove '{_selectedMedicine.Name}'?",
                                          "Confirm Delete",
                                          MessageBoxButtons.YesNo,
@@ -517,27 +551,120 @@ namespace School_Clinic
 
             if (result == DialogResult.Yes)
             {
-               
+
                 _inventory.Remove(_selectedMedicine);
 
-                
+
                 if (_selectedPanel != null)
                 {
                     pnlInventoryList.Controls.Remove(_selectedPanel);
-                    _selectedPanel.Dispose(); 
+                    _selectedPanel.Dispose();
                 }
 
-               
+
                 SaveInventory();
                 UpdateDashboardStats();
 
-               
+
                 _selectedMedicine = null;
                 _selectedPanel = null;
             }
 
             //pp 
             //this comment is para kay kyle para ma update sa github 
+        }
+
+        private void materialButton5_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+            panel2.BringToFront();
+
+            // Clear previous selection
+            materialComboBox1.Items.Clear();
+            materialMaskedTextBox1.Clear();
+
+            // Load ONLY available medicines
+            foreach (var item in _inventory)
+            {
+                if (item.Quantity > 0)
+                {
+                    materialComboBox1.Items.Add(item.Name);
+                }
+            }
+
+            if (materialComboBox1.Items.Count == 0)
+            {
+                MessageBox.Show("No medicines available in stock!", "Out of Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void cancelSelectMedic_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void RefreshInventoryUI()
+        {
+            // 1. Clear the current visual list
+            pnlInventoryList.Controls.Clear();
+
+            // 2. Re-add items from the updated list
+            foreach (var item in _inventory)
+            {
+                AddItemToVisualList(item);
+            }
+
+            // 3. Update the stats numbers (Low stock, etc.)
+            UpdateDashboardStats();
+        }
+
+        private void addSelectedMedic_Click(object sender, EventArgs e)
+        {
+            if (materialComboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a medicine.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 2. VALIDATION: Check if quantity is valid
+            int qtyNeeded;
+            if (!int.TryParse(materialMaskedTextBox1.Text, out qtyNeeded) || qtyNeeded <= 0)
+            {
+                MessageBox.Show("Please enter a valid quantity (greater than 0).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 3. FIND THE MEDICINE
+            string selectedName = materialComboBox1.SelectedItem.ToString();
+            var item = _inventory.FirstOrDefault(x => x.Name == selectedName);
+
+            if (item != null)
+            {
+                // 4. CHECK STOCK
+                if (item.Quantity < qtyNeeded)
+                {
+                    MessageBox.Show($"Not enough stock! Only {item.Quantity} left.", "Stock Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 5. DEDUCT STOCK
+                item.Quantity -= qtyNeeded;
+
+                // 6. ADD TO LISTVIEW (The visual list below the button)
+                ListViewItem lvi = new ListViewItem(item.Name);
+                lvi.SubItems.Add(qtyNeeded.ToString());
+                listView1.Items.Add(lvi);
+
+                // 7. SAVE AND REFRESH UI
+                SaveInventory();       // Save changes to JSON file
+                RefreshInventoryUI();  // Update the Inventory Tab immediately
+                UpdateDashboardStats();// Update the Home Tab counters
+
+                // 8. CLOSE POPUP
+                panel2.Visible = false;
+
+                MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

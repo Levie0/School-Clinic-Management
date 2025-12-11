@@ -35,8 +35,9 @@ namespace School_Clinic
             materialTabControl1 = new MaterialTabControl();
             tabPage1 = new TabPage();
             panel2 = new Panel();
-            materialButton4 = new MaterialButton();
-            materialButton3 = new MaterialButton();
+            materialLabel7 = new MaterialLabel();
+            cancelSelectMedic = new MaterialButton();
+            addSelectedMedic = new MaterialButton();
             label30 = new Label();
             materialMaskedTextBox1 = new MaterialMaskedTextBox();
             label29 = new Label();
@@ -58,6 +59,7 @@ namespace School_Clinic
             label11 = new Label();
             textBox15 = new TextBox();
             materialButton5 = new MaterialButton();
+            listView1 = new ListView();
             tableLayoutPanel1 = new TableLayoutPanel();
             materialLabel2 = new MaterialLabel();
             label1 = new Label();
@@ -149,7 +151,6 @@ namespace School_Clinic
             materialLabel5 = new MaterialLabel();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
-            materialLabel7 = new MaterialLabel();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel2.SuspendLayout();
@@ -208,8 +209,8 @@ namespace School_Clinic
             panel2.Anchor = AnchorStyles.None;
             panel2.BackColor = Color.WhiteSmoke;
             panel2.Controls.Add(materialLabel7);
-            panel2.Controls.Add(materialButton4);
-            panel2.Controls.Add(materialButton3);
+            panel2.Controls.Add(cancelSelectMedic);
+            panel2.Controls.Add(addSelectedMedic);
             panel2.Controls.Add(label30);
             panel2.Controls.Add(materialMaskedTextBox1);
             panel2.Controls.Add(label29);
@@ -219,46 +220,62 @@ namespace School_Clinic
             panel2.Name = "panel2";
             panel2.Size = new Size(267, 349);
             panel2.TabIndex = 49;
+            panel2.Visible = false;
             // 
-            // materialButton4
+            // materialLabel7
             // 
-            materialButton4.AutoSize = false;
-            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton4.Density = MaterialButton.MaterialButtonDensity.Default;
-            materialButton4.Depth = 0;
-            materialButton4.HighEmphasis = true;
-            materialButton4.Icon = null;
-            materialButton4.Location = new Point(21, 281);
-            materialButton4.Margin = new Padding(4, 6, 4, 6);
-            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton4.Name = "materialButton4";
-            materialButton4.NoAccentTextColor = Color.Empty;
-            materialButton4.Size = new Size(107, 36);
-            materialButton4.TabIndex = 51;
-            materialButton4.Text = "Cancel";
-            materialButton4.Type = MaterialButton.MaterialButtonType.Contained;
-            materialButton4.UseAccentColor = false;
-            materialButton4.UseVisualStyleBackColor = true;
+            materialLabel7.AutoSize = true;
+            materialLabel7.Depth = 0;
+            materialLabel7.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
+            materialLabel7.Location = new Point(12, 11);
+            materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel7.Name = "materialLabel7";
+            materialLabel7.Size = new Size(195, 29);
+            materialLabel7.TabIndex = 52;
+            materialLabel7.Text = "Medicine Selector";
             // 
-            // materialButton3
+            // cancelSelectMedic
             // 
-            materialButton3.AutoSize = false;
-            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton3.Density = MaterialButton.MaterialButtonDensity.Default;
-            materialButton3.Depth = 0;
-            materialButton3.HighEmphasis = true;
-            materialButton3.Icon = null;
-            materialButton3.Location = new Point(141, 281);
-            materialButton3.Margin = new Padding(4, 6, 4, 6);
-            materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton3.Name = "materialButton3";
-            materialButton3.NoAccentTextColor = Color.Empty;
-            materialButton3.Size = new Size(107, 36);
-            materialButton3.TabIndex = 50;
-            materialButton3.Text = "Add";
-            materialButton3.Type = MaterialButton.MaterialButtonType.Contained;
-            materialButton3.UseAccentColor = false;
-            materialButton3.UseVisualStyleBackColor = true;
+            cancelSelectMedic.AutoSize = false;
+            cancelSelectMedic.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cancelSelectMedic.Density = MaterialButton.MaterialButtonDensity.Default;
+            cancelSelectMedic.Depth = 0;
+            cancelSelectMedic.HighEmphasis = true;
+            cancelSelectMedic.Icon = null;
+            cancelSelectMedic.Location = new Point(21, 281);
+            cancelSelectMedic.Margin = new Padding(4, 6, 4, 6);
+            cancelSelectMedic.MouseState = MaterialSkin.MouseState.HOVER;
+            cancelSelectMedic.Name = "cancelSelectMedic";
+            cancelSelectMedic.NoAccentTextColor = Color.Empty;
+            cancelSelectMedic.Size = new Size(107, 36);
+            cancelSelectMedic.TabIndex = 51;
+            cancelSelectMedic.Text = "Cancel";
+            cancelSelectMedic.Type = MaterialButton.MaterialButtonType.Contained;
+            cancelSelectMedic.UseAccentColor = false;
+            cancelSelectMedic.UseVisualStyleBackColor = true;
+            cancelSelectMedic.Click += cancelSelectMedic_Click;
+            // 
+            // addSelectedMedic
+            // 
+            addSelectedMedic.AutoSize = false;
+            addSelectedMedic.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            addSelectedMedic.Density = MaterialButton.MaterialButtonDensity.Default;
+            addSelectedMedic.Depth = 0;
+            addSelectedMedic.HighEmphasis = true;
+            addSelectedMedic.Icon = null;
+            addSelectedMedic.Location = new Point(141, 281);
+            addSelectedMedic.Margin = new Padding(4, 6, 4, 6);
+            addSelectedMedic.MouseState = MaterialSkin.MouseState.HOVER;
+            addSelectedMedic.Name = "addSelectedMedic";
+            addSelectedMedic.NoAccentTextColor = Color.Empty;
+            addSelectedMedic.Size = new Size(107, 36);
+            addSelectedMedic.TabIndex = 50;
+            addSelectedMedic.Text = "Add";
+            addSelectedMedic.Type = MaterialButton.MaterialButtonType.Contained;
+            addSelectedMedic.UseAccentColor = false;
+            addSelectedMedic.UseVisualStyleBackColor = true;
+            addSelectedMedic.Click += addSelectedMedic_Click;
             // 
             // label30
             // 
@@ -402,6 +419,7 @@ namespace School_Clinic
             tableLayoutPanel2.Controls.Add(label11, 1, 1);
             tableLayoutPanel2.Controls.Add(textBox15, 1, 4);
             tableLayoutPanel2.Controls.Add(materialButton5, 1, 5);
+            tableLayoutPanel2.Controls.Add(listView1, 1, 6);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(636, 3);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -569,6 +587,15 @@ namespace School_Clinic
             materialButton5.Type = MaterialButton.MaterialButtonType.Contained;
             materialButton5.UseAccentColor = false;
             materialButton5.UseVisualStyleBackColor = true;
+            materialButton5.Click += materialButton5_Click;
+            // 
+            // listView1
+            // 
+            listView1.Location = new Point(316, 285);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(307, 41);
+            listView1.TabIndex = 48;
+            listView1.UseCompatibleStateImageBehavior = false;
             // 
             // tableLayoutPanel1
             // 
@@ -1648,19 +1675,6 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // materialLabel7
-            // 
-            materialLabel7.AutoSize = true;
-            materialLabel7.Depth = 0;
-            materialLabel7.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            materialLabel7.Location = new Point(12, 11);
-            materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel7.Name = "materialLabel7";
-            materialLabel7.Size = new Size(195, 29);
-            materialLabel7.TabIndex = 52;
-            materialLabel7.Text = "Medicine Selector";
-            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1828,9 +1842,10 @@ namespace School_Clinic
         private Label label29;
         private MaterialComboBox materialComboBox1;
         private Label label28;
-        private MaterialButton materialButton4;
-        private MaterialButton materialButton3;
+        private MaterialButton cancelSelectMedic;
+        private MaterialButton addSelectedMedic;
         private MaterialButton materialButton5;
         private MaterialLabel materialLabel7;
+        private ListView listView1;
     }
 }
