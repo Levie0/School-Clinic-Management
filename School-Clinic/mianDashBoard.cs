@@ -338,5 +338,10 @@ namespace School_Clinic
 
             dataGridView1.DataSource = filteredList;
         }
+
+        private void addmedic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
