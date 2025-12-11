@@ -341,7 +341,13 @@ namespace School_Clinic
 
         private void addmedic_Click(object sender, EventArgs e)
         {
-
+            panel5.Visible = true;
+            panel5.BringToFront();
+            panel5.BackColor = Color.DarkGreen;
+            label18.BackColor = Color.DarkGreen;
+            label26.BackColor = Color.DarkGreen;
+            label18.ForeColor = Color.White;
+            label26.ForeColor = Color.White;
         }
     }
 }
