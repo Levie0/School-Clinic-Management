@@ -376,22 +376,22 @@ namespace School_Clinic
             MedicineItem newItem = new MedicineItem
             {
                 Name = textBox10.Text,
-                Quantity = int.Parse(textBox16.Text) 
+                Quantity = int.Parse(textBox16.Text)
             };
 
-            
+
             _inventory.Add(newItem);
 
-            
+
             SaveInventory();
 
-            
+
             AddItemToVisualList(newItem);
 
-           
+
             UpdateDashboardStats();
 
-           
+
             textBox10.Clear();
             textBox16.Clear();
             panel5.Visible = false;
@@ -399,49 +399,49 @@ namespace School_Clinic
 
         private void AddItemToVisualList(MedicineItem item)
         {
-           
+
             Panel rowPanel = new Panel();
             rowPanel.Size = new Size(410, 50);
             rowPanel.BackColor = Color.White;
             rowPanel.Margin = new Padding(5);
             rowPanel.BorderStyle = BorderStyle.FixedSingle;
 
-           
+
             Label nameLbl = new Label();
             nameLbl.Text = item.Name;
             nameLbl.Location = new Point(10, 15);
             nameLbl.AutoSize = true;
             nameLbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
 
-           
+
             Label qtyLbl = new Label();
             qtyLbl.Text = item.Quantity.ToString();
             qtyLbl.Location = new Point(340, 15);
             qtyLbl.AutoSize = true;
             qtyLbl.Font = new Font("Segoe UI", 12, FontStyle.Bold);
 
-            
+
             EventHandler selectAction = (s, e) =>
             {
-                
+
                 if (_selectedPanel != null)
                 {
                     _selectedPanel.BackColor = Color.White;
                 }
 
-                
+
                 _selectedMedicine = item;
                 _selectedPanel = rowPanel;
                 _selectedPanel.BackColor = Color.LightGreen;
             };
 
-            
+
             rowPanel.Click += selectAction;
             nameLbl.Click += selectAction;
             qtyLbl.Click += selectAction;
-            
 
-           
+
+
             Button btnMinus = new Button();
             btnMinus.Text = "-";
             btnMinus.Size = new Size(30, 30);
@@ -457,7 +457,7 @@ namespace School_Clinic
                 }
             };
 
-            
+
             Button btnPlus = new Button();
             btnPlus.Text = "+";
             btnPlus.Size = new Size(30, 30);
@@ -470,27 +470,27 @@ namespace School_Clinic
                 SaveInventory();
             };
 
-            
+
             rowPanel.Controls.Add(nameLbl);
             rowPanel.Controls.Add(btnMinus);
             rowPanel.Controls.Add(qtyLbl);
             rowPanel.Controls.Add(btnPlus);
 
-           
+
             pnlInventoryList.Controls.Add(rowPanel);
         }
 
         private void UpdateDashboardStats()
         {
-            
+
             int totalStock = _inventory.Sum(x => x.Quantity);
             allstockNumber.Text = totalStock.ToString();
 
-           
+
             int lowStockCount = _inventory.Count(x => x.Quantity > 0 && x.Quantity <= LOW_STOCK_THRESHOLD);
             LowstockNumber.Text = lowStockCount.ToString();
 
-            
+
             int outStockCount = _inventory.Count(x => x.Quantity == 0);
             outofstockNumber.Text = outStockCount.ToString();
         }
@@ -509,7 +509,7 @@ namespace School_Clinic
                 return;
             }
 
-            
+
             var result = MessageBox.Show($"Are you sure you want to remove '{_selectedMedicine.Name}'?",
                                          "Confirm Delete",
                                          MessageBoxButtons.YesNo,
@@ -517,27 +517,62 @@ namespace School_Clinic
 
             if (result == DialogResult.Yes)
             {
-               
+
                 _inventory.Remove(_selectedMedicine);
 
-                
+
                 if (_selectedPanel != null)
                 {
                     pnlInventoryList.Controls.Remove(_selectedPanel);
-                    _selectedPanel.Dispose(); 
+                    _selectedPanel.Dispose();
                 }
 
-               
+
                 SaveInventory();
                 UpdateDashboardStats();
 
-               
+
                 _selectedMedicine = null;
                 _selectedPanel = null;
             }
 
             //pp 
             //this comment is para kay kyle para ma update sa github 
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialMaskedTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialCard8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void allstockNumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
