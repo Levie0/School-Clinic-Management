@@ -665,6 +665,7 @@ namespace School_Clinic
 
                 MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+              //kklkl
         }
     }
 }
