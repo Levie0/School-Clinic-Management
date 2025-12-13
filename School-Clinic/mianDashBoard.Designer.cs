@@ -158,6 +158,7 @@ namespace School_Clinic
             materialLabel5 = new MaterialLabel();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
+            closepopupPanel = new MaterialButton();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel2.SuspendLayout();
@@ -1447,14 +1448,15 @@ namespace School_Clinic
             // panel5
             // 
             panel5.BackColor = Color.DarkGreen;
+            panel5.Controls.Add(closepopupPanel);
             panel5.Controls.Add(materialButton2);
             panel5.Controls.Add(label26);
             panel5.Controls.Add(textBox16);
             panel5.Controls.Add(label18);
             panel5.Controls.Add(textBox10);
-            panel5.Location = new Point(531, 194);
+            panel5.Location = new Point(518, 194);
             panel5.Name = "panel5";
-            panel5.Size = new Size(184, 211);
+            panel5.Size = new Size(197, 211);
             panel5.TabIndex = 5;
             panel5.Visible = false;
             // 
@@ -1466,7 +1468,7 @@ namespace School_Clinic
             materialButton2.Depth = 0;
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = null;
-            materialButton2.Location = new Point(56, 156);
+            materialButton2.Location = new Point(114, 156);
             materialButton2.Margin = new Padding(4, 6, 4, 6);
             materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton2.Name = "materialButton2";
@@ -1491,7 +1493,7 @@ namespace School_Clinic
             // 
             // textBox16
             // 
-            textBox16.Location = new Point(28, 108);
+            textBox16.Location = new Point(38, 108);
             textBox16.Name = "textBox16";
             textBox16.Size = new Size(129, 39);
             textBox16.TabIndex = 2;
@@ -1508,7 +1510,7 @@ namespace School_Clinic
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(28, 36);
+            textBox10.Location = new Point(38, 40);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(129, 39);
             textBox10.TabIndex = 0;
@@ -1787,6 +1789,27 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // closepopupPanel
+            // 
+            closepopupPanel.AutoSize = false;
+            closepopupPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            closepopupPanel.Density = MaterialButton.MaterialButtonDensity.Default;
+            closepopupPanel.Depth = 0;
+            closepopupPanel.HighEmphasis = true;
+            closepopupPanel.Icon = null;
+            closepopupPanel.Location = new Point(16, 156);
+            closepopupPanel.Margin = new Padding(4, 6, 4, 6);
+            closepopupPanel.MouseState = MaterialSkin.MouseState.HOVER;
+            closepopupPanel.Name = "closepopupPanel";
+            closepopupPanel.NoAccentTextColor = Color.Empty;
+            closepopupPanel.Size = new Size(75, 36);
+            closepopupPanel.TabIndex = 5;
+            closepopupPanel.Text = "Close";
+            closepopupPanel.Type = MaterialButton.MaterialButtonType.Contained;
+            closepopupPanel.UseAccentColor = false;
+            closepopupPanel.UseVisualStyleBackColor = true;
+            closepopupPanel.Click += closepopupPanel_Click;
+            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1970,5 +1993,6 @@ namespace School_Clinic
         private MaterialCard materialCard10;
         private Label label27;
         private ListView listView1;
+        private MaterialButton closepopupPanel;
     }
 }

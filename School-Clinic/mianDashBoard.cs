@@ -99,6 +99,20 @@ namespace School_Clinic
 
         private void savebtn_Click(object sender, EventArgs e)
         {
+            List<string> medList = new List<string>();
+
+            foreach (ListViewItem item in listView1.Items)
+            {
+                // item.Text is the Name, item.SubItems[1].Text is the Quantity
+                string medInfo = $"{item.Text} ({item.SubItems[1].Text})";
+                medList.Add(medInfo);
+            }
+
+            // Join them with a comma and space
+            string medicationString = string.Join(", ", medList);
+
+
+            // 2. CREATE THE RECORD object
             var records = new Records
             {
                 thisName = textBox1.Text,
@@ -112,14 +126,19 @@ namespace School_Clinic
                 thisTime = textBox5.Text,
                 thisComplaint = textBox8.Text,
                 thisAssesment = textBox14.Text,
-                thisAction = textBox15.Text
+                thisAction = textBox15.Text,
+
+                // NEW: Save the combined string we created above
+                thisMedication = medicationString
             };
 
+            // 3. ADD TO LIST AND SAVE
             _records.Add(records);
             SaveData();
 
             MessageBox.Show("Information has been saved successfully!");
 
+            // 4. CLEAR ALL CONTROLS (Reset the form)
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.SelectedIndex = -1;
@@ -130,6 +149,10 @@ namespace School_Clinic
             textBox8.Clear();
             textBox14.Clear();
             textBox15.Clear();
+
+            // NEW: Clear the ListView so it is empty for the next student
+            listView1.Items.Clear();
+            listView1.Items.Clear();
         }
 
         //Tig load sa na save nga Data(Ayaw Hilabti)
@@ -706,6 +729,11 @@ namespace School_Clinic
         private void closePanelBtn_Click(object sender, EventArgs e)
         {
             panel2.Visible = false;
+        }
+
+        private void closepopupPanel_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = false;
         }
     }
 }
