@@ -36,7 +36,7 @@ namespace School_Clinic
             tabPage1 = new TabPage();
             panel2 = new Panel();
             materialLabel7 = new MaterialLabel();
-            materialButton4 = new MaterialButton();
+            closePanelBtn = new MaterialButton();
             addMedicineBtn = new MaterialButton();
             label30 = new Label();
             materialMaskedTextBox1 = new MaterialMaskedTextBox();
@@ -221,7 +221,7 @@ namespace School_Clinic
             panel2.Anchor = AnchorStyles.None;
             panel2.BackColor = Color.WhiteSmoke;
             panel2.Controls.Add(materialLabel7);
-            panel2.Controls.Add(materialButton4);
+            panel2.Controls.Add(closePanelBtn);
             panel2.Controls.Add(addMedicineBtn);
             panel2.Controls.Add(label30);
             panel2.Controls.Add(materialMaskedTextBox1);
@@ -247,25 +247,26 @@ namespace School_Clinic
             materialLabel7.TabIndex = 52;
             materialLabel7.Text = "Medicine Selector";
             // 
-            // materialButton4
+            // closePanelBtn
             // 
-            materialButton4.AutoSize = false;
-            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton4.Density = MaterialButton.MaterialButtonDensity.Default;
-            materialButton4.Depth = 0;
-            materialButton4.HighEmphasis = true;
-            materialButton4.Icon = null;
-            materialButton4.Location = new Point(21, 281);
-            materialButton4.Margin = new Padding(4, 6, 4, 6);
-            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton4.Name = "materialButton4";
-            materialButton4.NoAccentTextColor = Color.Empty;
-            materialButton4.Size = new Size(107, 36);
-            materialButton4.TabIndex = 51;
-            materialButton4.Text = "Cancel";
-            materialButton4.Type = MaterialButton.MaterialButtonType.Contained;
-            materialButton4.UseAccentColor = false;
-            materialButton4.UseVisualStyleBackColor = true;
+            closePanelBtn.AutoSize = false;
+            closePanelBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            closePanelBtn.Density = MaterialButton.MaterialButtonDensity.Default;
+            closePanelBtn.Depth = 0;
+            closePanelBtn.HighEmphasis = true;
+            closePanelBtn.Icon = null;
+            closePanelBtn.Location = new Point(21, 281);
+            closePanelBtn.Margin = new Padding(4, 6, 4, 6);
+            closePanelBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            closePanelBtn.Name = "closePanelBtn";
+            closePanelBtn.NoAccentTextColor = Color.Empty;
+            closePanelBtn.Size = new Size(107, 36);
+            closePanelBtn.TabIndex = 51;
+            closePanelBtn.Text = "Cancel";
+            closePanelBtn.Type = MaterialButton.MaterialButtonType.Contained;
+            closePanelBtn.UseAccentColor = false;
+            closePanelBtn.UseVisualStyleBackColor = true;
+            closePanelBtn.Click += closePanelBtn_Click;
             // 
             // addMedicineBtn
             // 
@@ -1957,7 +1958,7 @@ namespace School_Clinic
         private Label label29;
         private MaterialComboBox materialComboBox1;
         private Label label28;
-        private MaterialButton materialButton4;
+        private MaterialButton closePanelBtn;
         private MaterialButton addMedicineBtn;
         private MaterialButton popupPanel;
         private MaterialLabel materialLabel7;

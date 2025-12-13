@@ -615,6 +615,20 @@ namespace School_Clinic
         {
 
         }
+        private void RefreshInventoryUI()
+        {
+            // 1. Clear the current visual list
+            pnlInventoryList.Controls.Clear();
+
+            // 2. Re-add items from the updated list
+            foreach (var item in _inventory)
+            {
+                AddItemToVisualList(item);
+            }
+
+            // 3. Update the stats numbers (Low stock, etc.)
+            UpdateDashboardStats();
+        }
 
         private void addMedicineBtn_Click(object sender, EventArgs e)
         {
@@ -655,7 +669,7 @@ namespace School_Clinic
 
                 // 7. SAVE AND REFRESH UI
                 SaveInventory();       // Save changes to JSON file
-                //RefreshInventoryUI();  // Update the Inventory Tab immediately
+                RefreshInventoryUI();  // Update the Inventory Tab immediately
                 UpdateDashboardStats();// Update the Home Tab counters
 
                 // 8. CLOSE POPUP
@@ -687,6 +701,11 @@ namespace School_Clinic
             {
                 MessageBox.Show("No medicines available in stock!", "Out of Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void closePanelBtn_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
         }
     }
 }
