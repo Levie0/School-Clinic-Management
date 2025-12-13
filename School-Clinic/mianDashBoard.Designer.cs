@@ -127,20 +127,23 @@ namespace School_Clinic
             Action = new DataGridViewTextBoxColumn();
             Medication = new DataGridViewTextBoxColumn();
             tabPage3 = new TabPage();
-            materialCard1 = new MaterialCard();
-            label27 = new Label();
-            materialCard10 = new MaterialCard();
-            pictureBox4 = new PictureBox();
-            removeMedicBtn = new MaterialButton();
             panel5 = new Panel();
+            closepopupPanel = new MaterialButton();
             materialButton2 = new MaterialButton();
             label26 = new Label();
             textBox16 = new TextBox();
             label18 = new Label();
             textBox10 = new TextBox();
-            addmedic = new MaterialButton();
+            tableLayoutPanel5 = new TableLayoutPanel();
             materialCard9 = new MaterialCard();
             pnlInventoryList = new FlowLayoutPanel();
+            materialCard1 = new MaterialCard();
+            label27 = new Label();
+            materialCard10 = new MaterialCard();
+            panel4 = new Panel();
+            pictureBox4 = new PictureBox();
+            addmedic = new MaterialButton();
+            removeMedicBtn = new MaterialButton();
             materialCard3 = new MaterialCard();
             panel3 = new Panel();
             tableLayoutPanel4 = new TableLayoutPanel();
@@ -158,7 +161,6 @@ namespace School_Clinic
             materialLabel5 = new MaterialLabel();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
-            closepopupPanel = new MaterialButton();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel2.SuspendLayout();
@@ -172,10 +174,12 @@ namespace School_Clinic
             materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage3.SuspendLayout();
-            materialCard1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel5.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
             materialCard9.SuspendLayout();
+            materialCard1.SuspendLayout();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             materialCard3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             materialCard8.SuspendLayout();
@@ -199,7 +203,7 @@ namespace School_Clinic
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(1300, 625);
+            materialTabControl1.Size = new Size(1322, 674);
             materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -212,7 +216,7 @@ namespace School_Clinic
             tabPage1.Margin = new Padding(10);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(8);
-            tabPage1.Size = new Size(1292, 597);
+            tabPage1.Size = new Size(1314, 646);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
@@ -815,7 +819,7 @@ namespace School_Clinic
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1292, 597);
+            tabPage2.Size = new Size(1314, 646);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECORDS";
             tabPage2.Click += tabPage2_Click;
@@ -1357,93 +1361,19 @@ namespace School_Clinic
             // tabPage3
             // 
             tabPage3.BackgroundImage = (Image)resources.GetObject("tabPage3.BackgroundImage");
-            tabPage3.Controls.Add(materialCard1);
-            tabPage3.Controls.Add(pictureBox4);
-            tabPage3.Controls.Add(removeMedicBtn);
             tabPage3.Controls.Add(panel5);
-            tabPage3.Controls.Add(addmedic);
-            tabPage3.Controls.Add(materialCard9);
+            tabPage3.Controls.Add(tableLayoutPanel5);
+            tabPage3.Controls.Add(panel4);
             tabPage3.Controls.Add(materialCard3);
             tabPage3.Font = new Font("Segoe UI", 18F);
             tabPage3.ImageKey = "medical-records.png";
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1292, 597);
+            tabPage3.Size = new Size(1314, 646);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "INVENTORY";
             tabPage3.UseVisualStyleBackColor = true;
             tabPage3.Click += tabPage3_Click;
-            // 
-            // materialCard1
-            // 
-            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.BackgroundImage = (Image)resources.GetObject("materialCard1.BackgroundImage");
-            materialCard1.Controls.Add(label27);
-            materialCard1.Controls.Add(materialCard10);
-            materialCard1.Depth = 0;
-            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(1133, 224);
-            materialCard1.Margin = new Padding(12, 10, 12, 10);
-            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard1.Name = "materialCard1";
-            materialCard1.Padding = new Padding(12, 10, 12, 10);
-            materialCard1.Size = new Size(299, 329);
-            materialCard1.TabIndex = 7;
-            // 
-            // label27
-            // 
-            label27.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label27.Location = new Point(88, 0);
-            label27.Name = "label27";
-            label27.Size = new Size(160, 25);
-            label27.TabIndex = 9;
-            label27.Text = "Recently Activity";
-            label27.Click += label27_Click;
-            // 
-            // materialCard10
-            // 
-            materialCard10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            materialCard10.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard10.Depth = 0;
-            materialCard10.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard10.Location = new Point(24, 27);
-            materialCard10.Margin = new Padding(12, 10, 12, 10);
-            materialCard10.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard10.Name = "materialCard10";
-            materialCard10.Padding = new Padding(12, 10, 12, 10);
-            materialCard10.Size = new Size(250, 281);
-            materialCard10.TabIndex = 8;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(3, 184);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(109, 37);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
-            // 
-            // removeMedicBtn
-            // 
-            removeMedicBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            removeMedicBtn.Density = MaterialButton.MaterialButtonDensity.Default;
-            removeMedicBtn.Depth = 0;
-            removeMedicBtn.HighEmphasis = true;
-            removeMedicBtn.Icon = (Image)resources.GetObject("removeMedicBtn.Icon");
-            removeMedicBtn.Location = new Point(638, 174);
-            removeMedicBtn.Margin = new Padding(4, 6, 4, 6);
-            removeMedicBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            removeMedicBtn.Name = "removeMedicBtn";
-            removeMedicBtn.NoAccentTextColor = Color.Empty;
-            removeMedicBtn.Size = new Size(184, 36);
-            removeMedicBtn.TabIndex = 6;
-            removeMedicBtn.Text = "Remove Medicene";
-            removeMedicBtn.Type = MaterialButton.MaterialButtonType.Contained;
-            removeMedicBtn.UseAccentColor = false;
-            removeMedicBtn.UseVisualStyleBackColor = true;
-            removeMedicBtn.Click += removeMedicBtn_Click;
             // 
             // panel5
             // 
@@ -1454,11 +1384,32 @@ namespace School_Clinic
             panel5.Controls.Add(textBox16);
             panel5.Controls.Add(label18);
             panel5.Controls.Add(textBox10);
-            panel5.Location = new Point(518, 194);
+            panel5.Location = new Point(576, 215);
             panel5.Name = "panel5";
             panel5.Size = new Size(197, 211);
             panel5.TabIndex = 5;
             panel5.Visible = false;
+            // 
+            // closepopupPanel
+            // 
+            closepopupPanel.AutoSize = false;
+            closepopupPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            closepopupPanel.Density = MaterialButton.MaterialButtonDensity.Default;
+            closepopupPanel.Depth = 0;
+            closepopupPanel.HighEmphasis = true;
+            closepopupPanel.Icon = null;
+            closepopupPanel.Location = new Point(16, 156);
+            closepopupPanel.Margin = new Padding(4, 6, 4, 6);
+            closepopupPanel.MouseState = MaterialSkin.MouseState.HOVER;
+            closepopupPanel.Name = "closepopupPanel";
+            closepopupPanel.NoAccentTextColor = Color.Empty;
+            closepopupPanel.Size = new Size(75, 36);
+            closepopupPanel.TabIndex = 5;
+            closepopupPanel.Text = "Close";
+            closepopupPanel.Type = MaterialButton.MaterialButtonType.Contained;
+            closepopupPanel.UseAccentColor = false;
+            closepopupPanel.UseVisualStyleBackColor = true;
+            closepopupPanel.Click += closepopupPanel_Click;
             // 
             // materialButton2
             // 
@@ -1515,6 +1466,112 @@ namespace School_Clinic
             textBox10.Size = new Size(129, 39);
             textBox10.TabIndex = 0;
             // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel5.Controls.Add(materialCard9, 0, 0);
+            tableLayoutPanel5.Controls.Add(materialCard1, 1, 0);
+            tableLayoutPanel5.Dock = DockStyle.Top;
+            tableLayoutPanel5.Location = new Point(0, 209);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Size = new Size(1314, 338);
+            tableLayoutPanel5.TabIndex = 9;
+            // 
+            // materialCard9
+            // 
+            materialCard9.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard9.Controls.Add(pnlInventoryList);
+            materialCard9.Depth = 0;
+            materialCard9.Dock = DockStyle.Fill;
+            materialCard9.Font = new Font("Segoe UI", 18F);
+            materialCard9.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard9.Location = new Point(12, 10);
+            materialCard9.Margin = new Padding(12, 10, 12, 10);
+            materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard9.Name = "materialCard9";
+            materialCard9.Padding = new Padding(12, 10, 12, 10);
+            materialCard9.Size = new Size(961, 318);
+            materialCard9.TabIndex = 3;
+            materialCard9.Paint += materialCard9_Paint;
+            // 
+            // pnlInventoryList
+            // 
+            pnlInventoryList.AutoScroll = true;
+            pnlInventoryList.Dock = DockStyle.Fill;
+            pnlInventoryList.FlowDirection = FlowDirection.TopDown;
+            pnlInventoryList.Location = new Point(12, 10);
+            pnlInventoryList.Name = "pnlInventoryList";
+            pnlInventoryList.Size = new Size(937, 298);
+            pnlInventoryList.TabIndex = 0;
+            // 
+            // materialCard1
+            // 
+            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.BackgroundImage = (Image)resources.GetObject("materialCard1.BackgroundImage");
+            materialCard1.Controls.Add(label27);
+            materialCard1.Controls.Add(materialCard10);
+            materialCard1.Depth = 0;
+            materialCard1.Dock = DockStyle.Fill;
+            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard1.Location = new Point(997, 10);
+            materialCard1.Margin = new Padding(12, 10, 12, 10);
+            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard1.Name = "materialCard1";
+            materialCard1.Padding = new Padding(12, 10, 12, 10);
+            materialCard1.Size = new Size(305, 318);
+            materialCard1.TabIndex = 7;
+            materialCard1.Paint += materialCard1_Paint_1;
+            // 
+            // label27
+            // 
+            label27.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label27.Location = new Point(68, 4);
+            label27.Name = "label27";
+            label27.Size = new Size(176, 25);
+            label27.TabIndex = 9;
+            label27.Text = "Medicine Log Activity";
+            label27.Click += label27_Click;
+            // 
+            // materialCard10
+            // 
+            materialCard10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            materialCard10.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard10.Depth = 0;
+            materialCard10.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard10.Location = new Point(15, 30);
+            materialCard10.Margin = new Padding(12, 10, 12, 10);
+            materialCard10.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard10.Name = "materialCard10";
+            materialCard10.Padding = new Padding(12, 10, 12, 10);
+            materialCard10.Size = new Size(281, 278);
+            materialCard10.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(pictureBox4);
+            panel4.Controls.Add(addmedic);
+            panel4.Controls.Add(removeMedicBtn);
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 152);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1314, 57);
+            panel4.TabIndex = 8;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(3, 17);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(109, 37);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 3;
+            pictureBox4.TabStop = false;
+            // 
             // addmedic
             // 
             addmedic.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -1522,7 +1579,7 @@ namespace School_Clinic
             addmedic.Depth = 0;
             addmedic.HighEmphasis = true;
             addmedic.Icon = (Image)resources.GetObject("addmedic.Icon");
-            addmedic.Location = new Point(822, 174);
+            addmedic.Location = new Point(1140, 17);
             addmedic.Margin = new Padding(4);
             addmedic.MouseState = MaterialSkin.MouseState.HOVER;
             addmedic.Name = "addmedic";
@@ -1535,31 +1592,25 @@ namespace School_Clinic
             addmedic.UseVisualStyleBackColor = true;
             addmedic.Click += addmedic_Click;
             // 
-            // materialCard9
+            // removeMedicBtn
             // 
-            materialCard9.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard9.Controls.Add(pnlInventoryList);
-            materialCard9.Depth = 0;
-            materialCard9.Font = new Font("Segoe UI", 18F);
-            materialCard9.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard9.Location = new Point(8, 224);
-            materialCard9.Margin = new Padding(12, 10, 12, 10);
-            materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard9.Name = "materialCard9";
-            materialCard9.Padding = new Padding(12, 10, 12, 10);
-            materialCard9.Size = new Size(962, 357);
-            materialCard9.TabIndex = 3;
-            materialCard9.Paint += materialCard9_Paint;
-            // 
-            // pnlInventoryList
-            // 
-            pnlInventoryList.AutoScroll = true;
-            pnlInventoryList.Dock = DockStyle.Left;
-            pnlInventoryList.FlowDirection = FlowDirection.TopDown;
-            pnlInventoryList.Location = new Point(12, 10);
-            pnlInventoryList.Name = "pnlInventoryList";
-            pnlInventoryList.Size = new Size(935, 337);
-            pnlInventoryList.TabIndex = 0;
+            removeMedicBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            removeMedicBtn.Density = MaterialButton.MaterialButtonDensity.Default;
+            removeMedicBtn.Depth = 0;
+            removeMedicBtn.HighEmphasis = true;
+            removeMedicBtn.Icon = (Image)resources.GetObject("removeMedicBtn.Icon");
+            removeMedicBtn.Location = new Point(948, 17);
+            removeMedicBtn.Margin = new Padding(4, 6, 4, 6);
+            removeMedicBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            removeMedicBtn.Name = "removeMedicBtn";
+            removeMedicBtn.NoAccentTextColor = Color.Empty;
+            removeMedicBtn.Size = new Size(184, 36);
+            removeMedicBtn.TabIndex = 6;
+            removeMedicBtn.Text = "Remove Medicene";
+            removeMedicBtn.Type = MaterialButton.MaterialButtonType.Contained;
+            removeMedicBtn.UseAccentColor = false;
+            removeMedicBtn.UseVisualStyleBackColor = true;
+            removeMedicBtn.Click += removeMedicBtn_Click;
             // 
             // materialCard3
             // 
@@ -1574,7 +1625,7 @@ namespace School_Clinic
             materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard3.Name = "materialCard3";
             materialCard3.Padding = new Padding(12, 10, 12, 10);
-            materialCard3.Size = new Size(1292, 152);
+            materialCard3.Size = new Size(1314, 152);
             materialCard3.TabIndex = 1;
             // 
             // panel3
@@ -1601,7 +1652,7 @@ namespace School_Clinic
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 133F));
-            tableLayoutPanel4.Size = new Size(1268, 132);
+            tableLayoutPanel4.Size = new Size(1290, 132);
             tableLayoutPanel4.TabIndex = 0;
             // 
             // materialCard8
@@ -1613,46 +1664,51 @@ namespace School_Clinic
             materialCard8.Depth = 0;
             materialCard8.Dock = DockStyle.Fill;
             materialCard8.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard8.Location = new Point(856, 10);
+            materialCard8.Location = new Point(871, 10);
             materialCard8.Margin = new Padding(12, 10, 12, 10);
             materialCard8.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard8.Name = "materialCard8";
             materialCard8.Padding = new Padding(12, 10, 12, 10);
-            materialCard8.Size = new Size(400, 112);
+            materialCard8.Size = new Size(407, 112);
             materialCard8.TabIndex = 4;
             materialCard8.Paint += materialCard8_Paint;
             // 
             // pictureBox3
             // 
+            pictureBox3.Anchor = AnchorStyles.Right;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(324, 12);
+            pictureBox3.Location = new Point(296, 6);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(124, 89);
+            pictureBox3.Size = new Size(102, 89);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
             // 
             // outofstockNumber
             // 
+            outofstockNumber.Anchor = AnchorStyles.Left;
             outofstockNumber.AutoSize = true;
             outofstockNumber.Depth = 0;
-            outofstockNumber.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            outofstockNumber.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
+            outofstockNumber.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
             outofstockNumber.ForeColor = Color.FromArgb(255, 128, 128);
-            outofstockNumber.Location = new Point(207, 45);
+            outofstockNumber.Location = new Point(22, 48);
             outofstockNumber.Margin = new Padding(2, 0, 2, 0);
             outofstockNumber.MouseState = MaterialSkin.MouseState.HOVER;
             outofstockNumber.Name = "outofstockNumber";
-            outofstockNumber.Size = new Size(10, 19);
+            outofstockNumber.Size = new Size(20, 41);
             outofstockNumber.TabIndex = 1;
             outofstockNumber.Text = "0";
             // 
             // materialLabel6
             // 
+            materialLabel6.Anchor = AnchorStyles.Left;
             materialLabel6.AutoSize = true;
             materialLabel6.Depth = 0;
-            materialLabel6.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel6.Location = new Point(42, 44);
+            materialLabel6.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel6.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
+            materialLabel6.Location = new Point(22, 21);
             materialLabel6.Margin = new Padding(2, 0, 2, 0);
             materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel6.Name = "materialLabel6";
@@ -1674,16 +1730,17 @@ namespace School_Clinic
             materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard6.Name = "materialCard6";
             materialCard6.Padding = new Padding(12, 10, 12, 10);
-            materialCard6.Size = new Size(398, 112);
+            materialCard6.Size = new Size(405, 112);
             materialCard6.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(329, 12);
+            pictureBox1.Location = new Point(295, 12);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(109, 77);
+            pictureBox1.Size = new Size(95, 77);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -1691,25 +1748,29 @@ namespace School_Clinic
             // 
             // allstockNumber
             // 
+            allstockNumber.Anchor = AnchorStyles.Left;
             allstockNumber.AutoSize = true;
             allstockNumber.Depth = 0;
-            allstockNumber.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            allstockNumber.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
+            allstockNumber.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
             allstockNumber.ForeColor = Color.FromArgb(255, 128, 128);
-            allstockNumber.Location = new Point(228, 45);
+            allstockNumber.Location = new Point(27, 48);
             allstockNumber.Margin = new Padding(2, 0, 2, 0);
             allstockNumber.MouseState = MaterialSkin.MouseState.HOVER;
             allstockNumber.Name = "allstockNumber";
-            allstockNumber.Size = new Size(10, 19);
+            allstockNumber.Size = new Size(20, 41);
             allstockNumber.TabIndex = 1;
             allstockNumber.Text = "0";
             allstockNumber.Click += allstockNumber_Click;
             // 
             // materialLabel1
             // 
+            materialLabel1.Anchor = AnchorStyles.Left;
             materialLabel1.AutoSize = true;
             materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel1.Location = new Point(64, 45);
+            materialLabel1.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
+            materialLabel1.Location = new Point(27, 21);
             materialLabel1.Margin = new Padding(2, 0, 2, 0);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
@@ -1726,44 +1787,51 @@ namespace School_Clinic
             materialCard7.Depth = 0;
             materialCard7.Dock = DockStyle.Fill;
             materialCard7.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard7.Location = new Point(434, 10);
+            materialCard7.Location = new Point(441, 10);
             materialCard7.Margin = new Padding(12, 10, 12, 10);
             materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard7.Name = "materialCard7";
             materialCard7.Padding = new Padding(12, 10, 12, 10);
-            materialCard7.Size = new Size(398, 112);
+            materialCard7.Size = new Size(406, 112);
             materialCard7.TabIndex = 3;
             // 
             // pictureBox2
             // 
+            pictureBox2.Anchor = AnchorStyles.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(340, 12);
+            pictureBox2.Location = new Point(303, 6);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(124, 89);
+            pictureBox2.Size = new Size(93, 89);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
             // LowstockNumber
             // 
+            LowstockNumber.Anchor = AnchorStyles.Left;
             LowstockNumber.AutoSize = true;
+            LowstockNumber.BackColor = Color.FromArgb(255, 255, 192);
             LowstockNumber.Depth = 0;
-            LowstockNumber.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            LowstockNumber.Location = new Point(257, 44);
+            LowstockNumber.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
+            LowstockNumber.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            LowstockNumber.ForeColor = Color.FromArgb(255, 255, 192);
+            LowstockNumber.Location = new Point(32, 48);
             LowstockNumber.Margin = new Padding(2, 0, 2, 0);
             LowstockNumber.MouseState = MaterialSkin.MouseState.HOVER;
             LowstockNumber.Name = "LowstockNumber";
-            LowstockNumber.Size = new Size(10, 19);
+            LowstockNumber.Size = new Size(20, 41);
             LowstockNumber.TabIndex = 1;
             LowstockNumber.Text = "0";
             // 
             // materialLabel5
             // 
+            materialLabel5.Anchor = AnchorStyles.Left;
             materialLabel5.AutoSize = true;
             materialLabel5.Depth = 0;
-            materialLabel5.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel5.Location = new Point(45, 44);
+            materialLabel5.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
+            materialLabel5.Location = new Point(32, 21);
             materialLabel5.Margin = new Padding(2, 0, 2, 0);
             materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel5.Name = "materialLabel5";
@@ -1789,32 +1857,11 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // closepopupPanel
-            // 
-            closepopupPanel.AutoSize = false;
-            closepopupPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            closepopupPanel.Density = MaterialButton.MaterialButtonDensity.Default;
-            closepopupPanel.Depth = 0;
-            closepopupPanel.HighEmphasis = true;
-            closepopupPanel.Icon = null;
-            closepopupPanel.Location = new Point(16, 156);
-            closepopupPanel.Margin = new Padding(4, 6, 4, 6);
-            closepopupPanel.MouseState = MaterialSkin.MouseState.HOVER;
-            closepopupPanel.Name = "closepopupPanel";
-            closepopupPanel.NoAccentTextColor = Color.Empty;
-            closepopupPanel.Size = new Size(75, 36);
-            closepopupPanel.TabIndex = 5;
-            closepopupPanel.Text = "Close";
-            closepopupPanel.Type = MaterialButton.MaterialButtonType.Contained;
-            closepopupPanel.UseAccentColor = false;
-            closepopupPanel.UseVisualStyleBackColor = true;
-            closepopupPanel.Click += closepopupPanel_Click;
-            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1306, 692);
+            ClientSize = new Size(1328, 741);
             Controls.Add(materialTabControl1);
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = materialTabControl1;
@@ -1840,12 +1887,14 @@ namespace School_Clinic
             materialCard2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage3.ResumeLayout(false);
-            tabPage3.PerformLayout();
-            materialCard1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            tableLayoutPanel5.ResumeLayout(false);
             materialCard9.ResumeLayout(false);
+            materialCard1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             materialCard3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             materialCard8.ResumeLayout(false);
@@ -1994,5 +2043,7 @@ namespace School_Clinic
         private Label label27;
         private ListView listView1;
         private MaterialButton closepopupPanel;
+        private Panel panel4;
+        private TableLayoutPanel tableLayoutPanel5;
     }
 }

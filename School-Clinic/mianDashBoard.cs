@@ -31,6 +31,7 @@ namespace School_Clinic
             skin.AddFormToManage(this);
             skin.Theme = MaterialSkinManager.Themes.LIGHT;
             skin.ColorScheme = new ColorScheme(Primary.LightGreen800, Primary.LightGreen900, Primary.LightGreen500, Accent.Green700, TextShade.WHITE);
+            materialLabel1.UseAccent = true;
         }
 
 
@@ -734,6 +735,11 @@ namespace School_Clinic
         private void closepopupPanel_Click(object sender, EventArgs e)
         {
             panel5.Visible = false;
+        }
+
+        private void materialCard1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
