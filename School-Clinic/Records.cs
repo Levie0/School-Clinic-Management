@@ -30,7 +30,7 @@ namespace School_Clinic
 
         public string thisAction { get; set; }
 
-
+        public string thisMedication { get; set; }
 
 
 

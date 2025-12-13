@@ -159,6 +159,17 @@ namespace School_Clinic
                 AddItemToVisualList(item);
             }
 
+            listView1.View = View.Details;
+            listView1.GridLines = true;
+            listView1.FullRowSelect = true;
+
+            // Add columns if they are missing (prevents duplication if you reload)
+            if (listView1.Columns.Count == 0)
+            {
+                listView1.Columns.Add("Medicine Name", 200);
+                listView1.Columns.Add("Qty", 50);
+            }
+
             // 3. Update the stock numbers immediately
             UpdateDashboardStats();
         }
@@ -203,29 +214,59 @@ namespace School_Clinic
 
         private void saveEditBtn_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow == null) return;
+            List<string> medList = new List<string>();
 
-            var records = dataGridView1.CurrentRow.DataBoundItem as Records;
-            if (records != null)
+            foreach (ListViewItem item in listView1.Items)
             {
-                records.thisName = textBox7.Text;
-                records.thisAge = textBox9.Text;
-                records.thisCourse = comboBox2.SelectedItem?.ToString();
-                records.thisParent = textBox12.Text;
-                records.thisContact = textBox11.Text;
-                records.thisAllergies = textBox13.Text;
-                records.thisTime = textBox17.Text;
-                records.thisComplaint = textBox18.Text;
-                records.thisAssesment = textBox19.Text;
-                records.thisAction = textBox20.Text;
-                records.thisBirth = dateTimePicker3.Text;
-                records.thisDate = dateTimePicker4.Text;
-
-                dataGridView1.Refresh();
-                SaveData();
-
-                panel1.Visible = false;
+                // item.Text is the Name, item.SubItems[1].Text is the Quantity
+                string medInfo = $"{item.Text} ({item.SubItems[1].Text})";
+                medList.Add(medInfo);
             }
+
+            // Join them with a comma and space
+            string medicationString = string.Join(", ", medList);
+
+
+            // 2. CREATE THE RECORD object
+            var records = new Records
+            {
+                thisName = textBox1.Text,
+                thisAge = textBox2.Text,
+                thisCourse = comboBox1.SelectedItem?.ToString(),
+                thisBirth = dateTimePicker3.Text,
+                thisParent = textBox6.Text,
+                thisContact = textBox4.Text,
+                thisAllergies = textBox3.Text,
+                thisDate = dateTimePicker4.Text,
+                thisTime = textBox5.Text,
+                thisComplaint = textBox8.Text,
+                thisAssesment = textBox14.Text,
+                thisAction = textBox15.Text,
+
+                // NEW: Save the combined string we created above
+                thisMedication = medicationString
+            };
+
+            // 3. ADD TO LIST AND SAVE
+            _records.Add(records);
+            SaveData();
+
+            MessageBox.Show("Information has been saved successfully!");
+
+            // 4. CLEAR ALL CONTROLS (Reset the form)
+            textBox1.Clear();
+            textBox2.Clear();
+            comboBox1.SelectedIndex = -1;
+            textBox6.Clear();
+            textBox4.Clear();
+            textBox3.Clear();
+            textBox5.Clear();
+            textBox8.Clear();
+            textBox14.Clear();
+            textBox15.Clear();
+
+            // NEW: Clear the ListView so it is empty for the next student
+            listView1.Items.Clear();
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -573,6 +614,79 @@ namespace School_Clinic
         private void label27_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addMedicineBtn_Click(object sender, EventArgs e)
+        {
+            if (materialComboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a medicine.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 2. VALIDATION: Check if quantity is valid
+            int qtyNeeded;
+            if (!int.TryParse(materialMaskedTextBox1.Text, out qtyNeeded) || qtyNeeded <= 0)
+            {
+                MessageBox.Show("Please enter a valid quantity (greater than 0).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 3. FIND THE MEDICINE
+            string selectedName = materialComboBox1.SelectedItem.ToString();
+            var item = _inventory.FirstOrDefault(x => x.Name == selectedName);
+
+            if (item != null)
+            {
+                // 4. CHECK STOCK
+                if (item.Quantity < qtyNeeded)
+                {
+                    MessageBox.Show($"Not enough stock! Only {item.Quantity} left.", "Stock Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 5. DEDUCT STOCK
+                item.Quantity -= qtyNeeded;
+
+                // 6. ADD TO LISTVIEW (The visual list below the button)
+                ListViewItem lvi = new ListViewItem(item.Name);
+                lvi.SubItems.Add(qtyNeeded.ToString());
+                listView1.Items.Add(lvi);
+
+                // 7. SAVE AND REFRESH UI
+                SaveInventory();       // Save changes to JSON file
+                //RefreshInventoryUI();  // Update the Inventory Tab immediately
+                UpdateDashboardStats();// Update the Home Tab counters
+
+                // 8. CLOSE POPUP
+                panel2.Visible = false;
+
+                MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void popupPanel_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+            panel2.BringToFront();
+
+            // Clear previous selection
+            materialComboBox1.Items.Clear();
+            materialMaskedTextBox1.Clear();
+
+            // Load ONLY available medicines
+            foreach (var item in _inventory)
+            {
+                if (item.Quantity > 0)
+                {
+                    materialComboBox1.Items.Add(item.Name);
+                }
+            }
+
+            if (materialComboBox1.Items.Count == 0)
+            {
+                MessageBox.Show("No medicines available in stock!", "Out of Stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
