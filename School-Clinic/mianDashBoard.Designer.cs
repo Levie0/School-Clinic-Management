@@ -151,6 +151,7 @@ namespace School_Clinic
             materialLabel5 = new MaterialLabel();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
+            closeBtnforPaneladd = new MaterialButton();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel2.SuspendLayout();
@@ -1376,14 +1377,15 @@ namespace School_Clinic
             // panel5
             // 
             panel5.BackColor = Color.DarkGreen;
+            panel5.Controls.Add(closeBtnforPaneladd);
             panel5.Controls.Add(materialButton2);
             panel5.Controls.Add(label26);
             panel5.Controls.Add(textBox16);
             panel5.Controls.Add(label18);
             panel5.Controls.Add(textBox10);
-            panel5.Location = new Point(531, 194);
+            panel5.Location = new Point(516, 194);
             panel5.Name = "panel5";
-            panel5.Size = new Size(184, 211);
+            panel5.Size = new Size(199, 211);
             panel5.TabIndex = 5;
             panel5.Visible = false;
             // 
@@ -1395,7 +1397,7 @@ namespace School_Clinic
             materialButton2.Depth = 0;
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = null;
-            materialButton2.Location = new Point(56, 156);
+            materialButton2.Location = new Point(109, 156);
             materialButton2.Margin = new Padding(4, 6, 4, 6);
             materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton2.Name = "materialButton2";
@@ -1412,7 +1414,7 @@ namespace School_Clinic
             // 
             label26.Font = new Font("Segoe UI", 10F);
             label26.ForeColor = Color.Black;
-            label26.Location = new Point(28, 85);
+            label26.Location = new Point(37, 85);
             label26.Name = "label26";
             label26.Size = new Size(129, 20);
             label26.TabIndex = 3;
@@ -1420,7 +1422,7 @@ namespace School_Clinic
             // 
             // textBox16
             // 
-            textBox16.Location = new Point(28, 108);
+            textBox16.Location = new Point(37, 108);
             textBox16.Name = "textBox16";
             textBox16.Size = new Size(129, 39);
             textBox16.TabIndex = 2;
@@ -1429,7 +1431,7 @@ namespace School_Clinic
             // 
             label18.Font = new Font("Segoe UI", 10F);
             label18.ForeColor = Color.Black;
-            label18.Location = new Point(28, 13);
+            label18.Location = new Point(37, 13);
             label18.Name = "label18";
             label18.Size = new Size(129, 20);
             label18.TabIndex = 1;
@@ -1437,7 +1439,7 @@ namespace School_Clinic
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(28, 36);
+            textBox10.Location = new Point(37, 36);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(129, 39);
             textBox10.TabIndex = 0;
@@ -1675,6 +1677,27 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // closeBtnforPaneladd
+            // 
+            closeBtnforPaneladd.AutoSize = false;
+            closeBtnforPaneladd.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            closeBtnforPaneladd.Density = MaterialButton.MaterialButtonDensity.Default;
+            closeBtnforPaneladd.Depth = 0;
+            closeBtnforPaneladd.HighEmphasis = true;
+            closeBtnforPaneladd.Icon = null;
+            closeBtnforPaneladd.Location = new Point(17, 156);
+            closeBtnforPaneladd.Margin = new Padding(4, 6, 4, 6);
+            closeBtnforPaneladd.MouseState = MaterialSkin.MouseState.HOVER;
+            closeBtnforPaneladd.Name = "closeBtnforPaneladd";
+            closeBtnforPaneladd.NoAccentTextColor = Color.Empty;
+            closeBtnforPaneladd.Size = new Size(75, 36);
+            closeBtnforPaneladd.TabIndex = 5;
+            closeBtnforPaneladd.Text = "Cancel";
+            closeBtnforPaneladd.Type = MaterialButton.MaterialButtonType.Contained;
+            closeBtnforPaneladd.UseAccentColor = false;
+            closeBtnforPaneladd.UseVisualStyleBackColor = true;
+            closeBtnforPaneladd.Click += closeBtnforPaneladd_Click;
+            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1847,5 +1870,6 @@ namespace School_Clinic
         private MaterialButton materialButton5;
         private MaterialLabel materialLabel7;
         private ListView listView1;
+        private MaterialButton closeBtnforPaneladd;
     }
 }

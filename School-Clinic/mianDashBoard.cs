@@ -666,5 +666,10 @@ namespace School_Clinic
                 MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void closeBtnforPaneladd_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = false;
+        }
     }
 }
