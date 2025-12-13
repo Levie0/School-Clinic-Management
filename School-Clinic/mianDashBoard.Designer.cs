@@ -134,15 +134,13 @@ namespace School_Clinic
             textBox16 = new TextBox();
             label18 = new Label();
             textBox10 = new TextBox();
+            addmedic = new MaterialButton();
             tableLayoutPanel5 = new TableLayoutPanel();
             materialCard9 = new MaterialCard();
             pnlInventoryList = new FlowLayoutPanel();
             materialCard1 = new MaterialCard();
             label27 = new Label();
             materialCard10 = new MaterialCard();
-            panel4 = new Panel();
-            pictureBox4 = new PictureBox();
-            addmedic = new MaterialButton();
             removeMedicBtn = new MaterialButton();
             materialCard3 = new MaterialCard();
             panel3 = new Panel();
@@ -178,8 +176,6 @@ namespace School_Clinic
             tableLayoutPanel5.SuspendLayout();
             materialCard9.SuspendLayout();
             materialCard1.SuspendLayout();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             materialCard3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             materialCard8.SuspendLayout();
@@ -1362,8 +1358,9 @@ namespace School_Clinic
             // 
             tabPage3.BackgroundImage = (Image)resources.GetObject("tabPage3.BackgroundImage");
             tabPage3.Controls.Add(panel5);
+            tabPage3.Controls.Add(addmedic);
             tabPage3.Controls.Add(tableLayoutPanel5);
-            tabPage3.Controls.Add(panel4);
+            tabPage3.Controls.Add(removeMedicBtn);
             tabPage3.Controls.Add(materialCard3);
             tabPage3.Font = new Font("Segoe UI", 18F);
             tabPage3.ImageKey = "medical-records.png";
@@ -1466,6 +1463,26 @@ namespace School_Clinic
             textBox10.Size = new Size(129, 39);
             textBox10.TabIndex = 0;
             // 
+            // addmedic
+            // 
+            addmedic.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            addmedic.Density = MaterialButton.MaterialButtonDensity.Default;
+            addmedic.Depth = 0;
+            addmedic.HighEmphasis = true;
+            addmedic.Icon = (Image)resources.GetObject("addmedic.Icon");
+            addmedic.Location = new Point(1081, 596);
+            addmedic.Margin = new Padding(4);
+            addmedic.MouseState = MaterialSkin.MouseState.HOVER;
+            addmedic.Name = "addmedic";
+            addmedic.NoAccentTextColor = Color.Empty;
+            addmedic.Size = new Size(170, 36);
+            addmedic.TabIndex = 4;
+            addmedic.Text = "Add medication";
+            addmedic.Type = MaterialButton.MaterialButtonType.Contained;
+            addmedic.UseAccentColor = false;
+            addmedic.UseVisualStyleBackColor = true;
+            addmedic.Click += addmedic_Click;
+            // 
             // tableLayoutPanel5
             // 
             tableLayoutPanel5.ColumnCount = 2;
@@ -1474,11 +1491,11 @@ namespace School_Clinic
             tableLayoutPanel5.Controls.Add(materialCard9, 0, 0);
             tableLayoutPanel5.Controls.Add(materialCard1, 1, 0);
             tableLayoutPanel5.Dock = DockStyle.Top;
-            tableLayoutPanel5.Location = new Point(0, 209);
+            tableLayoutPanel5.Location = new Point(0, 152);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new Size(1314, 338);
+            tableLayoutPanel5.Size = new Size(1314, 424);
             tableLayoutPanel5.TabIndex = 9;
             // 
             // materialCard9
@@ -1494,7 +1511,7 @@ namespace School_Clinic
             materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard9.Name = "materialCard9";
             materialCard9.Padding = new Padding(12, 10, 12, 10);
-            materialCard9.Size = new Size(961, 318);
+            materialCard9.Size = new Size(961, 404);
             materialCard9.TabIndex = 3;
             materialCard9.Paint += materialCard9_Paint;
             // 
@@ -1505,7 +1522,7 @@ namespace School_Clinic
             pnlInventoryList.FlowDirection = FlowDirection.TopDown;
             pnlInventoryList.Location = new Point(12, 10);
             pnlInventoryList.Name = "pnlInventoryList";
-            pnlInventoryList.Size = new Size(937, 298);
+            pnlInventoryList.Size = new Size(937, 384);
             pnlInventoryList.TabIndex = 0;
             // 
             // materialCard1
@@ -1522,7 +1539,7 @@ namespace School_Clinic
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(12, 10, 12, 10);
-            materialCard1.Size = new Size(305, 318);
+            materialCard1.Size = new Size(305, 404);
             materialCard1.TabIndex = 7;
             materialCard1.Paint += materialCard1_Paint_1;
             // 
@@ -1547,50 +1564,8 @@ namespace School_Clinic
             materialCard10.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard10.Name = "materialCard10";
             materialCard10.Padding = new Padding(12, 10, 12, 10);
-            materialCard10.Size = new Size(281, 278);
+            materialCard10.Size = new Size(281, 364);
             materialCard10.TabIndex = 8;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(pictureBox4);
-            panel4.Controls.Add(addmedic);
-            panel4.Controls.Add(removeMedicBtn);
-            panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 152);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1314, 57);
-            panel4.TabIndex = 8;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(3, 17);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(109, 37);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
-            // 
-            // addmedic
-            // 
-            addmedic.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            addmedic.Density = MaterialButton.MaterialButtonDensity.Default;
-            addmedic.Depth = 0;
-            addmedic.HighEmphasis = true;
-            addmedic.Icon = (Image)resources.GetObject("addmedic.Icon");
-            addmedic.Location = new Point(1140, 17);
-            addmedic.Margin = new Padding(4);
-            addmedic.MouseState = MaterialSkin.MouseState.HOVER;
-            addmedic.Name = "addmedic";
-            addmedic.NoAccentTextColor = Color.Empty;
-            addmedic.Size = new Size(170, 36);
-            addmedic.TabIndex = 4;
-            addmedic.Text = "Add medication";
-            addmedic.Type = MaterialButton.MaterialButtonType.Contained;
-            addmedic.UseAccentColor = false;
-            addmedic.UseVisualStyleBackColor = true;
-            addmedic.Click += addmedic_Click;
             // 
             // removeMedicBtn
             // 
@@ -1599,7 +1574,7 @@ namespace School_Clinic
             removeMedicBtn.Depth = 0;
             removeMedicBtn.HighEmphasis = true;
             removeMedicBtn.Icon = (Image)resources.GetObject("removeMedicBtn.Icon");
-            removeMedicBtn.Location = new Point(948, 17);
+            removeMedicBtn.Location = new Point(873, 596);
             removeMedicBtn.Margin = new Padding(4, 6, 4, 6);
             removeMedicBtn.MouseState = MaterialSkin.MouseState.HOVER;
             removeMedicBtn.Name = "removeMedicBtn";
@@ -1887,14 +1862,12 @@ namespace School_Clinic
             materialCard2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
             materialCard9.ResumeLayout(false);
             materialCard1.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             materialCard3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             materialCard8.ResumeLayout(false);
@@ -1995,7 +1968,6 @@ namespace School_Clinic
         private MaterialCard materialCard8;
         private MaterialCard materialCard7;
         private MaterialCard materialCard9;
-        private MaterialButton addmedic;
         private MaterialLabel materialLabel1;
         private MaterialLabel allstockNumber;
         private MaterialLabel materialLabel5;
@@ -2010,7 +1982,6 @@ namespace School_Clinic
         private MaterialButton materialButton2;
         private Label label26;
         private FlowLayoutPanel pnlInventoryList;
-        private MaterialButton removeMedicBtn;
         private DataGridViewTextBoxColumn colName;
         private DataGridViewTextBoxColumn Age;
         private DataGridViewTextBoxColumn Course;
@@ -2037,13 +2008,13 @@ namespace School_Clinic
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
         private MaterialCard materialCard1;
         private MaterialCard materialCard10;
         private Label label27;
         private ListView listView1;
         private MaterialButton closepopupPanel;
-        private Panel panel4;
         private TableLayoutPanel tableLayoutPanel5;
+        private MaterialButton removeMedicBtn;
+        private MaterialButton addmedic;
     }
 }

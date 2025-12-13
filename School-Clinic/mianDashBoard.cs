@@ -34,6 +34,40 @@ namespace School_Clinic
             materialLabel1.UseAccent = true;
         }
 
+        private ListBox _logBox; // The list that holds the text
+
+        private void SetupLogFeature()
+        {
+            // 1. Initialize the ListBox
+            _logBox = new ListBox();
+
+            // 2. Add it to materialCard10 (The "Medicine Log Activity" card)
+            materialCard10.Controls.Add(_logBox);
+
+            // 3. Position it below the "Medicine Log Activity" label
+            // label27 is the title, so we place the list below it.
+            _logBox.Location = new Point(10, 50);
+            _logBox.Size = new Size(materialCard10.Width - 20, materialCard10.Height - 60);
+
+            // 4. Anchor it so it resizes if the window changes size
+            _logBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+
+            // 5. Visual Styling (Optional: Remove border for cleaner look)
+            _logBox.BorderStyle = BorderStyle.None;
+            _logBox.Font = new Font("Segoe UI", 9);
+        }
+
+        private void LogActivity(string action, string medicineName)
+        {
+            if (_logBox == null) return;
+
+            string timestamp = DateTime.Now.ToString("MMM dd - hh:mm tt");
+            string logEntry = $"[{timestamp}] {action}: {medicineName}";
+
+            // Add to top of list
+            _logBox.Items.Insert(0, logEntry);
+        }
+
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -193,6 +227,8 @@ namespace School_Clinic
                 listView1.Columns.Add("Medicine Name", 200);
                 listView1.Columns.Add("Qty", 50);
             }
+
+            SetupLogFeature();
 
             // 3. Update the stock numbers immediately
             UpdateDashboardStats();
@@ -444,18 +480,13 @@ namespace School_Clinic
                 Quantity = int.Parse(textBox16.Text)
             };
 
-
             _inventory.Add(newItem);
-
-
             SaveInventory();
-
-
             AddItemToVisualList(newItem);
-
-
             UpdateDashboardStats();
 
+            // --- LOGGING ---
+            LogActivity("New Item Added", newItem.Name);
 
             textBox10.Clear();
             textBox16.Clear();
@@ -471,13 +502,11 @@ namespace School_Clinic
             rowPanel.Margin = new Padding(5);
             rowPanel.BorderStyle = BorderStyle.FixedSingle;
 
-
             Label nameLbl = new Label();
             nameLbl.Text = item.Name;
             nameLbl.Location = new Point(10, 15);
             nameLbl.AutoSize = true;
             nameLbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-
 
             Label qtyLbl = new Label();
             qtyLbl.Text = item.Quantity.ToString();
@@ -485,32 +514,27 @@ namespace School_Clinic
             qtyLbl.AutoSize = true;
             qtyLbl.Font = new Font("Segoe UI", 12, FontStyle.Bold);
 
-
             EventHandler selectAction = (s, e) =>
             {
-
                 if (_selectedPanel != null)
                 {
                     _selectedPanel.BackColor = Color.White;
                 }
-
-
                 _selectedMedicine = item;
                 _selectedPanel = rowPanel;
                 _selectedPanel.BackColor = Color.LightGreen;
             };
 
-
             rowPanel.Click += selectAction;
             nameLbl.Click += selectAction;
             qtyLbl.Click += selectAction;
-
-
 
             Button btnMinus = new Button();
             btnMinus.Text = "-";
             btnMinus.Size = new Size(30, 30);
             btnMinus.Location = new Point(300, 10);
+
+            // --- [UPDATED LOGIC: MINUS BUTTON] ---
             btnMinus.Click += (s, e) =>
             {
                 if (item.Quantity > 0)
@@ -519,28 +543,36 @@ namespace School_Clinic
                     qtyLbl.Text = item.Quantity.ToString();
                     UpdateDashboardStats();
                     SaveInventory();
+
+                    // LOG: Check for Out of Stock
+                    if (item.Quantity == 0)
+                    {
+                        LogActivity("Out of Stock", item.Name);
+                    }
                 }
             };
-
 
             Button btnPlus = new Button();
             btnPlus.Text = "+";
             btnPlus.Size = new Size(30, 30);
             btnPlus.Location = new Point(370, 10);
+
+            // --- [UPDATED LOGIC: PLUS BUTTON] ---
             btnPlus.Click += (s, e) =>
             {
                 item.Quantity++;
                 qtyLbl.Text = item.Quantity.ToString();
                 UpdateDashboardStats();
                 SaveInventory();
-            };
 
+                // LOG: Restocked
+                LogActivity("Restocked", item.Name);
+            };
 
             rowPanel.Controls.Add(nameLbl);
             rowPanel.Controls.Add(btnMinus);
             rowPanel.Controls.Add(qtyLbl);
             rowPanel.Controls.Add(btnPlus);
-
 
             pnlInventoryList.Controls.Add(rowPanel);
         }
@@ -574,7 +606,6 @@ namespace School_Clinic
                 return;
             }
 
-
             var result = MessageBox.Show($"Are you sure you want to remove '{_selectedMedicine.Name}'?",
                                          "Confirm Delete",
                                          MessageBoxButtons.YesNo,
@@ -582,9 +613,10 @@ namespace School_Clinic
 
             if (result == DialogResult.Yes)
             {
+                // --- LOGGING BEFORE REMOVE ---
+                LogActivity("Item Removed", _selectedMedicine.Name);
 
                 _inventory.Remove(_selectedMedicine);
-
 
                 if (_selectedPanel != null)
                 {
@@ -592,18 +624,17 @@ namespace School_Clinic
                     _selectedPanel.Dispose();
                 }
 
-
                 SaveInventory();
                 UpdateDashboardStats();
-
 
                 _selectedMedicine = null;
                 _selectedPanel = null;
             }
+        }
 
             //pp 
             //this comment is para kay kyle para ma update sa github 
-        }
+        
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
@@ -662,7 +693,6 @@ namespace School_Clinic
                 return;
             }
 
-            // 2. VALIDATION: Check if quantity is valid
             int qtyNeeded;
             if (!int.TryParse(materialMaskedTextBox1.Text, out qtyNeeded) || qtyNeeded <= 0)
             {
@@ -670,35 +700,34 @@ namespace School_Clinic
                 return;
             }
 
-            // 3. FIND THE MEDICINE
             string selectedName = materialComboBox1.SelectedItem.ToString();
             var item = _inventory.FirstOrDefault(x => x.Name == selectedName);
 
             if (item != null)
             {
-                // 4. CHECK STOCK
                 if (item.Quantity < qtyNeeded)
                 {
                     MessageBox.Show($"Not enough stock! Only {item.Quantity} left.", "Stock Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // 5. DEDUCT STOCK
                 item.Quantity -= qtyNeeded;
 
-                // 6. ADD TO LISTVIEW (The visual list below the button)
+                // --- LOGGING ---
+                if (item.Quantity == 0)
+                {
+                    LogActivity("Out of Stock", item.Name);
+                }
+
                 ListViewItem lvi = new ListViewItem(item.Name);
                 lvi.SubItems.Add(qtyNeeded.ToString());
                 listView1.Items.Add(lvi);
 
-                // 7. SAVE AND REFRESH UI
-                SaveInventory();       // Save changes to JSON file
-                RefreshInventoryUI();  // Update the Inventory Tab immediately
-                UpdateDashboardStats();// Update the Home Tab counters
+                SaveInventory();
+                RefreshInventoryUI();
+                UpdateDashboardStats();
 
-                // 8. CLOSE POPUP
                 panel2.Visible = false;
-
                 MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
