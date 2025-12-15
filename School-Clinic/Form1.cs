@@ -8,15 +8,24 @@ namespace School_Clinic
         {
             InitializeComponent();
 
+            textBox2.PasswordChar = '*';// charles
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) //charles (para ni invisible sa button)
         {
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.BackColor = Color.Transparent;
+            button1.ForeColor = Color.Transparent;
+            button1.Text = "";
+            button1.Cursor = Cursors.Hand;
 
-
+            this.AcceptButton = button1;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e) //charles
         {
 
         }
@@ -26,7 +35,7 @@ namespace School_Clinic
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)//charles
         {
             if (textBox1.Text.Any(c => !char.IsDigit(c) && c != '-'))
             {
@@ -43,23 +52,25 @@ namespace School_Clinic
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)// charles
         {
-
-            if (textBox1.Text != "2024-0049" && textBox2.Text != "password")
+            if (textBox1.Text != "2024-0049" || textBox2.Text != "password")
             {
                 MessageBox.Show("Incorrect UserID or Password");
+                return;
             }
-            else 
-            {
-                //MainDashboard nextPage = new MainDashboard(this);
-                //nextPage.Show();
-                //this.Hide();
 
-                mianDashBoard nextPage = new mianDashBoard(this);
-                nextPage.Show();
-                this.Hide();
-            }
+            mianDashBoard nextPage = new mianDashBoard(this);
+            nextPage.Show();
+            this.Hide();
+        }
+
+
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
