@@ -228,6 +228,8 @@ namespace School_Clinic
                 listView1.Columns.Add("Qty", 50);
             }
 
+           
+
             SetupLogFeature();
 
             // 3. Update the stock numbers immediately
