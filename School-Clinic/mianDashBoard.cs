@@ -30,7 +30,7 @@ namespace School_Clinic
             var skin = MaterialSkinManager.Instance;
             skin.AddFormToManage(this);
             skin.Theme = MaterialSkinManager.Themes.LIGHT;
-            skin.ColorScheme = new ColorScheme(Primary.LightGreen800, Primary.LightGreen900, Primary.LightGreen500, Accent.Green700, TextShade.WHITE);
+            skin.ColorScheme = new ColorScheme(Primary.Cyan800, Primary.Cyan900, Primary.Cyan500, Accent.Blue700, TextShade.WHITE);
             materialLabel1.UseAccent = true;
         }
 
@@ -476,7 +476,7 @@ namespace School_Clinic
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            MedicineItem newItem = new MedicineItem
+               MedicineItem newItem = new MedicineItem
             {
                 Name = textBox10.Text,
                 Quantity = int.Parse(textBox16.Text)
