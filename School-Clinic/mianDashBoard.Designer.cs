@@ -222,19 +222,6 @@ namespace School_Clinic
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
             // 
-            // materialLabel3
-            // 
-            materialLabel3.AutoSize = true;
-            materialLabel3.Depth = 0;
-            materialLabel3.Font = new Font("Roboto Light", 60F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H2;
-            materialLabel3.Location = new Point(27, 104);
-            materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel3.Name = "materialLabel3";
-            materialLabel3.Size = new Size(494, 72);
-            materialLabel3.TabIndex = 50;
-            materialLabel3.Text = "MEDICAL RECORD";
-            // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.None;
@@ -409,7 +396,7 @@ namespace School_Clinic
             materialLabel3.Depth = 0;
             materialLabel3.Font = new Font("Roboto Light", 60F, FontStyle.Regular, GraphicsUnit.Pixel);
             materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H2;
-            materialLabel3.Location = new Point(3, 8);
+            materialLabel3.Location = new Point(3, 11);
             materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel3.Name = "materialLabel3";
             materialLabel3.Size = new Size(494, 72);
@@ -619,12 +606,12 @@ namespace School_Clinic
             popupPanel.Dock = DockStyle.Bottom;
             popupPanel.HighEmphasis = true;
             popupPanel.Icon = null;
-            popupPanel.Location = new Point(361, 323);
+            popupPanel.Location = new Point(361, 334);
             popupPanel.Margin = new Padding(5, 8, 5, 8);
             popupPanel.MouseState = MaterialSkin.MouseState.HOVER;
             popupPanel.Name = "popupPanel";
             popupPanel.NoAccentTextColor = Color.Empty;
-            popupPanel.Size = new Size(347, 47);
+            popupPanel.Size = new Size(347, 36);
             popupPanel.TabIndex = 47;
             popupPanel.Text = "add medicine";
             popupPanel.Type = MaterialButton.MaterialButtonType.Contained;
@@ -691,7 +678,7 @@ namespace School_Clinic
             materialLabel2.Location = new Point(9, 7);
             materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(303, 41);
+            materialLabel2.Size = new Size(180, 24);
             materialLabel2.TabIndex = 4;
             materialLabel2.Text = "Student Information";
             materialLabel2.Click += materialLabel2_Click_1;
@@ -1580,7 +1567,6 @@ namespace School_Clinic
             // 
             // tableLayoutPanel5
             // 
-            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel5.ColumnCount = 2;
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75F));
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));

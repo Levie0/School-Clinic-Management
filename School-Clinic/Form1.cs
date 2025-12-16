@@ -8,7 +8,7 @@ namespace School_Clinic
         {
             InitializeComponent();
 
-            textBox2.PasswordChar = '*';// charles
+            textBox2.PasswordChar = '*';// charles (para sa password)
         }
 
         private void Form1_Load(object sender, EventArgs e) //charles (para ni invisible sa button)
@@ -35,7 +35,7 @@ namespace School_Clinic
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)//charles
+        private void textBox1_TextChanged(object sender, EventArgs e) // charles
         {
             if (textBox1.Text.Any(c => !char.IsDigit(c) && c != '-'))
             {
@@ -46,11 +46,9 @@ namespace School_Clinic
                     textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
                     textBox1.SelectionStart = textBox1.Text.Length;
                 }
-
             }
-
-
         }
+
 
         private void button1_Click(object sender, EventArgs e)// charles
         {

@@ -36,31 +36,30 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(40, 142, 88);
+            textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 9F);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(632, 357);
+            textBox1.ForeColor = Color.DimGray;
+            textBox1.Location = new Point(642, 358);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.MaxLength = 32600;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(232, 20);
             textBox1.TabIndex = 1;
-            textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.BackColor = Color.FromArgb(40, 142, 88);
+            textBox2.BackColor = Color.White;
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 9F);
-            textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(632, 433);
+            textBox2.ForeColor = Color.DimGray;
+            textBox2.Location = new Point(643, 434);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(232, 20);
             textBox2.TabIndex = 2;
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            textBox2.Tag = "";
             textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button1
@@ -69,7 +68,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(611, 491);
+            button1.Location = new Point(624, 490);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(272, 54);
@@ -84,7 +83,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1027, 763);
+            ClientSize = new Size(1044, 763);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
