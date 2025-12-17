@@ -794,152 +794,120 @@ namespace School_Clinic
             panel2.TabIndex = 49;
             panel2.Visible = false;
             // 
-            // materialLabel7
+            // tableLayoutPanel7
             // 
-            materialLabel7.AutoSize = true;
-            materialLabel7.Depth = 0;
-            materialLabel7.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            materialLabel7.Location = new Point(12, 11);
-            materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel7.Name = "materialLabel7";
-            materialLabel7.Size = new Size(195, 29);
-            materialLabel7.TabIndex = 52;
-            materialLabel7.Text = "Medicine Selector";
+            tableLayoutPanel7.ColumnCount = 4;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel7.Location = new Point(15, 170);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 4;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel7.Size = new Size(962, 151);
+            tableLayoutPanel7.TabIndex = 49;
             // 
-            // closePanelBtn
+            // tableLayoutPanel6
             // 
-            closePanelBtn.AutoSize = false;
-            closePanelBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            closePanelBtn.Density = MaterialButton.MaterialButtonDensity.Default;
-            closePanelBtn.Depth = 0;
-            closePanelBtn.HighEmphasis = true;
-            closePanelBtn.Icon = null;
-            closePanelBtn.Location = new Point(21, 281);
-            closePanelBtn.Margin = new Padding(4, 6, 4, 6);
-            closePanelBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            closePanelBtn.Name = "closePanelBtn";
-            closePanelBtn.NoAccentTextColor = Color.Empty;
-            closePanelBtn.Size = new Size(107, 36);
-            closePanelBtn.TabIndex = 51;
-            closePanelBtn.Text = "Cancel";
-            closePanelBtn.Type = MaterialButton.MaterialButtonType.Contained;
-            closePanelBtn.UseAccentColor = false;
-            closePanelBtn.UseVisualStyleBackColor = true;
-            closePanelBtn.Click += closePanelBtn_Click;
+            tableLayoutPanel6.ColumnCount = 4;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.Controls.Add(comboBox1, 3, 2);
+            tableLayoutPanel6.Controls.Add(textBox1, 0, 2);
+            tableLayoutPanel6.Controls.Add(label1, 0, 1);
+            tableLayoutPanel6.Controls.Add(dateTimePicker3, 2, 2);
+            tableLayoutPanel6.Controls.Add(label4, 2, 1);
+            tableLayoutPanel6.Controls.Add(materialLabel2, 0, 0);
+            tableLayoutPanel6.Controls.Add(label2, 1, 1);
+            tableLayoutPanel6.Controls.Add(textBox2, 1, 2);
+            tableLayoutPanel6.Controls.Add(label3, 3, 1);
+            tableLayoutPanel6.Controls.Add(materialLabel3, 0, 3);
+            tableLayoutPanel6.Location = new Point(15, 13);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 4;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.Size = new Size(962, 151);
+            tableLayoutPanel6.TabIndex = 0;
             // 
-            // addMedicineBtn
+            // comboBox1
             // 
-            addMedicineBtn.AutoSize = false;
-            addMedicineBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            addMedicineBtn.Density = MaterialButton.MaterialButtonDensity.Default;
-            addMedicineBtn.Depth = 0;
-            addMedicineBtn.HighEmphasis = true;
-            addMedicineBtn.Icon = null;
-            addMedicineBtn.Location = new Point(141, 281);
-            addMedicineBtn.Margin = new Padding(4, 6, 4, 6);
-            addMedicineBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            addMedicineBtn.Name = "addMedicineBtn";
-            addMedicineBtn.NoAccentTextColor = Color.Empty;
-            addMedicineBtn.Size = new Size(107, 36);
-            addMedicineBtn.TabIndex = 50;
-            addMedicineBtn.Text = "Add";
-            addMedicineBtn.Type = MaterialButton.MaterialButtonType.Contained;
-            addMedicineBtn.UseAccentColor = false;
-            addMedicineBtn.UseVisualStyleBackColor = true;
-            addMedicineBtn.Click += addMedicineBtn_Click;
+            comboBox1.BackColor = SystemColors.Menu;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "BSIT", "BSN", "BSMT", "BSA", "BSBA" });
+            comboBox1.Location = new Point(723, 77);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(236, 23);
+            comboBox1.TabIndex = 47;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // label30
+            // textBox1
             // 
-            label30.AutoSize = true;
-            label30.Location = new Point(21, 174);
-            label30.Name = "label30";
-            label30.Size = new Size(51, 15);
-            label30.TabIndex = 5;
-            label30.Text = "Amount";
+            textBox1.BackColor = SystemColors.Menu;
+            textBox1.Location = new Point(3, 77);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(234, 23);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
-            // materialMaskedTextBox1
+            // label1
             // 
-            materialMaskedTextBox1.AllowPromptAsInput = true;
-            materialMaskedTextBox1.AnimateReadOnly = false;
-            materialMaskedTextBox1.AsciiOnly = false;
-            materialMaskedTextBox1.BackgroundImageLayout = ImageLayout.None;
-            materialMaskedTextBox1.BeepOnError = false;
-            materialMaskedTextBox1.CutCopyMaskFormat = MaskFormat.IncludeLiterals;
-            materialMaskedTextBox1.Depth = 0;
-            materialMaskedTextBox1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialMaskedTextBox1.HidePromptOnLeave = false;
-            materialMaskedTextBox1.HideSelection = true;
-            materialMaskedTextBox1.InsertKeyMode = InsertKeyMode.Default;
-            materialMaskedTextBox1.LeadingIcon = null;
-            materialMaskedTextBox1.Location = new Point(21, 192);
-            materialMaskedTextBox1.Mask = "";
-            materialMaskedTextBox1.MaxLength = 32767;
-            materialMaskedTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialMaskedTextBox1.Name = "materialMaskedTextBox1";
-            materialMaskedTextBox1.PasswordChar = '\0';
-            materialMaskedTextBox1.PrefixSuffixText = null;
-            materialMaskedTextBox1.PromptChar = '_';
-            materialMaskedTextBox1.ReadOnly = false;
-            materialMaskedTextBox1.RejectInputOnFirstFailure = false;
-            materialMaskedTextBox1.ResetOnPrompt = true;
-            materialMaskedTextBox1.ResetOnSpace = true;
-            materialMaskedTextBox1.RightToLeft = RightToLeft.No;
-            materialMaskedTextBox1.SelectedText = "";
-            materialMaskedTextBox1.SelectionLength = 0;
-            materialMaskedTextBox1.SelectionStart = 0;
-            materialMaskedTextBox1.ShortcutsEnabled = true;
-            materialMaskedTextBox1.Size = new Size(227, 48);
-            materialMaskedTextBox1.SkipLiterals = true;
-            materialMaskedTextBox1.TabIndex = 4;
-            materialMaskedTextBox1.TabStop = false;
-            materialMaskedTextBox1.TextAlign = HorizontalAlignment.Left;
-            materialMaskedTextBox1.TextMaskFormat = MaskFormat.IncludeLiterals;
-            materialMaskedTextBox1.TrailingIcon = null;
-            materialMaskedTextBox1.UseSystemPasswordChar = false;
-            materialMaskedTextBox1.ValidatingType = null;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(3, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(39, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Name";
+            label1.Click += label1_Click;
             // 
-            // label29
+            // dateTimePicker3
             // 
-            label29.AutoSize = true;
-            label29.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label29.ForeColor = SystemColors.ControlDarkDark;
-            label29.Location = new Point(21, 74);
-            label29.Name = "label29";
-            label29.Size = new Size(56, 15);
-            label29.TabIndex = 3;
-            label29.Text = "Medicine";
+            dateTimePicker3.CalendarMonthBackground = SystemColors.Menu;
+            dateTimePicker3.Format = DateTimePickerFormat.Short;
+            dateTimePicker3.Location = new Point(483, 77);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(234, 23);
+            dateTimePicker3.TabIndex = 18;
             // 
-            // materialComboBox1
+            // label4
             // 
-            materialComboBox1.AutoResize = false;
-            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialComboBox1.Depth = 0;
-            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
-            materialComboBox1.DropDownHeight = 174;
-            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            materialComboBox1.DropDownWidth = 121;
-            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialComboBox1.FormattingEnabled = true;
-            materialComboBox1.IntegralHeight = false;
-            materialComboBox1.ItemHeight = 43;
-            materialComboBox1.Location = new Point(21, 92);
-            materialComboBox1.MaxDropDownItems = 4;
-            materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialComboBox1.Name = "materialComboBox1";
-            materialComboBox1.Size = new Size(227, 49);
-            materialComboBox1.StartIndex = 0;
-            materialComboBox1.TabIndex = 2;
+            label4.AutoSize = true;
+            label4.Location = new Point(483, 37);
+            label4.Name = "label4";
+            label4.Size = new Size(73, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Date of Birth";
             // 
-            // label28
+            // materialLabel2
             // 
-            label28.AutoSize = true;
-            label28.Location = new Point(9, 37);
-            label28.Name = "label28";
-            label28.Size = new Size(126, 15);
-            label28.TabIndex = 1;
-            label28.Text = "Please Select Medicine";
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            materialLabel2.Location = new Point(3, 0);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(180, 24);
+            materialLabel2.TabIndex = 4;
+            materialLabel2.Text = "Student Information";
+            materialLabel2.Click += materialLabel2_Click_1;
             // 
             // tabPage2
             // 
