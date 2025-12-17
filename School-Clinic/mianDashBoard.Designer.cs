@@ -86,6 +86,10 @@ namespace School_Clinic
             editBtn = new MaterialButton();
             deleteBtn = new MaterialButton();
             panel1 = new Panel();
+            label32 = new Label();
+            label31 = new Label();
+            textBox21 = new TextBox();
+            comboBox3 = new ComboBox();
             cancelBtn = new MaterialButton();
             comboBox2 = new ComboBox();
             saveEditBtn = new MaterialButton();
@@ -213,9 +217,9 @@ namespace School_Clinic
             tabPage1.Controls.Add(materialCard4);
             tabPage1.ImageKey = "home.png";
             tabPage1.Location = new Point(4, 24);
-            tabPage1.Margin = new Padding(10, 10, 10, 10);
+            tabPage1.Margin = new Padding(10);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(8, 8, 8, 8);
+            tabPage1.Padding = new Padding(8);
             tabPage1.Size = new Size(1199, 496);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "HOME";
@@ -407,10 +411,10 @@ namespace School_Clinic
             materialCard4.Depth = 0;
             materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard4.Location = new Point(10, 164);
-            materialCard4.Margin = new Padding(14, 14, 14, 14);
+            materialCard4.Margin = new Padding(14);
             materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard4.Name = "materialCard4";
-            materialCard4.Padding = new Padding(14, 14, 14, 14);
+            materialCard4.Padding = new Padding(14);
             materialCard4.Size = new Size(1170, 310);
             materialCard4.TabIndex = 48;
             // 
@@ -552,7 +556,7 @@ namespace School_Clinic
             label10.Dock = DockStyle.Bottom;
             label10.Location = new Point(3, 155);
             label10.Name = "label10";
-            label10.Padding = new Padding(5, 5, 5, 5);
+            label10.Padding = new Padding(5);
             label10.Size = new Size(276, 25);
             label10.TabIndex = 22;
             label10.Text = "Chief Complaint ( Symptoms/Reason for Visit )";
@@ -642,7 +646,7 @@ namespace School_Clinic
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(5, 5, 5, 5);
+            tableLayoutPanel1.Padding = new Padding(5);
             tableLayoutPanel1.RowCount = 9;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.11111F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
@@ -823,7 +827,7 @@ namespace School_Clinic
             tabPage2.ImageKey = "history.png";
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(10, 10, 10, 10);
+            tabPage2.Padding = new Padding(10);
             tabPage2.Size = new Size(1199, 496);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECORDS";
@@ -841,10 +845,10 @@ namespace School_Clinic
             materialCard11.Dock = DockStyle.Top;
             materialCard11.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard11.Location = new Point(10, 10);
-            materialCard11.Margin = new Padding(20, 20, 20, 20);
+            materialCard11.Margin = new Padding(20);
             materialCard11.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard11.Name = "materialCard11";
-            materialCard11.Padding = new Padding(14, 14, 14, 14);
+            materialCard11.Padding = new Padding(14);
             materialCard11.Size = new Size(1179, 129);
             materialCard11.TabIndex = 7;
             // 
@@ -891,10 +895,10 @@ namespace School_Clinic
             materialCard5.Depth = 0;
             materialCard5.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard5.Location = new Point(10, 84);
-            materialCard5.Margin = new Padding(14, 14, 14, 14);
+            materialCard5.Margin = new Padding(14);
             materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard5.Name = "materialCard5";
-            materialCard5.Padding = new Padding(14, 14, 14, 14);
+            materialCard5.Padding = new Padding(14);
             materialCard5.Size = new Size(866, 36);
             materialCard5.TabIndex = 2;
             // 
@@ -966,7 +970,11 @@ namespace School_Clinic
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ButtonFace;
+            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(label32);
+            panel1.Controls.Add(label31);
+            panel1.Controls.Add(textBox21);
+            panel1.Controls.Add(comboBox3);
             panel1.Controls.Add(cancelBtn);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(saveEditBtn);
@@ -998,6 +1006,41 @@ namespace School_Clinic
             panel1.Size = new Size(645, 312);
             panel1.TabIndex = 1;
             panel1.Visible = false;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.ForeColor = SystemColors.ButtonFace;
+            label32.Location = new Point(360, 183);
+            label32.Name = "label32";
+            label32.Size = new Size(56, 15);
+            label32.TabIndex = 30;
+            label32.Text = "Quantity ";
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.ForeColor = SystemColors.ButtonFace;
+            label31.Location = new Point(360, 130);
+            label31.Name = "label31";
+            label31.Size = new Size(56, 15);
+            label31.TabIndex = 29;
+            label31.Text = "Medicine";
+            // 
+            // textBox21
+            // 
+            textBox21.Location = new Point(359, 201);
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(120, 23);
+            textBox21.TabIndex = 28;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(358, 148);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(121, 23);
+            comboBox3.TabIndex = 27;
             // 
             // cancelBtn
             // 
@@ -1257,10 +1300,10 @@ namespace School_Clinic
             materialCard2.Depth = 0;
             materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard2.Location = new Point(10, 149);
-            materialCard2.Margin = new Padding(14, 14, 14, 14);
+            materialCard2.Margin = new Padding(14);
             materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard2.Name = "materialCard2";
-            materialCard2.Padding = new Padding(14, 14, 14, 14);
+            materialCard2.Padding = new Padding(14);
             materialCard2.Size = new Size(1178, 473);
             materialCard2.TabIndex = 0;
             materialCard2.Paint += materialCard2_Paint;
@@ -1392,7 +1435,7 @@ namespace School_Clinic
             tabPage3.ImageKey = "medical-records.png";
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1315, 646);
+            tabPage3.Size = new Size(1199, 496);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "INVENTORY";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1512,7 +1555,7 @@ namespace School_Clinic
             addmedic.HighEmphasis = true;
             addmedic.Icon = (Image)resources.GetObject("addmedic.Icon");
             addmedic.Location = new Point(1128, 583);
-            addmedic.Margin = new Padding(4, 4, 4, 4);
+            addmedic.Margin = new Padding(4);
             addmedic.MouseState = MaterialSkin.MouseState.HOVER;
             addmedic.Name = "addmedic";
             addmedic.NoAccentTextColor = Color.Empty;
@@ -1536,7 +1579,7 @@ namespace School_Clinic
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new Size(1315, 424);
+            tableLayoutPanel5.Size = new Size(1199, 424);
             tableLayoutPanel5.TabIndex = 9;
             // 
             // materialCard9
@@ -1552,7 +1595,7 @@ namespace School_Clinic
             materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard9.Name = "materialCard9";
             materialCard9.Padding = new Padding(12, 10, 12, 10);
-            materialCard9.Size = new Size(962, 404);
+            materialCard9.Size = new Size(875, 404);
             materialCard9.TabIndex = 3;
             materialCard9.Paint += materialCard9_Paint;
             // 
@@ -1563,7 +1606,7 @@ namespace School_Clinic
             pnlInventoryList.FlowDirection = FlowDirection.TopDown;
             pnlInventoryList.Location = new Point(12, 10);
             pnlInventoryList.Name = "pnlInventoryList";
-            pnlInventoryList.Size = new Size(938, 384);
+            pnlInventoryList.Size = new Size(851, 384);
             pnlInventoryList.TabIndex = 0;
             // 
             // materialCard1
@@ -1575,12 +1618,12 @@ namespace School_Clinic
             materialCard1.Depth = 0;
             materialCard1.Dock = DockStyle.Fill;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(998, 10);
+            materialCard1.Location = new Point(911, 10);
             materialCard1.Margin = new Padding(12, 10, 12, 10);
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(12, 10, 12, 10);
-            materialCard1.Size = new Size(305, 404);
+            materialCard1.Size = new Size(276, 404);
             materialCard1.TabIndex = 7;
             materialCard1.Paint += materialCard1_Paint_1;
             // 
@@ -1605,7 +1648,7 @@ namespace School_Clinic
             materialCard10.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard10.Name = "materialCard10";
             materialCard10.Padding = new Padding(12, 10, 12, 10);
-            materialCard10.Size = new Size(281, 364);
+            materialCard10.Size = new Size(252, 364);
             materialCard10.TabIndex = 8;
             // 
             // removeMedicBtn
@@ -1642,7 +1685,7 @@ namespace School_Clinic
             materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard3.Name = "materialCard3";
             materialCard3.Padding = new Padding(12, 10, 12, 10);
-            materialCard3.Size = new Size(1315, 152);
+            materialCard3.Size = new Size(1199, 152);
             materialCard3.TabIndex = 1;
             // 
             // materialLabel9
@@ -1674,7 +1717,7 @@ namespace School_Clinic
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 133F));
-            tableLayoutPanel4.Size = new Size(1291, 132);
+            tableLayoutPanel4.Size = new Size(1175, 132);
             tableLayoutPanel4.TabIndex = 0;
             // 
             // materialCard8
@@ -1686,12 +1729,12 @@ namespace School_Clinic
             materialCard8.Depth = 0;
             materialCard8.Dock = DockStyle.Fill;
             materialCard8.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard8.Location = new Point(872, 10);
+            materialCard8.Location = new Point(794, 10);
             materialCard8.Margin = new Padding(12, 10, 12, 10);
             materialCard8.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard8.Name = "materialCard8";
             materialCard8.Padding = new Padding(12, 10, 12, 10);
-            materialCard8.Size = new Size(407, 112);
+            materialCard8.Size = new Size(369, 112);
             materialCard8.TabIndex = 4;
             materialCard8.Paint += materialCard8_Paint;
             // 
@@ -1699,7 +1742,7 @@ namespace School_Clinic
             // 
             pictureBox3.Anchor = AnchorStyles.Right;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(296, 7);
+            pictureBox3.Location = new Point(258, 7);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(102, 89);
@@ -1752,14 +1795,14 @@ namespace School_Clinic
             materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard6.Name = "materialCard6";
             materialCard6.Padding = new Padding(12, 10, 12, 10);
-            materialCard6.Size = new Size(406, 112);
+            materialCard6.Size = new Size(367, 112);
             materialCard6.TabIndex = 2;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(296, 13);
+            pictureBox1.Location = new Point(257, 13);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(95, 77);
@@ -1809,19 +1852,19 @@ namespace School_Clinic
             materialCard7.Depth = 0;
             materialCard7.Dock = DockStyle.Fill;
             materialCard7.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard7.Location = new Point(442, 10);
+            materialCard7.Location = new Point(403, 10);
             materialCard7.Margin = new Padding(12, 10, 12, 10);
             materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard7.Name = "materialCard7";
             materialCard7.Padding = new Padding(12, 10, 12, 10);
-            materialCard7.Size = new Size(406, 112);
+            materialCard7.Size = new Size(367, 112);
             materialCard7.TabIndex = 3;
             // 
             // pictureBox2
             // 
             pictureBox2.Anchor = AnchorStyles.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(303, 7);
+            pictureBox2.Location = new Point(264, 7);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(93, 89);
@@ -2068,5 +2111,9 @@ namespace School_Clinic
         private MaterialLabel materialLabel4;
         private MaterialLabel materialLabel9;
         private MaterialLabel materialLabel8;
+        private Label label32;
+        private Label label31;
+        private TextBox textBox21;
+        private ComboBox comboBox3;
     }
 }
