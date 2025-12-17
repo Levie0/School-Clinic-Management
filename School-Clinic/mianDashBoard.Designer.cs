@@ -34,6 +34,15 @@ namespace School_Clinic
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mianDashBoard));
             materialTabControl1 = new MaterialTabControl();
             tabPage1 = new TabPage();
+            panel2 = new Panel();
+            materialLabel7 = new MaterialLabel();
+            closePanelBtn = new MaterialButton();
+            addMedicineBtn = new MaterialButton();
+            label30 = new Label();
+            materialMaskedTextBox1 = new MaterialMaskedTextBox();
+            label29 = new Label();
+            materialComboBox1 = new MaterialComboBox();
+            label28 = new Label();
             materialCard13 = new MaterialCard();
             tableLayoutPanel1 = new TableLayoutPanel();
             savebtn = new MaterialButton();
@@ -54,11 +63,6 @@ namespace School_Clinic
             label9 = new Label();
             dateTimePicker4 = new DateTimePicker();
             textBox3 = new TextBox();
-            tableLayoutPanel7 = new TableLayoutPanel();
-            label5 = new Label();
-            label6 = new Label();
-            textBox4 = new TextBox();
-            textBox6 = new TextBox();
             tableLayoutPanel6 = new TableLayoutPanel();
             comboBox1 = new ComboBox();
             textBox1 = new TextBox();
@@ -72,17 +76,13 @@ namespace School_Clinic
             materialLabel3 = new MaterialLabel();
             materialCard4 = new MaterialCard();
             materialCard14 = new MaterialCard();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            label5 = new Label();
+            label6 = new Label();
+            textBox4 = new TextBox();
+            textBox6 = new TextBox();
             materialCard12 = new MaterialCard();
             materialLabel12 = new MaterialLabel();
-            panel2 = new Panel();
-            materialLabel7 = new MaterialLabel();
-            closePanelBtn = new MaterialButton();
-            addMedicineBtn = new MaterialButton();
-            label30 = new Label();
-            materialMaskedTextBox1 = new MaterialMaskedTextBox();
-            label29 = new Label();
-            materialComboBox1 = new MaterialComboBox();
-            label28 = new Label();
             tabPage2 = new TabPage();
             materialCard11 = new MaterialCard();
             materialLabel4 = new MaterialLabel();
@@ -174,13 +174,14 @@ namespace School_Clinic
             contextMenuStrip1 = new ContextMenuStrip(components);
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            panel2.SuspendLayout();
             materialCard13.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel8.SuspendLayout();
-            tableLayoutPanel7.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
+            materialCard14.SuspendLayout();
+            tableLayoutPanel7.SuspendLayout();
             materialCard12.SuspendLayout();
-            panel2.SuspendLayout();
             tabPage2.SuspendLayout();
             materialCard11.SuspendLayout();
             materialCard5.SuspendLayout();
@@ -222,9 +223,9 @@ namespace School_Clinic
             // tabPage1
             // 
             tabPage1.BackColor = Color.WhiteSmoke;
+            tabPage1.Controls.Add(panel2);
             tabPage1.Controls.Add(materialCard13);
             tabPage1.Controls.Add(materialCard12);
-            tabPage1.Controls.Add(panel2);
             tabPage1.ImageKey = "home.png";
             tabPage1.Location = new Point(4, 24);
             tabPage1.Margin = new Padding(10);
@@ -235,13 +236,168 @@ namespace School_Clinic
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
             // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.None;
+            panel2.BackColor = Color.WhiteSmoke;
+            panel2.Controls.Add(materialLabel7);
+            panel2.Controls.Add(closePanelBtn);
+            panel2.Controls.Add(addMedicineBtn);
+            panel2.Controls.Add(label30);
+            panel2.Controls.Add(materialMaskedTextBox1);
+            panel2.Controls.Add(label29);
+            panel2.Controls.Add(materialComboBox1);
+            panel2.Controls.Add(label28);
+            panel2.Location = new Point(545, 165);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(273, 312);
+            panel2.TabIndex = 49;
+            panel2.Visible = false;
+            // 
+            // materialLabel7
+            // 
+            materialLabel7.Depth = 0;
+            materialLabel7.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            materialLabel7.Location = new Point(26, 12);
+            materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel7.Name = "materialLabel7";
+            materialLabel7.Size = new Size(223, 23);
+            materialLabel7.TabIndex = 0;
+            materialLabel7.Text = "Please Select Medicine";
+            // 
+            // closePanelBtn
+            // 
+            closePanelBtn.AutoSize = false;
+            closePanelBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            closePanelBtn.Density = MaterialButton.MaterialButtonDensity.Default;
+            closePanelBtn.Depth = 0;
+            closePanelBtn.HighEmphasis = true;
+            closePanelBtn.Icon = null;
+            closePanelBtn.Location = new Point(26, 257);
+            closePanelBtn.Margin = new Padding(4, 6, 4, 6);
+            closePanelBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            closePanelBtn.Name = "closePanelBtn";
+            closePanelBtn.NoAccentTextColor = Color.Empty;
+            closePanelBtn.Size = new Size(92, 36);
+            closePanelBtn.TabIndex = 1;
+            closePanelBtn.Text = "cancel";
+            closePanelBtn.Type = MaterialButton.MaterialButtonType.Contained;
+            closePanelBtn.UseAccentColor = false;
+            // 
+            // addMedicineBtn
+            // 
+            addMedicineBtn.AutoSize = false;
+            addMedicineBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            addMedicineBtn.Density = MaterialButton.MaterialButtonDensity.Default;
+            addMedicineBtn.Depth = 0;
+            addMedicineBtn.HighEmphasis = true;
+            addMedicineBtn.Icon = null;
+            addMedicineBtn.Location = new Point(157, 257);
+            addMedicineBtn.Margin = new Padding(4, 6, 4, 6);
+            addMedicineBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            addMedicineBtn.Name = "addMedicineBtn";
+            addMedicineBtn.NoAccentTextColor = Color.Empty;
+            addMedicineBtn.Size = new Size(92, 36);
+            addMedicineBtn.TabIndex = 2;
+            addMedicineBtn.Text = "add";
+            addMedicineBtn.Type = MaterialButton.MaterialButtonType.Contained;
+            addMedicineBtn.UseAccentColor = false;
+            // 
+            // label30
+            // 
+            label30.BackColor = Color.Transparent;
+            label30.ForeColor = SystemColors.ControlDarkDark;
+            label30.Location = new Point(26, 65);
+            label30.Name = "label30";
+            label30.Size = new Size(78, 23);
+            label30.TabIndex = 3;
+            label30.Text = "Medicine";
+            // 
+            // materialMaskedTextBox1
+            // 
+            materialMaskedTextBox1.AllowPromptAsInput = true;
+            materialMaskedTextBox1.AnimateReadOnly = false;
+            materialMaskedTextBox1.AsciiOnly = false;
+            materialMaskedTextBox1.BackgroundImageLayout = ImageLayout.None;
+            materialMaskedTextBox1.BeepOnError = false;
+            materialMaskedTextBox1.CutCopyMaskFormat = MaskFormat.IncludeLiterals;
+            materialMaskedTextBox1.Depth = 0;
+            materialMaskedTextBox1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialMaskedTextBox1.HidePromptOnLeave = false;
+            materialMaskedTextBox1.HideSelection = true;
+            materialMaskedTextBox1.InsertKeyMode = InsertKeyMode.Default;
+            materialMaskedTextBox1.LeadingIcon = null;
+            materialMaskedTextBox1.Location = new Point(26, 174);
+            materialMaskedTextBox1.Mask = "";
+            materialMaskedTextBox1.MaxLength = 32767;
+            materialMaskedTextBox1.MouseState = MaterialSkin.MouseState.OUT;
+            materialMaskedTextBox1.Name = "materialMaskedTextBox1";
+            materialMaskedTextBox1.PasswordChar = '\0';
+            materialMaskedTextBox1.PrefixSuffixText = null;
+            materialMaskedTextBox1.PromptChar = '_';
+            materialMaskedTextBox1.ReadOnly = false;
+            materialMaskedTextBox1.RejectInputOnFirstFailure = false;
+            materialMaskedTextBox1.ResetOnPrompt = true;
+            materialMaskedTextBox1.ResetOnSpace = true;
+            materialMaskedTextBox1.RightToLeft = RightToLeft.No;
+            materialMaskedTextBox1.SelectedText = "";
+            materialMaskedTextBox1.SelectionLength = 0;
+            materialMaskedTextBox1.SelectionStart = 0;
+            materialMaskedTextBox1.ShortcutsEnabled = true;
+            materialMaskedTextBox1.Size = new Size(223, 48);
+            materialMaskedTextBox1.SkipLiterals = true;
+            materialMaskedTextBox1.TabIndex = 4;
+            materialMaskedTextBox1.TabStop = false;
+            materialMaskedTextBox1.TextAlign = HorizontalAlignment.Left;
+            materialMaskedTextBox1.TextMaskFormat = MaskFormat.IncludeLiterals;
+            materialMaskedTextBox1.TrailingIcon = null;
+            materialMaskedTextBox1.UseSystemPasswordChar = false;
+            materialMaskedTextBox1.ValidatingType = null;
+            // 
+            // label29
+            // 
+            label29.Location = new Point(52, 31);
+            label29.Name = "label29";
+            label29.Size = new Size(100, 23);
+            label29.TabIndex = 5;
+            // 
+            // materialComboBox1
+            // 
+            materialComboBox1.AutoResize = false;
+            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
+            materialComboBox1.Depth = 0;
+            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
+            materialComboBox1.DropDownHeight = 174;
+            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            materialComboBox1.DropDownWidth = 121;
+            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialComboBox1.IntegralHeight = false;
+            materialComboBox1.ItemHeight = 43;
+            materialComboBox1.Location = new Point(26, 87);
+            materialComboBox1.MaxDropDownItems = 4;
+            materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
+            materialComboBox1.Name = "materialComboBox1";
+            materialComboBox1.Size = new Size(223, 49);
+            materialComboBox1.StartIndex = 0;
+            materialComboBox1.TabIndex = 6;
+            // 
+            // label28
+            // 
+            label28.ForeColor = SystemColors.ControlDarkDark;
+            label28.Location = new Point(26, 153);
+            label28.Name = "label28";
+            label28.Size = new Size(100, 23);
+            label28.TabIndex = 7;
+            label28.Text = "Quantity";
+            // 
             // materialCard13
             // 
             materialCard13.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             materialCard13.BackColor = Color.FromArgb(255, 255, 255);
             materialCard13.Controls.Add(tableLayoutPanel1);
             materialCard13.Controls.Add(tableLayoutPanel8);
-            materialCard13.Controls.Add(tableLayoutPanel7);
             materialCard13.Controls.Add(tableLayoutPanel6);
             materialCard13.Controls.Add(materialCard4);
             materialCard13.Controls.Add(materialCard14);
@@ -361,18 +517,20 @@ namespace School_Clinic
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(3, 140);
+            label17.Dock = DockStyle.Bottom;
+            label17.Location = new Point(3, 164);
             label17.Name = "label17";
-            label17.Size = new Size(75, 15);
+            label17.Size = new Size(283, 15);
             label17.TabIndex = 31;
             label17.Text = "Action Taken";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(3, 39);
+            label11.Dock = DockStyle.Bottom;
+            label11.Location = new Point(3, 61);
             label11.Name = "label11";
-            label11.Size = new Size(96, 15);
+            label11.Size = new Size(283, 15);
             label11.TabIndex = 30;
             label11.Text = "Initial Assesment";
             // 
@@ -514,70 +672,14 @@ namespace School_Clinic
             textBox3.Size = new Size(220, 23);
             textBox3.TabIndex = 12;
             // 
-            // tableLayoutPanel7
-            // 
-            tableLayoutPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel7.ColumnCount = 2;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel7.Controls.Add(label5, 0, 0);
-            tableLayoutPanel7.Controls.Add(label6, 1, 0);
-            tableLayoutPanel7.Controls.Add(textBox4, 1, 1);
-            tableLayoutPanel7.Controls.Add(textBox6, 0, 1);
-            tableLayoutPanel7.Location = new Point(22, 180);
-            tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 2;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel7.Size = new Size(904, 77);
-            tableLayoutPanel7.TabIndex = 49;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Bottom;
-            label5.Location = new Point(3, 23);
-            label5.Name = "label5";
-            label5.Size = new Size(446, 15);
-            label5.TabIndex = 8;
-            label5.Text = "Parent/Guardian Name ";
-            label5.Click += label5_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Dock = DockStyle.Bottom;
-            label6.Location = new Point(455, 23);
-            label6.Name = "label6";
-            label6.Size = new Size(446, 15);
-            label6.TabIndex = 9;
-            label6.Text = "Emergency Contact";
-            // 
-            // textBox4
-            // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.BackColor = Color.WhiteSmoke;
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(455, 41);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(446, 23);
-            textBox4.TabIndex = 13;
-            // 
-            // textBox6
-            // 
-            textBox6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox6.BackColor = Color.WhiteSmoke;
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(3, 41);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(446, 23);
-            textBox6.TabIndex = 15;
-            textBox6.TextChanged += textBox6_TextChanged;
-            // 
             // tableLayoutPanel6
             // 
             tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel6.ColumnCount = 4;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
@@ -592,7 +694,7 @@ namespace School_Clinic
             tableLayoutPanel6.Controls.Add(textBox2, 1, 2);
             tableLayoutPanel6.Controls.Add(label3, 3, 1);
             tableLayoutPanel6.Controls.Add(materialLabel3, 0, 3);
-            tableLayoutPanel6.Location = new Point(22, 23);
+            tableLayoutPanel6.Location = new Point(15, 13);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 4;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
@@ -603,7 +705,15 @@ namespace School_Clinic
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel6.Size = new Size(904, 151);
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.Size = new Size(908, 151);
             tableLayoutPanel6.TabIndex = 0;
             // 
             // comboBox1
@@ -611,21 +721,21 @@ namespace School_Clinic
             comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.BackColor = SystemColors.Menu;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "BSIT", "BSN", "BSMT", "BSA", "BSBA" });
-            comboBox1.Location = new Point(681, 77);
+            comboBox1.Items.AddRange(new object[] { "BSIT", "BSN", "BSMT", "BSA", "BSBA", "BSIT", "BSN", "BSMT", "BSA", "BSBA" });
+            comboBox1.Location = new Point(684, 77);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(220, 23);
+            comboBox1.Size = new Size(221, 23);
             comboBox1.TabIndex = 47;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.BackColor = Color.WhiteSmoke;
+            textBox1.BackColor = SystemColors.Menu;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Location = new Point(3, 77);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(220, 23);
+            textBox1.Size = new Size(221, 23);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged_1;
             // 
@@ -636,7 +746,7 @@ namespace School_Clinic
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 59);
             label1.Name = "label1";
-            label1.Size = new Size(220, 15);
+            label1.Size = new Size(221, 15);
             label1.TabIndex = 3;
             label1.Text = "Name";
             label1.Click += label1_Click;
@@ -646,18 +756,18 @@ namespace School_Clinic
             dateTimePicker3.CalendarMonthBackground = SystemColors.Menu;
             dateTimePicker3.Dock = DockStyle.Fill;
             dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(455, 77);
+            dateTimePicker3.Location = new Point(457, 77);
             dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(220, 23);
+            dateTimePicker3.Size = new Size(221, 23);
             dateTimePicker3.TabIndex = 18;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Dock = DockStyle.Bottom;
-            label4.Location = new Point(455, 59);
+            label4.Location = new Point(457, 59);
             label4.Name = "label4";
-            label4.Size = new Size(220, 15);
+            label4.Size = new Size(221, 15);
             label4.TabIndex = 7;
             label4.Text = "Date of Birth";
             // 
@@ -679,9 +789,9 @@ namespace School_Clinic
             // 
             label2.AutoSize = true;
             label2.Dock = DockStyle.Bottom;
-            label2.Location = new Point(229, 59);
+            label2.Location = new Point(230, 59);
             label2.Name = "label2";
-            label2.Size = new Size(220, 15);
+            label2.Size = new Size(221, 15);
             label2.TabIndex = 5;
             label2.Text = "Age";
             // 
@@ -690,18 +800,18 @@ namespace School_Clinic
             textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBox2.BackColor = Color.WhiteSmoke;
             textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(229, 77);
+            textBox2.Location = new Point(230, 77);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(220, 23);
+            textBox2.Size = new Size(221, 23);
             textBox2.TabIndex = 46;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Dock = DockStyle.Bottom;
-            label3.Location = new Point(681, 59);
+            label3.Location = new Point(684, 59);
             label3.Name = "label3";
-            label3.Size = new Size(220, 15);
+            label3.Size = new Size(221, 15);
             label3.TabIndex = 6;
             label3.Text = "Grade/Class";
             label3.Click += label3_Click;
@@ -716,7 +826,7 @@ namespace School_Clinic
             materialLabel3.Location = new Point(3, 127);
             materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel3.Name = "materialLabel3";
-            materialLabel3.Size = new Size(220, 24);
+            materialLabel3.Size = new Size(221, 24);
             materialLabel3.TabIndex = 48;
             materialLabel3.Text = "Contact Information";
             // 
@@ -738,6 +848,7 @@ namespace School_Clinic
             // 
             materialCard14.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             materialCard14.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard14.Controls.Add(tableLayoutPanel7);
             materialCard14.Depth = 0;
             materialCard14.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard14.Location = new Point(11, 9);
@@ -747,6 +858,68 @@ namespace School_Clinic
             materialCard14.Padding = new Padding(14);
             materialCard14.Size = new Size(927, 418);
             materialCard14.TabIndex = 0;
+            // 
+            // tableLayoutPanel7
+            // 
+            tableLayoutPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel7.ColumnCount = 2;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel7.Controls.Add(label5, 0, 0);
+            tableLayoutPanel7.Controls.Add(label6, 1, 0);
+            tableLayoutPanel7.Controls.Add(textBox4, 1, 1);
+            tableLayoutPanel7.Controls.Add(textBox6, 0, 1);
+            tableLayoutPanel7.Location = new Point(9, 161);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 2;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel7.Size = new Size(906, 87);
+            tableLayoutPanel7.TabIndex = 49;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Dock = DockStyle.Bottom;
+            label5.Location = new Point(3, 28);
+            label5.Name = "label5";
+            label5.Size = new Size(447, 15);
+            label5.TabIndex = 8;
+            label5.Text = "Parent/Guardian Name ";
+            label5.Click += label5_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Dock = DockStyle.Bottom;
+            label6.Location = new Point(456, 28);
+            label6.Name = "label6";
+            label6.Size = new Size(447, 15);
+            label6.TabIndex = 9;
+            label6.Text = "Emergency Contact";
+            // 
+            // textBox4
+            // 
+            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox4.BackColor = Color.WhiteSmoke;
+            textBox4.BorderStyle = BorderStyle.FixedSingle;
+            textBox4.Location = new Point(456, 46);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(447, 23);
+            textBox4.TabIndex = 13;
+            // 
+            // textBox6
+            // 
+            textBox6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox6.BackColor = Color.WhiteSmoke;
+            textBox6.BorderStyle = BorderStyle.FixedSingle;
+            textBox6.Location = new Point(3, 46);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(447, 23);
+            textBox6.TabIndex = 15;
+            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // materialCard12
             // 
@@ -775,139 +948,6 @@ namespace School_Clinic
             materialLabel12.Size = new Size(353, 41);
             materialLabel12.TabIndex = 0;
             materialLabel12.Text = "Welcome to DMC Clinic";
-            // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.None;
-            panel2.BackColor = Color.WhiteSmoke;
-            panel2.Controls.Add(materialLabel7);
-            panel2.Controls.Add(closePanelBtn);
-            panel2.Controls.Add(addMedicineBtn);
-            panel2.Controls.Add(label30);
-            panel2.Controls.Add(materialMaskedTextBox1);
-            panel2.Controls.Add(label29);
-            panel2.Controls.Add(materialComboBox1);
-            panel2.Controls.Add(label28);
-            panel2.Location = new Point(499, 166);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(267, 349);
-            panel2.TabIndex = 49;
-            panel2.Visible = false;
-            // 
-            // tableLayoutPanel7
-            // 
-            tableLayoutPanel7.ColumnCount = 4;
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel7.Location = new Point(15, 170);
-            tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 4;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel7.Size = new Size(962, 151);
-            tableLayoutPanel7.TabIndex = 49;
-            // 
-            // tableLayoutPanel6
-            // 
-            tableLayoutPanel6.ColumnCount = 4;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel6.Controls.Add(comboBox1, 3, 2);
-            tableLayoutPanel6.Controls.Add(textBox1, 0, 2);
-            tableLayoutPanel6.Controls.Add(label1, 0, 1);
-            tableLayoutPanel6.Controls.Add(dateTimePicker3, 2, 2);
-            tableLayoutPanel6.Controls.Add(label4, 2, 1);
-            tableLayoutPanel6.Controls.Add(materialLabel2, 0, 0);
-            tableLayoutPanel6.Controls.Add(label2, 1, 1);
-            tableLayoutPanel6.Controls.Add(textBox2, 1, 2);
-            tableLayoutPanel6.Controls.Add(label3, 3, 1);
-            tableLayoutPanel6.Controls.Add(materialLabel3, 0, 3);
-            tableLayoutPanel6.Location = new Point(15, 13);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 4;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25.0000019F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel6.Size = new Size(962, 151);
-            tableLayoutPanel6.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            comboBox1.BackColor = SystemColors.Menu;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "BSIT", "BSN", "BSMT", "BSA", "BSBA" });
-            comboBox1.Location = new Point(723, 77);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(236, 23);
-            comboBox1.TabIndex = 47;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = SystemColors.Menu;
-            textBox1.Location = new Point(3, 77);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(234, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged_1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(39, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Name";
-            label1.Click += label1_Click;
-            // 
-            // dateTimePicker3
-            // 
-            dateTimePicker3.CalendarMonthBackground = SystemColors.Menu;
-            dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(483, 77);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(234, 23);
-            dateTimePicker3.TabIndex = 18;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(483, 37);
-            label4.Name = "label4";
-            label4.Size = new Size(73, 15);
-            label4.TabIndex = 7;
-            label4.Text = "Date of Birth";
-            // 
-            // materialLabel2
-            // 
-            materialLabel2.AutoSize = true;
-            materialLabel2.Depth = 0;
-            materialLabel2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel2.Location = new Point(3, 0);
-            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(180, 24);
-            materialLabel2.TabIndex = 4;
-            materialLabel2.Text = "Student Information";
-            materialLabel2.Click += materialLabel2_Click_1;
             // 
             // tabPage2
             // 
@@ -1668,7 +1708,7 @@ namespace School_Clinic
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel5.Controls.Add(materialCard9, 0, 0);
             tableLayoutPanel5.Controls.Add(materialCard1, 1, 0);
-            tableLayoutPanel5.Location = new Point(0, 228);
+            tableLayoutPanel5.Location = new Point(6, 242);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -1773,12 +1813,12 @@ namespace School_Clinic
             materialCard3.Controls.Add(tableLayoutPanel4);
             materialCard3.Depth = 0;
             materialCard3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard3.Location = new Point(12, 0);
+            materialCard3.Location = new Point(12, 10);
             materialCard3.Margin = new Padding(12, 10, 12, 10);
             materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard3.Name = "materialCard3";
             materialCard3.Padding = new Padding(12, 10, 12, 10);
-            materialCard3.Size = new Size(1281, 232);
+            materialCard3.Size = new Size(1281, 222);
             materialCard3.TabIndex = 1;
             // 
             // materialLabel9
@@ -1804,7 +1844,7 @@ namespace School_Clinic
             tableLayoutPanel4.Controls.Add(materialCard6, 0, 0);
             tableLayoutPanel4.Controls.Add(materialCard7, 1, 0);
             tableLayoutPanel4.Dock = DockStyle.Bottom;
-            tableLayoutPanel4.Location = new Point(12, 90);
+            tableLayoutPanel4.Location = new Point(12, 80);
             tableLayoutPanel4.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
@@ -2029,19 +2069,19 @@ namespace School_Clinic
             Load += mianDashBoard_Load;
             materialTabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             materialCard13.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel8.ResumeLayout(false);
             tableLayoutPanel8.PerformLayout();
-            tableLayoutPanel7.ResumeLayout(false);
-            tableLayoutPanel7.PerformLayout();
             tableLayoutPanel6.ResumeLayout(false);
             tableLayoutPanel6.PerformLayout();
+            materialCard14.ResumeLayout(false);
+            tableLayoutPanel7.ResumeLayout(false);
+            tableLayoutPanel7.PerformLayout();
             materialCard12.ResumeLayout(false);
             materialCard12.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             tabPage2.ResumeLayout(false);
             materialCard11.ResumeLayout(false);
             materialCard11.PerformLayout();
@@ -2134,12 +2174,8 @@ namespace School_Clinic
         private Label label9;
         private Label label8;
         private DateTimePicker dateTimePicker3;
-        private TextBox textBox6;
-        private TextBox textBox4;
         private TextBox textBox3;
         private Label label7;
-        private Label label6;
-        private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
@@ -2179,12 +2215,9 @@ namespace School_Clinic
         private DataGridViewTextBoxColumn Action;
         private DataGridViewTextBoxColumn Medication;
         private Panel panel2;
-        private Label label30;
-        private MaterialMaskedTextBox materialMaskedTextBox1;
         private Label label29;
         private MaterialComboBox materialComboBox1;
         private Label label28;
-        private MaterialButton closePanelBtn;
         private MaterialButton addMedicineBtn;
         private MaterialButton popupPanel;
         private MaterialLabel materialLabel7;
@@ -2211,7 +2244,6 @@ namespace School_Clinic
         private MaterialCard materialCard12;
         private TableLayoutPanel tableLayoutPanel6;
         private MaterialLabel materialLabel3;
-        private TableLayoutPanel tableLayoutPanel7;
         private TableLayoutPanel tableLayoutPanel8;
         private MaterialLabel materialLabel10;
         private TableLayoutPanel tableLayoutPanel1;
@@ -2219,5 +2251,13 @@ namespace School_Clinic
         private MaterialCard materialCard4;
         private MaterialCard materialCard14;
         private MaterialLabel materialLabel12;
+        private MaterialButton closePanelBtn;
+        private Label label30;
+        private MaterialMaskedTextBox materialMaskedTextBox1;
+        private TableLayoutPanel tableLayoutPanel7;
+        private Label label5;
+        private Label label6;
+        private TextBox textBox4;
+        private TextBox textBox6;
     }
 }
