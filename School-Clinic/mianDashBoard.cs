@@ -637,7 +637,8 @@ namespace School_Clinic
             btnMinus.Location = new Point(300, 10);
 
             // --- [UPDATED LOGIC: MINUS BUTTON] ---
-            btnMinus.Click += (s, e) => {
+            btnMinus.Click += (s, e) =>
+            {
                 if (item.Quantity > 0)
                 {
                     item.Quantity--; // Subtracts only 1
@@ -655,7 +656,8 @@ namespace School_Clinic
             btnPlus.Location = new Point(370, 10);
 
             // --- [UPDATED LOGIC: PLUS BUTTON] ---
-            btnPlus.Click += (s, e) => {
+            btnPlus.Click += (s, e) =>
+            {
                 if (item.Quantity >= 120)
                 {
                     MessageBox.Show("The quantity of medicine is already full.", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -909,6 +911,11 @@ namespace School_Clinic
         }
 
         private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel13_Click(object sender, EventArgs e)
         {
 
         }
