@@ -553,23 +553,43 @@ namespace School_Clinic
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox16.Text))
+            {
+                MessageBox.Show("Please enter the medicine name.", "Input Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Stop execution
+            }
+
+            // FIX 2: Check if the Quantity (textBox10) is empty or not a number
+            // int.TryParse prevents the crash by safely checking if the text is a valid number
+            if (string.IsNullOrWhiteSpace(textBox10.Text) || !int.TryParse(textBox10.Text, out int qty))
+            {
+                MessageBox.Show("Please enter a valid numeric quantity.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Stop execution
+            }
+
+            // --- Safe to proceed ---
+
+            // Create the new medicine item
             MedicineItem newItem = new MedicineItem
             {
-                Name = textBox10.Text,
-                Quantity = int.Parse(textBox16.Text)
+                Name = textBox16.Text,
+                Quantity = qty
             };
 
+            // Add to inventory list
             _inventory.Add(newItem);
-            SaveInventory();
-            AddItemToVisualList(newItem);
-            UpdateDashboardStats();
 
-            // --- LOGGING ---
-            LogActivity("New Item Added", newItem.Name);
+            // Save and Refresh
+            SaveInventory(); // or SaveData(); depending on your save function name
+            RefreshInventoryUI(); // Updates the visual list
+            UpdateDashboardStats(); // Updates the stock counters
 
-            textBox10.Clear();
-            textBox16.Clear();
+            // Close the panel and clear inputs
             panel5.Visible = false;
+            textBox16.Clear();
+            textBox10.Clear();
+
+            MessageBox.Show("New medicine added to inventory!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void AddItemToVisualList(MedicineItem item)
