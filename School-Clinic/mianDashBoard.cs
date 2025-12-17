@@ -547,12 +547,19 @@ namespace School_Clinic
         {
             panel5.Visible = true;
             panel5.BringToFront();
-            panel5.BackColor = Color.DarkGreen;
-            label18.BackColor = Color.DarkGreen;
-            label26.BackColor = Color.DarkGreen;
+
+
+            Color lightCyan = Color.FromArgb(30, 161, 173);
+
+            panel5.BackColor = lightCyan;
+            label18.BackColor = lightCyan;
+            label26.BackColor = lightCyan;
+
             label18.ForeColor = Color.White;
             label26.ForeColor = Color.White;
         }
+
+
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
@@ -916,6 +923,31 @@ namespace School_Clinic
         }
 
         private void materialLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closePanelBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
         {
 
         }
