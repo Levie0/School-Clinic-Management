@@ -161,6 +161,10 @@ namespace School_Clinic
             materialLabel5 = new MaterialLabel();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
+            comboBox3 = new ComboBox();
+            textBox21 = new TextBox();
+            label31 = new Label();
+            label32 = new Label();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel2.SuspendLayout();
@@ -968,6 +972,10 @@ namespace School_Clinic
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonFace;
+            panel1.Controls.Add(label32);
+            panel1.Controls.Add(label31);
+            panel1.Controls.Add(textBox21);
+            panel1.Controls.Add(comboBox3);
             panel1.Controls.Add(cancelBtn);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(saveEditBtn);
@@ -1879,6 +1887,42 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(360, 148);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(250, 23);
+            comboBox3.TabIndex = 27;
+            // 
+            // textBox21
+            // 
+            textBox21.Location = new Point(360, 197);
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(100, 23);
+            textBox21.TabIndex = 28;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.ForeColor = Color.Black;
+            label31.Location = new Point(359, 130);
+            label31.Name = "label31";
+            label31.Size = new Size(56, 15);
+            label31.TabIndex = 29;
+            label31.Text = "Medicine";
+            label31.Click += label31_Click;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.ForeColor = Color.Black;
+            label32.Location = new Point(360, 179);
+            label32.Name = "label32";
+            label32.Size = new Size(56, 15);
+            label32.TabIndex = 30;
+            label32.Text = "Quanitity";
+            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2068,5 +2112,9 @@ namespace School_Clinic
         private MaterialLabel materialLabel4;
         private MaterialLabel materialLabel9;
         private MaterialLabel materialLabel8;
+        private Label label31;
+        private TextBox textBox21;
+        private ComboBox comboBox3;
+        private Label label32;
     }
 }

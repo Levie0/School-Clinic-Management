@@ -228,7 +228,7 @@ namespace School_Clinic
                 listView1.Columns.Add("Qty", 50);
             }
 
-           
+
 
             SetupLogFeature();
 
@@ -476,7 +476,7 @@ namespace School_Clinic
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-               MedicineItem newItem = new MedicineItem
+            MedicineItem newItem = new MedicineItem
             {
                 Name = textBox10.Text,
                 Quantity = int.Parse(textBox16.Text)
@@ -634,9 +634,9 @@ namespace School_Clinic
             }
         }
 
-            //pp 
-            //this comment is para kay kyle para ma update sa github 
-        
+        //pp 
+        //this comment is para kay kyle para ma update sa github 
+
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
@@ -769,6 +769,11 @@ namespace School_Clinic
         }
 
         private void materialCard1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
         {
 
         }
