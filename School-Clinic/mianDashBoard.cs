@@ -246,8 +246,8 @@ namespace School_Clinic
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            panel1.BringToFront();
+           
+            
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
