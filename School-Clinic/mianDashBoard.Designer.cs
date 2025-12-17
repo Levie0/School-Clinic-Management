@@ -86,6 +86,10 @@ namespace School_Clinic
             editBtn = new MaterialButton();
             deleteBtn = new MaterialButton();
             panel1 = new Panel();
+            label32 = new Label();
+            label31 = new Label();
+            textBox21 = new TextBox();
+            comboBox3 = new ComboBox();
             cancelBtn = new MaterialButton();
             comboBox2 = new ComboBox();
             saveEditBtn = new MaterialButton();
@@ -161,10 +165,6 @@ namespace School_Clinic
             materialLabel5 = new MaterialLabel();
             imageList1 = new ImageList(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
-            comboBox3 = new ComboBox();
-            textBox21 = new TextBox();
-            label31 = new Label();
-            label32 = new Label();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel2.SuspendLayout();
@@ -206,7 +206,7 @@ namespace School_Clinic
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(1322, 738);
+            materialTabControl1.Size = new Size(1322, 721);
             materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -220,7 +220,7 @@ namespace School_Clinic
             tabPage1.Margin = new Padding(10);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(8);
-            tabPage1.Size = new Size(1314, 710);
+            tabPage1.Size = new Size(1314, 693);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
@@ -237,7 +237,7 @@ namespace School_Clinic
             panel2.Controls.Add(label29);
             panel2.Controls.Add(materialComboBox1);
             panel2.Controls.Add(label28);
-            panel2.Location = new Point(518, 156);
+            panel2.Location = new Point(518, 147);
             panel2.Name = "panel2";
             panel2.Size = new Size(267, 349);
             panel2.TabIndex = 49;
@@ -415,7 +415,7 @@ namespace School_Clinic
             materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard4.Name = "materialCard4";
             materialCard4.Padding = new Padding(14);
-            materialCard4.Size = new Size(1301, 502);
+            materialCard4.Size = new Size(1301, 485);
             materialCard4.TabIndex = 48;
             // 
             // tableLayoutPanel3
@@ -431,7 +431,7 @@ namespace School_Clinic
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 431F));
-            tableLayoutPanel3.Size = new Size(1273, 474);
+            tableLayoutPanel3.Size = new Size(1273, 457);
             tableLayoutPanel3.TabIndex = 0;
             tableLayoutPanel3.Paint += tableLayoutPanel3_Paint;
             // 
@@ -466,7 +466,7 @@ namespace School_Clinic
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel2.Size = new Size(631, 468);
+            tableLayoutPanel2.Size = new Size(631, 451);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // savebtn
@@ -478,12 +478,12 @@ namespace School_Clinic
             savebtn.Dock = DockStyle.Bottom;
             savebtn.HighEmphasis = true;
             savebtn.Icon = Properties.Resources.save;
-            savebtn.Location = new Point(319, 370);
+            savebtn.Location = new Point(319, 356);
             savebtn.Margin = new Padding(4, 6, 4, 6);
             savebtn.MouseState = MaterialSkin.MouseState.HOVER;
             savebtn.Name = "savebtn";
             savebtn.NoAccentTextColor = Color.Empty;
-            savebtn.Size = new Size(308, 40);
+            savebtn.Size = new Size(308, 38);
             savebtn.TabIndex = 45;
             savebtn.Text = "SAVE";
             savebtn.Type = MaterialButton.MaterialButtonType.Contained;
@@ -495,7 +495,7 @@ namespace School_Clinic
             // 
             label8.AutoSize = true;
             label8.Dock = DockStyle.Bottom;
-            label8.Location = new Point(3, 89);
+            label8.Location = new Point(3, 85);
             label8.Name = "label8";
             label8.Size = new Size(309, 15);
             label8.TabIndex = 20;
@@ -506,7 +506,7 @@ namespace School_Clinic
             // 
             label17.AutoSize = true;
             label17.Dock = DockStyle.Bottom;
-            label17.Location = new Point(318, 193);
+            label17.Location = new Point(318, 185);
             label17.Name = "label17";
             label17.Size = new Size(310, 15);
             label17.TabIndex = 31;
@@ -516,17 +516,17 @@ namespace School_Clinic
             // 
             textBox8.BackColor = SystemColors.Menu;
             textBox8.Dock = DockStyle.Fill;
-            textBox8.Location = new Point(3, 315);
+            textBox8.Location = new Point(3, 303);
             textBox8.Multiline = true;
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(309, 46);
+            textBox8.Size = new Size(309, 44);
             textBox8.TabIndex = 35;
             // 
             // textBox5
             // 
             textBox5.BackColor = SystemColors.Menu;
             textBox5.Dock = DockStyle.Fill;
-            textBox5.Location = new Point(3, 211);
+            textBox5.Location = new Point(3, 203);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(309, 23);
             textBox5.TabIndex = 34;
@@ -535,7 +535,7 @@ namespace School_Clinic
             // 
             dateTimePicker4.Dock = DockStyle.Fill;
             dateTimePicker4.Format = DateTimePickerFormat.Short;
-            dateTimePicker4.Location = new Point(3, 107);
+            dateTimePicker4.Location = new Point(3, 103);
             dateTimePicker4.Name = "dateTimePicker4";
             dateTimePicker4.Size = new Size(309, 23);
             dateTimePicker4.TabIndex = 44;
@@ -544,7 +544,7 @@ namespace School_Clinic
             // 
             label9.AutoSize = true;
             label9.Dock = DockStyle.Bottom;
-            label9.Location = new Point(3, 193);
+            label9.Location = new Point(3, 185);
             label9.Name = "label9";
             label9.Size = new Size(309, 15);
             label9.TabIndex = 21;
@@ -554,7 +554,7 @@ namespace School_Clinic
             // 
             label10.AutoSize = true;
             label10.Dock = DockStyle.Bottom;
-            label10.Location = new Point(3, 287);
+            label10.Location = new Point(3, 275);
             label10.Name = "label10";
             label10.Padding = new Padding(5);
             label10.Size = new Size(309, 25);
@@ -565,17 +565,17 @@ namespace School_Clinic
             // 
             textBox14.BackColor = SystemColors.Menu;
             textBox14.Dock = DockStyle.Fill;
-            textBox14.Location = new Point(318, 107);
+            textBox14.Location = new Point(318, 103);
             textBox14.Multiline = true;
             textBox14.Name = "textBox14";
-            textBox14.Size = new Size(310, 46);
+            textBox14.Size = new Size(310, 44);
             textBox14.TabIndex = 41;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Dock = DockStyle.Bottom;
-            label11.Location = new Point(318, 89);
+            label11.Location = new Point(318, 85);
             label11.Name = "label11";
             label11.Size = new Size(310, 15);
             label11.TabIndex = 30;
@@ -585,10 +585,10 @@ namespace School_Clinic
             // 
             textBox15.BackColor = SystemColors.Menu;
             textBox15.Dock = DockStyle.Fill;
-            textBox15.Location = new Point(318, 211);
+            textBox15.Location = new Point(318, 203);
             textBox15.Multiline = true;
             textBox15.Name = "textBox15";
-            textBox15.Size = new Size(310, 46);
+            textBox15.Size = new Size(310, 44);
             textBox15.TabIndex = 42;
             // 
             // popupPanel
@@ -599,7 +599,7 @@ namespace School_Clinic
             popupPanel.Dock = DockStyle.Bottom;
             popupPanel.HighEmphasis = true;
             popupPanel.Icon = null;
-            popupPanel.Location = new Point(319, 270);
+            popupPanel.Location = new Point(319, 258);
             popupPanel.Margin = new Padding(4, 6, 4, 6);
             popupPanel.MouseState = MaterialSkin.MouseState.HOVER;
             popupPanel.Name = "popupPanel";
@@ -615,9 +615,9 @@ namespace School_Clinic
             // listView1
             // 
             listView1.Dock = DockStyle.Fill;
-            listView1.Location = new Point(318, 315);
+            listView1.Location = new Point(318, 303);
             listView1.Name = "listView1";
-            listView1.Size = new Size(310, 46);
+            listView1.Size = new Size(310, 44);
             listView1.TabIndex = 48;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -657,7 +657,7 @@ namespace School_Clinic
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.1111107F));
-            tableLayoutPanel1.Size = new Size(630, 468);
+            tableLayoutPanel1.Size = new Size(630, 451);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // materialLabel2
@@ -679,7 +679,7 @@ namespace School_Clinic
             label1.AutoSize = true;
             label1.Dock = DockStyle.Bottom;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(8, 90);
+            label1.Location = new Point(8, 87);
             label1.Name = "label1";
             label1.Size = new Size(304, 15);
             label1.TabIndex = 3;
@@ -690,7 +690,7 @@ namespace School_Clinic
             // 
             textBox1.BackColor = SystemColors.Menu;
             textBox1.Dock = DockStyle.Top;
-            textBox1.Location = new Point(8, 108);
+            textBox1.Location = new Point(8, 105);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(304, 23);
             textBox1.TabIndex = 0;
@@ -700,7 +700,7 @@ namespace School_Clinic
             // 
             label2.AutoSize = true;
             label2.Dock = DockStyle.Bottom;
-            label2.Location = new Point(8, 190);
+            label2.Location = new Point(8, 185);
             label2.Name = "label2";
             label2.Size = new Size(304, 15);
             label2.TabIndex = 5;
@@ -710,7 +710,7 @@ namespace School_Clinic
             // 
             textBox2.BackColor = SystemColors.Menu;
             textBox2.Dock = DockStyle.Top;
-            textBox2.Location = new Point(8, 208);
+            textBox2.Location = new Point(8, 203);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(304, 23);
             textBox2.TabIndex = 46;
@@ -719,7 +719,7 @@ namespace School_Clinic
             // 
             label3.AutoSize = true;
             label3.Dock = DockStyle.Bottom;
-            label3.Location = new Point(8, 290);
+            label3.Location = new Point(8, 283);
             label3.Name = "label3";
             label3.Size = new Size(304, 15);
             label3.TabIndex = 6;
@@ -732,7 +732,7 @@ namespace School_Clinic
             comboBox1.Dock = DockStyle.Top;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "BSIT", "BSN", "BSMT", "BSA", "BSBA" });
-            comboBox1.Location = new Point(8, 308);
+            comboBox1.Location = new Point(8, 301);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(304, 23);
             comboBox1.TabIndex = 47;
@@ -742,7 +742,7 @@ namespace School_Clinic
             // 
             textBox3.BackColor = SystemColors.Menu;
             textBox3.Dock = DockStyle.Top;
-            textBox3.Location = new Point(318, 408);
+            textBox3.Location = new Point(318, 399);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(304, 23);
             textBox3.TabIndex = 12;
@@ -751,7 +751,7 @@ namespace School_Clinic
             // 
             label7.AutoSize = true;
             label7.Dock = DockStyle.Bottom;
-            label7.Location = new Point(318, 390);
+            label7.Location = new Point(318, 381);
             label7.Name = "label7";
             label7.Size = new Size(304, 15);
             label7.TabIndex = 10;
@@ -762,7 +762,7 @@ namespace School_Clinic
             // 
             label4.AutoSize = true;
             label4.Dock = DockStyle.Bottom;
-            label4.Location = new Point(318, 90);
+            label4.Location = new Point(318, 87);
             label4.Name = "label4";
             label4.Size = new Size(304, 15);
             label4.TabIndex = 7;
@@ -773,7 +773,7 @@ namespace School_Clinic
             dateTimePicker3.CalendarMonthBackground = SystemColors.Menu;
             dateTimePicker3.Dock = DockStyle.Top;
             dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(318, 108);
+            dateTimePicker3.Location = new Point(318, 105);
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(304, 23);
             dateTimePicker3.TabIndex = 18;
@@ -782,7 +782,7 @@ namespace School_Clinic
             // 
             textBox4.BackColor = SystemColors.Menu;
             textBox4.Dock = DockStyle.Top;
-            textBox4.Location = new Point(318, 308);
+            textBox4.Location = new Point(318, 301);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(304, 23);
             textBox4.TabIndex = 13;
@@ -791,7 +791,7 @@ namespace School_Clinic
             // 
             label6.AutoSize = true;
             label6.Dock = DockStyle.Bottom;
-            label6.Location = new Point(318, 290);
+            label6.Location = new Point(318, 283);
             label6.Name = "label6";
             label6.Size = new Size(304, 15);
             label6.TabIndex = 9;
@@ -801,7 +801,7 @@ namespace School_Clinic
             // 
             label5.AutoSize = true;
             label5.Dock = DockStyle.Bottom;
-            label5.Location = new Point(318, 190);
+            label5.Location = new Point(318, 185);
             label5.Name = "label5";
             label5.Size = new Size(304, 15);
             label5.TabIndex = 8;
@@ -812,7 +812,7 @@ namespace School_Clinic
             // 
             textBox6.BackColor = SystemColors.Menu;
             textBox6.Dock = DockStyle.Top;
-            textBox6.Location = new Point(318, 208);
+            textBox6.Location = new Point(318, 203);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(304, 23);
             textBox6.TabIndex = 15;
@@ -829,7 +829,7 @@ namespace School_Clinic
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(10);
-            tabPage2.Size = new Size(1314, 710);
+            tabPage2.Size = new Size(1314, 693);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECORDS";
             tabPage2.Click += tabPage2_Click;
@@ -1007,6 +1007,42 @@ namespace School_Clinic
             panel1.Size = new Size(645, 312);
             panel1.TabIndex = 1;
             panel1.Visible = false;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.ForeColor = Color.Black;
+            label32.Location = new Point(360, 179);
+            label32.Name = "label32";
+            label32.Size = new Size(56, 15);
+            label32.TabIndex = 30;
+            label32.Text = "Quanitity";
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.ForeColor = Color.Black;
+            label31.Location = new Point(359, 130);
+            label31.Name = "label31";
+            label31.Size = new Size(56, 15);
+            label31.TabIndex = 29;
+            label31.Text = "Medicine";
+            label31.Click += label31_Click;
+            // 
+            // textBox21
+            // 
+            textBox21.Location = new Point(360, 197);
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(100, 23);
+            textBox21.TabIndex = 28;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(360, 148);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(250, 23);
+            comboBox3.TabIndex = 27;
             // 
             // cancelBtn
             // 
@@ -1887,47 +1923,11 @@ namespace School_Clinic
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(360, 148);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(250, 23);
-            comboBox3.TabIndex = 27;
-            // 
-            // textBox21
-            // 
-            textBox21.Location = new Point(360, 197);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(100, 23);
-            textBox21.TabIndex = 28;
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.ForeColor = Color.Black;
-            label31.Location = new Point(359, 130);
-            label31.Name = "label31";
-            label31.Size = new Size(56, 15);
-            label31.TabIndex = 29;
-            label31.Text = "Medicine";
-            label31.Click += label31_Click;
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.ForeColor = Color.Black;
-            label32.Location = new Point(360, 179);
-            label32.Name = "label32";
-            label32.Size = new Size(56, 15);
-            label32.TabIndex = 30;
-            label32.Text = "Quanitity";
-            // 
             // mianDashBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1328, 805);
+            ClientSize = new Size(1328, 788);
             Controls.Add(materialTabControl1);
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = materialTabControl1;

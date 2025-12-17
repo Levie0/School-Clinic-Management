@@ -24,6 +24,12 @@ namespace School_Clinic
 
         private const int LOW_STOCK_THRESHOLD = 10;
 
+        private string _originalMedName;
+        private int _originalQty;
+        private string _originalDiagnosis; // To check for changes
+        private string _originalDate;      // To check for changes
+        private int _editingRowIndex = -1; // To know which row we are editing
+
         public mianDashBoard(Form1 callingForm)
         {
             InitializeComponent();
@@ -246,14 +252,56 @@ namespace School_Clinic
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-           
-            
-        }
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a record to edit.");
+                return;
+            }
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dataGridView1.CurrentRow == null) return;
+            _editingRowIndex = dataGridView1.SelectedRows[0].Index;
+            var selectedRow = dataGridView1.Rows[_editingRowIndex];
 
+            // --- 1. CRITICAL: PARSE THE "Biogesic(3)" STRING ---
+            string combinedValue = selectedRow.Cells["Medication"].Value?.ToString() ?? "";
+
+            // Reset values first
+            _originalMedName = "";
+            _originalQty = 0;
+
+            if (combinedValue.Contains("(") && combinedValue.Contains(")"))
+            {
+                // Split "Biogesic(3)" -> Name: "Biogesic", Qty: "3"
+                int openParenIndex = combinedValue.LastIndexOf('(');
+                _originalMedName = combinedValue.Substring(0, openParenIndex).Trim();
+
+                string qtyPart = combinedValue.Substring(openParenIndex + 1).Replace(")", "").Trim();
+                int.TryParse(qtyPart, out _originalQty);
+            }
+            else
+            {
+                // If it's just "Biogesic" without a number
+                _originalMedName = combinedValue.Trim();
+                _originalQty = 0;
+            }
+
+            // --- 2. SETUP PANEL 1 ---
+            panel1.Visible = true;
+            panel1.BringToFront();
+
+            comboBox3.Items.Clear();
+            foreach (var item in _inventory)
+            {
+                // Load item if it has stock OR if it matches the current medicine
+                if (item.Quantity > 0 || item.Name.Trim().ToLower() == _originalMedName.Trim().ToLower())
+                {
+                    comboBox3.Items.Add(item.Name);
+                }
+            }
+
+            comboBox3.Text = _originalMedName;
+            textBox21.Text = _originalQty.ToString();
+
+            // --- 3. FILL OTHER TEXT BOXES ---
             var records = dataGridView1.CurrentRow.DataBoundItem as Records;
             if (records != null)
             {
@@ -269,66 +317,95 @@ namespace School_Clinic
                 textBox20.Text = records.thisAction;
                 dateTimePicker3.Text = records.thisBirth;
                 dateTimePicker4.Text = records.thisDate;
-
-
             }
+
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            //empty
         }
 
         private void saveEditBtn_Click(object sender, EventArgs e)
         {
-            List<string> medList = new List<string>();
 
-            foreach (ListViewItem item in listView1.Items)
+            string newMedName = comboBox3.Text.Trim();
+            int newQty = 0;
+            int.TryParse(textBox21.Text, out newQty);
+
+            // --- 2. FIND ITEMS IN INVENTORY ---
+            // We clean the strings (Trim and ToLower) to ensure "Biogesic" matches "biogesic"
+            var oldItem = _inventory.FirstOrDefault(x => x.Name.Trim().ToLower() == _originalMedName.Trim().ToLower());
+            var newItem = _inventory.FirstOrDefault(x => x.Name.Trim().ToLower() == newMedName.Trim().ToLower());
+
+            // --- DEBUGGING MESSAGE (Remove this later) ---
+            string debugMsg = $"Original: {_originalMedName} (Qty: {_originalQty})\nNew: {newMedName} (Qty: {newQty})\n";
+            if (oldItem != null) debugMsg += $"Found Old Item in Inv: {oldItem.Name} (Stock: {oldItem.Quantity})\n";
+            else debugMsg += "WARNING: Old Item NOT found in Inventory!\n";
+            if (newItem != null) debugMsg += $"Found New Item in Inv: {newItem.Name} (Stock: {newItem.Quantity})";
+            else debugMsg += "WARNING: New Item NOT found in Inventory!";
+            MessageBox.Show(debugMsg, "Debug Check");
+            // ---------------------------------------------
+
+            // --- 3. LOGIC: RETURN OLD STOCK ---
+            if (oldItem != null)
             {
-                // item.Text is the Name, item.SubItems[1].Text is the Quantity
-                string medInfo = $"{item.Text} ({item.SubItems[1].Text})";
-                medList.Add(medInfo);
+                oldItem.Quantity += _originalQty;
             }
 
-            // Join them with a comma and space
-            string medicationString = string.Join(", ", medList);
-
-
-            // 2. CREATE THE RECORD object
-            var records = new Records
+            // --- 4. LOGIC: DEDUCT NEW STOCK ---
+            if (newItem != null)
             {
-                thisName = textBox1.Text,
-                thisAge = textBox2.Text,
-                thisCourse = comboBox1.SelectedItem?.ToString(),
-                thisBirth = dateTimePicker3.Text,
-                thisParent = textBox6.Text,
-                thisContact = textBox4.Text,
-                thisAllergies = textBox3.Text,
-                thisDate = dateTimePicker4.Text,
-                thisTime = textBox5.Text,
-                thisComplaint = textBox8.Text,
-                thisAssesment = textBox14.Text,
-                thisAction = textBox15.Text,
+                // Check if we have enough stock (considering we just added back the old stock if it was the same item)
+                if (newItem.Quantity < newQty)
+                {
+                    MessageBox.Show($"Not enough stock! Available: {newItem.Quantity}", "Error");
 
-                // NEW: Save the combined string we created above
-                thisMedication = medicationString
-            };
+                    // ROLLBACK: Remove the old stock again because we are cancelling
+                    if (oldItem != null) oldItem.Quantity -= _originalQty;
+                    return;
+                }
+                newItem.Quantity -= newQty;
+            }
+            else
+            {
+                MessageBox.Show($"Medicine '{newMedName}' not found in inventory. Cannot deduct stock.");
+                // Rollback
+                if (oldItem != null) oldItem.Quantity -= _originalQty;
+                return;
+            }
 
-            // 3. ADD TO LIST AND SAVE
-            _records.Add(records);
+            // --- 5. UPDATE THE RECORD DISPLAY ---
+            var currentRecord = _records[_editingRowIndex];
+
+            currentRecord.thisName = textBox7.Text;
+            currentRecord.thisAge = textBox9.Text;
+            currentRecord.thisCourse = comboBox2.SelectedItem?.ToString();
+            currentRecord.thisParent = textBox12.Text;
+            currentRecord.thisContact = textBox11.Text;
+            currentRecord.thisAllergies = textBox13.Text;
+            currentRecord.thisTime = textBox17.Text;
+            currentRecord.thisComplaint = textBox18.Text;
+            currentRecord.thisAssesment = textBox19.Text;
+            currentRecord.thisAction = textBox20.Text;
+            currentRecord.thisBirth = dateTimePicker3.Text;
+            currentRecord.thisDate = dateTimePicker4.Text;
+
+            // Save the combined "Biogesic(4)" string
+            currentRecord.thisMedication = $"{newMedName}({newQty})";
+
+            // --- 6. SAVE AND REFRESH ---
+            dataGridView1.Refresh();
+
+            SaveInventory();
             SaveData();
 
-            MessageBox.Show("Information has been saved successfully!");
+            // CRITICAL: Force the Inventory UI to redraw
+            RefreshInventoryUI();
+            UpdateDashboardStats();
 
-            // 4. CLEAR ALL CONTROLS (Reset the form)
-            textBox1.Clear();
-            textBox2.Clear();
-            comboBox1.SelectedIndex = -1;
-            textBox6.Clear();
-            textBox4.Clear();
-            textBox3.Clear();
-            textBox5.Clear();
-            textBox8.Clear();
-            textBox14.Clear();
-            textBox15.Clear();
-
-            // NEW: Clear the ListView so it is empty for the next student
-            listView1.Items.Clear();
+            MessageBox.Show("Success! Inventory and Record updated.");
+            panel1.Visible = false;
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
