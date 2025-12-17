@@ -33,6 +33,10 @@ namespace School_Clinic
         public mianDashBoard(Form1 callingForm)
         {
             InitializeComponent();
+            addmedic.BringToFront();
+            removeMedicBtn.BringToFront();
+            addmedic.Visible = true;
+            removeMedicBtn.Visible = true;
             var skin = MaterialSkinManager.Instance;
             skin.AddFormToManage(this);
             skin.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -40,25 +44,25 @@ namespace School_Clinic
             materialLabel1.UseAccent = true;
         }
 
-        private ListBox _logBox; 
+        private ListBox _logBox;
 
         private void SetupLogFeature()
         {
-            
+
             _logBox = new ListBox();
 
-           
+
             materialCard10.Controls.Add(_logBox);
 
-           
-           
+
+
             _logBox.Location = new Point(10, 50);
             _logBox.Size = new Size(materialCard10.Width - 20, materialCard10.Height - 60);
 
-            
+
             _logBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
-            
+
             _logBox.BorderStyle = BorderStyle.None;
             _logBox.Font = new Font("Segoe UI", 9);
         }
@@ -225,6 +229,8 @@ namespace School_Clinic
             listView1.View = View.Details;
             listView1.GridLines = true;
             listView1.FullRowSelect = true;
+
+
 
             // Add columns if they are missing (prevents duplication if you reload)
             if (listView1.Columns.Count == 0)
@@ -425,9 +431,9 @@ namespace School_Clinic
             panel1.Visible = false;
         }
 
-       
 
-        private void cancelBtn_Click(object sender, EventArgs e) 
+
+        private void cancelBtn_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
         }
@@ -561,7 +567,7 @@ namespace School_Clinic
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-               MedicineItem newItem = new MedicineItem
+            MedicineItem newItem = new MedicineItem
             {
                 Name = textBox10.Text,
                 Quantity = int.Parse(textBox16.Text)
@@ -687,41 +693,12 @@ namespace School_Clinic
 
         private void removeMedicBtn_Click(object sender, EventArgs e)
         {
-            if (_selectedMedicine == null)
-            {
-                MessageBox.Show("Please select a medicine to remove first.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var result = MessageBox.Show($"Are you sure you want to remove '{_selectedMedicine.Name}'?",
-                                         "Confirm Delete",
-                                         MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                // --- LOGGING BEFORE REMOVE ---
-                LogActivity("Item Removed", _selectedMedicine.Name);
-
-                _inventory.Remove(_selectedMedicine);
-
-                if (_selectedPanel != null)
-                {
-                    pnlInventoryList.Controls.Remove(_selectedPanel);
-                    _selectedPanel.Dispose();
-                }
-
-                SaveInventory();
-                UpdateDashboardStats();
-
-                _selectedMedicine = null;
-                _selectedPanel = null;
-            }
+            //kk
         }
 
-            //pp 
-            //this comment is para kay kyle para ma update sa github 
-        
+        //pp 
+        //this comment is para kay kyle para ma update sa github 
+
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
@@ -856,6 +833,51 @@ namespace School_Clinic
         private void materialCard1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void addingMedicationBtn_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = true;
+            panel5.BringToFront();
+            panel5.BackColor = Color.DarkGreen;
+            label18.BackColor = Color.DarkGreen;
+            label26.BackColor = Color.DarkGreen;
+            label18.ForeColor = Color.White;
+            label26.ForeColor = Color.White;
+        }
+
+        private void removeTheMedicine_Click(object sender, EventArgs e)
+        {
+            if (_selectedMedicine == null)
+            {
+                MessageBox.Show("Please select a medicine to remove first.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var result = MessageBox.Show($"Are you sure you want to remove '{_selectedMedicine.Name}'?",
+                                         "Confirm Delete",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // --- LOGGING BEFORE REMOVE ---
+                LogActivity("Item Removed", _selectedMedicine.Name);
+
+                _inventory.Remove(_selectedMedicine);
+
+                if (_selectedPanel != null)
+                {
+                    pnlInventoryList.Controls.Remove(_selectedPanel);
+                    _selectedPanel.Dispose();
+                }
+
+                SaveInventory();
+                UpdateDashboardStats();
+
+                _selectedMedicine = null;
+                _selectedPanel = null;
+            }
         }
     }
 }
