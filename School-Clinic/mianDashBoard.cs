@@ -833,49 +833,7 @@ namespace School_Clinic
 
         private void addMedicineBtn_Click(object sender, EventArgs e)
         {
-            if (materialComboBox1.SelectedIndex == -1)
-            {
-                MessageBox.Show("Please select a medicine.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int qtyNeeded;
-            if (!int.TryParse(materialMaskedTextBox1.Text, out qtyNeeded) || qtyNeeded <= 0)
-            {
-                MessageBox.Show("Please enter a valid quantity (greater than 0).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string selectedName = materialComboBox1.SelectedItem.ToString();
-            var item = _inventory.FirstOrDefault(x => x.Name == selectedName);
-
-            if (item != null)
-            {
-                if (item.Quantity < qtyNeeded)
-                {
-                    MessageBox.Show($"Not enough stock! Only {item.Quantity} left.", "Stock Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                item.Quantity -= qtyNeeded;
-
-                // --- LOGGING ---
-                if (item.Quantity == 0)
-                {
-                    LogActivity("Out of Stock", item.Name);
-                }
-
-                ListViewItem lvi = new ListViewItem(item.Name);
-                lvi.SubItems.Add(qtyNeeded.ToString());
-                listView1.Items.Add(lvi);
-
-                SaveInventory();
-                RefreshInventoryUI();
-                UpdateDashboardStats();
-
-                panel2.Visible = false;
-                MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //this event handler has no use 
         }
 
         private void popupPanel_Click(object sender, EventArgs e)
@@ -904,7 +862,7 @@ namespace School_Clinic
 
         private void closePanelBtn_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
+            //panel2.Visible = false;
         }
 
         private void closepopupPanel_Click(object sender, EventArgs e)
@@ -950,6 +908,58 @@ namespace School_Clinic
         private void pictureBox9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addMedicineBtn_Click_1(object sender, EventArgs e)
+        {
+            if (materialComboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a medicine.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int qtyNeeded;
+            if (!int.TryParse(materialMaskedTextBox1.Text, out qtyNeeded) || qtyNeeded <= 0)
+            {
+                MessageBox.Show("Please enter a valid quantity (greater than 0).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string selectedName = materialComboBox1.SelectedItem.ToString();
+            var item = _inventory.FirstOrDefault(x => x.Name == selectedName);
+
+            if (item != null)
+            {
+                if (item.Quantity < qtyNeeded)
+                {
+                    MessageBox.Show($"Not enough stock! Only {item.Quantity} left.", "Stock Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                item.Quantity -= qtyNeeded;
+
+                // --- LOGGING ---
+                if (item.Quantity == 0)
+                {
+                    LogActivity("Out of Stock", item.Name);
+                }
+
+                ListViewItem lvi = new ListViewItem(item.Name);
+                lvi.SubItems.Add(qtyNeeded.ToString());
+                listView1.Items.Add(lvi);
+
+                SaveInventory();
+                RefreshInventoryUI();
+                UpdateDashboardStats();
+
+                panel2.Visible = false;
+                MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void closePanelBtn_Click_2(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
         }
     }
 }
