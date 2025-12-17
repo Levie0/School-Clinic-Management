@@ -206,7 +206,7 @@ namespace School_Clinic
             materialTabControl1.Multiline = true;
             materialTabControl1.Name = "materialTabControl1";
             materialTabControl1.SelectedIndex = 0;
-            materialTabControl1.Size = new Size(1207, 524);
+            materialTabControl1.Size = new Size(1251, 627);
             materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -220,7 +220,7 @@ namespace School_Clinic
             tabPage1.Margin = new Padding(10);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(8);
-            tabPage1.Size = new Size(1199, 496);
+            tabPage1.Size = new Size(1243, 599);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "HOME";
             tabPage1.Click += tabPage1_Click;
@@ -828,7 +828,7 @@ namespace School_Clinic
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(10);
-            tabPage2.Size = new Size(1199, 496);
+            tabPage2.Size = new Size(1243, 599);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "RECORDS";
             tabPage2.Click += tabPage2_Click;
@@ -849,7 +849,7 @@ namespace School_Clinic
             materialCard11.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard11.Name = "materialCard11";
             materialCard11.Padding = new Padding(14);
-            materialCard11.Size = new Size(1179, 129);
+            materialCard11.Size = new Size(1223, 129);
             materialCard11.TabIndex = 7;
             // 
             // materialLabel4
@@ -873,7 +873,7 @@ namespace School_Clinic
             materialButton1.Depth = 0;
             materialButton1.HighEmphasis = true;
             materialButton1.Icon = (Image)resources.GetObject("materialButton1.Icon");
-            materialButton1.Location = new Point(1072, 84);
+            materialButton1.Location = new Point(1116, 84);
             materialButton1.Margin = new Padding(4, 6, 4, 6);
             materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton1.Name = "materialButton1";
@@ -899,13 +899,13 @@ namespace School_Clinic
             materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard5.Name = "materialCard5";
             materialCard5.Padding = new Padding(14);
-            materialCard5.Size = new Size(866, 36);
+            materialCard5.Size = new Size(910, 36);
             materialCard5.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            dateTimePicker2.Location = new Point(626, 6);
+            dateTimePicker2.Location = new Point(670, 6);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(227, 23);
             dateTimePicker2.TabIndex = 2;
@@ -921,7 +921,7 @@ namespace School_Clinic
             searchbar1.Location = new Point(14, 6);
             searchbar1.MouseState = MaterialSkin.MouseState.HOVER;
             searchbar1.Name = "searchbar1";
-            searchbar1.Size = new Size(605, 23);
+            searchbar1.Size = new Size(649, 23);
             searchbar1.TabIndex = 1;
             searchbar1.Text = "";
             searchbar1.TextChanged += searchbar1_TextChanged;
@@ -934,7 +934,7 @@ namespace School_Clinic
             editBtn.Depth = 0;
             editBtn.HighEmphasis = true;
             editBtn.Icon = (Image)resources.GetObject("editBtn.Icon");
-            editBtn.Location = new Point(882, 84);
+            editBtn.Location = new Point(926, 84);
             editBtn.Margin = new Padding(4, 6, 4, 6);
             editBtn.MouseState = MaterialSkin.MouseState.HOVER;
             editBtn.Name = "editBtn";
@@ -955,7 +955,7 @@ namespace School_Clinic
             deleteBtn.Depth = 0;
             deleteBtn.HighEmphasis = true;
             deleteBtn.Icon = (Image)resources.GetObject("deleteBtn.Icon");
-            deleteBtn.Location = new Point(966, 84);
+            deleteBtn.Location = new Point(1010, 84);
             deleteBtn.Margin = new Padding(4, 6, 4, 6);
             deleteBtn.MouseState = MaterialSkin.MouseState.HOVER;
             deleteBtn.Name = "deleteBtn";
@@ -1435,7 +1435,7 @@ namespace School_Clinic
             tabPage3.ImageKey = "medical-records.png";
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1199, 496);
+            tabPage3.Size = new Size(1243, 599);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "INVENTORY";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1554,7 +1554,7 @@ namespace School_Clinic
             addmedic.Depth = 0;
             addmedic.HighEmphasis = true;
             addmedic.Icon = (Image)resources.GetObject("addmedic.Icon");
-            addmedic.Location = new Point(1128, 583);
+            addmedic.Location = new Point(1172, 686);
             addmedic.Margin = new Padding(4);
             addmedic.MouseState = MaterialSkin.MouseState.HOVER;
             addmedic.Name = "addmedic";
@@ -1579,7 +1579,7 @@ namespace School_Clinic
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new Size(1199, 424);
+            tableLayoutPanel5.Size = new Size(1243, 424);
             tableLayoutPanel5.TabIndex = 9;
             // 
             // materialCard9
@@ -1595,7 +1595,7 @@ namespace School_Clinic
             materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard9.Name = "materialCard9";
             materialCard9.Padding = new Padding(12, 10, 12, 10);
-            materialCard9.Size = new Size(875, 404);
+            materialCard9.Size = new Size(908, 404);
             materialCard9.TabIndex = 3;
             materialCard9.Paint += materialCard9_Paint;
             // 
@@ -1606,7 +1606,7 @@ namespace School_Clinic
             pnlInventoryList.FlowDirection = FlowDirection.TopDown;
             pnlInventoryList.Location = new Point(12, 10);
             pnlInventoryList.Name = "pnlInventoryList";
-            pnlInventoryList.Size = new Size(851, 384);
+            pnlInventoryList.Size = new Size(884, 384);
             pnlInventoryList.TabIndex = 0;
             // 
             // materialCard1
@@ -1618,12 +1618,12 @@ namespace School_Clinic
             materialCard1.Depth = 0;
             materialCard1.Dock = DockStyle.Fill;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(911, 10);
+            materialCard1.Location = new Point(944, 10);
             materialCard1.Margin = new Padding(12, 10, 12, 10);
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(12, 10, 12, 10);
-            materialCard1.Size = new Size(276, 404);
+            materialCard1.Size = new Size(287, 404);
             materialCard1.TabIndex = 7;
             materialCard1.Paint += materialCard1_Paint_1;
             // 
@@ -1648,7 +1648,7 @@ namespace School_Clinic
             materialCard10.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard10.Name = "materialCard10";
             materialCard10.Padding = new Padding(12, 10, 12, 10);
-            materialCard10.Size = new Size(252, 364);
+            materialCard10.Size = new Size(263, 364);
             materialCard10.TabIndex = 8;
             // 
             // removeMedicBtn
@@ -1659,7 +1659,7 @@ namespace School_Clinic
             removeMedicBtn.Depth = 0;
             removeMedicBtn.HighEmphasis = true;
             removeMedicBtn.Icon = (Image)resources.GetObject("removeMedicBtn.Icon");
-            removeMedicBtn.Location = new Point(919, 583);
+            removeMedicBtn.Location = new Point(963, 686);
             removeMedicBtn.Margin = new Padding(4, 6, 4, 6);
             removeMedicBtn.MouseState = MaterialSkin.MouseState.HOVER;
             removeMedicBtn.Name = "removeMedicBtn";
@@ -1685,7 +1685,7 @@ namespace School_Clinic
             materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard3.Name = "materialCard3";
             materialCard3.Padding = new Padding(12, 10, 12, 10);
-            materialCard3.Size = new Size(1199, 152);
+            materialCard3.Size = new Size(1243, 152);
             materialCard3.TabIndex = 1;
             // 
             // materialLabel9
@@ -1717,7 +1717,7 @@ namespace School_Clinic
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 133F));
-            tableLayoutPanel4.Size = new Size(1175, 132);
+            tableLayoutPanel4.Size = new Size(1219, 132);
             tableLayoutPanel4.TabIndex = 0;
             // 
             // materialCard8
@@ -1729,12 +1729,12 @@ namespace School_Clinic
             materialCard8.Depth = 0;
             materialCard8.Dock = DockStyle.Fill;
             materialCard8.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard8.Location = new Point(794, 10);
+            materialCard8.Location = new Point(824, 10);
             materialCard8.Margin = new Padding(12, 10, 12, 10);
             materialCard8.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard8.Name = "materialCard8";
             materialCard8.Padding = new Padding(12, 10, 12, 10);
-            materialCard8.Size = new Size(369, 112);
+            materialCard8.Size = new Size(383, 112);
             materialCard8.TabIndex = 4;
             materialCard8.Paint += materialCard8_Paint;
             // 
@@ -1742,7 +1742,7 @@ namespace School_Clinic
             // 
             pictureBox3.Anchor = AnchorStyles.Right;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(258, 7);
+            pictureBox3.Location = new Point(272, 7);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(102, 89);
@@ -1795,14 +1795,14 @@ namespace School_Clinic
             materialCard6.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard6.Name = "materialCard6";
             materialCard6.Padding = new Padding(12, 10, 12, 10);
-            materialCard6.Size = new Size(367, 112);
+            materialCard6.Size = new Size(382, 112);
             materialCard6.TabIndex = 2;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(257, 13);
+            pictureBox1.Location = new Point(272, 13);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(95, 77);
@@ -1852,19 +1852,19 @@ namespace School_Clinic
             materialCard7.Depth = 0;
             materialCard7.Dock = DockStyle.Fill;
             materialCard7.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard7.Location = new Point(403, 10);
+            materialCard7.Location = new Point(418, 10);
             materialCard7.Margin = new Padding(12, 10, 12, 10);
             materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard7.Name = "materialCard7";
             materialCard7.Padding = new Padding(12, 10, 12, 10);
-            materialCard7.Size = new Size(367, 112);
+            materialCard7.Size = new Size(382, 112);
             materialCard7.TabIndex = 3;
             // 
             // pictureBox2
             // 
             pictureBox2.Anchor = AnchorStyles.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(264, 7);
+            pictureBox2.Location = new Point(279, 7);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(93, 89);
@@ -1926,7 +1926,7 @@ namespace School_Clinic
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1213, 591);
+            ClientSize = new Size(1257, 694);
             Controls.Add(materialTabControl1);
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = materialTabControl1;
