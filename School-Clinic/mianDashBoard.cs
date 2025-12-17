@@ -30,6 +30,9 @@ namespace School_Clinic
         private string _originalDate;      // To check for changes
         private int _editingRowIndex = -1; // To know which row we are editing
 
+        private const int PLUS_STEP_AMOUNT = 30;
+        private const int MAX_QUANTITY = 120;
+
         public mianDashBoard(Form1 callingForm)
         {
             InitializeComponent();
@@ -634,20 +637,15 @@ namespace School_Clinic
             btnMinus.Location = new Point(300, 10);
 
             // --- [UPDATED LOGIC: MINUS BUTTON] ---
-            btnMinus.Click += (s, e) =>
-            {
+            btnMinus.Click += (s, e) => {
                 if (item.Quantity > 0)
                 {
-                    item.Quantity--;
+                    item.Quantity--; // Subtracts only 1
+
                     qtyLbl.Text = item.Quantity.ToString();
                     UpdateDashboardStats();
                     SaveInventory();
-
-                    // LOG: Check for Out of Stock
-                    if (item.Quantity == 0)
-                    {
-                        LogActivity("Out of Stock", item.Name);
-                    }
+                    LogActivity("Used (-1)", item.Name);
                 }
             };
 
@@ -657,15 +655,23 @@ namespace School_Clinic
             btnPlus.Location = new Point(370, 10);
 
             // --- [UPDATED LOGIC: PLUS BUTTON] ---
-            btnPlus.Click += (s, e) =>
-            {
-                item.Quantity++;
+            btnPlus.Click += (s, e) => {
+                if (item.Quantity >= 120)
+                {
+                    MessageBox.Show("The quantity of medicine is already full.", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                item.Quantity += 30;
+
+                // Clamp to 120 if it exceeds
+                if (item.Quantity > 120)
+                    item.Quantity = 120;
+
                 qtyLbl.Text = item.Quantity.ToString();
                 UpdateDashboardStats();
                 SaveInventory();
-
-                // LOG: Restocked
-                LogActivity("Restocked", item.Name);
+                LogActivity("Restocked (+30)", item.Name);
             };
 
             rowPanel.Controls.Add(nameLbl);
@@ -674,6 +680,38 @@ namespace School_Clinic
             rowPanel.Controls.Add(btnPlus);
 
             pnlInventoryList.Controls.Add(rowPanel);
+        }
+
+        private void IncrementQuantity(Label quantityLabel)
+        {
+            int currentQuantity = 0;
+            int.TryParse(quantityLabel.Text, out currentQuantity);
+
+            if (currentQuantity >= MAX_QUANTITY)
+            {
+                MessageBox.Show("The quantity of medicine is already full.", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                quantityLabel.Text = MAX_QUANTITY.ToString();
+            }
+            else
+            {
+                int newQuantity = currentQuantity + PLUS_STEP_AMOUNT;
+                newQuantity = Math.Min(newQuantity, MAX_QUANTITY); // Cap at 120
+                quantityLabel.Text = newQuantity.ToString();
+            }
+        }
+
+        private void DecrementQuantity(Label quantityLabel)
+        {
+            int currentQuantity = 0;
+            int.TryParse(quantityLabel.Text, out currentQuantity);
+
+            // Subtract 1 instead of 30
+            int newQuantity = currentQuantity - 1;
+
+            // Ensure it doesn't go below zero
+            newQuantity = Math.Max(newQuantity, 0);
+
+            quantityLabel.Text = newQuantity.ToString();
         }
 
         private void UpdateDashboardStats()
