@@ -34,25 +34,25 @@ namespace School_Clinic
             materialLabel1.UseAccent = true;
         }
 
-        private ListBox _logBox; // The list that holds the text
+        private ListBox _logBox; 
 
         private void SetupLogFeature()
         {
-            // 1. Initialize the ListBox
+            
             _logBox = new ListBox();
 
-            // 2. Add it to materialCard10 (The "Medicine Log Activity" card)
+           
             materialCard10.Controls.Add(_logBox);
 
-            // 3. Position it below the "Medicine Log Activity" label
-            // label27 is the title, so we place the list below it.
+           
+           
             _logBox.Location = new Point(10, 50);
             _logBox.Size = new Size(materialCard10.Width - 20, materialCard10.Height - 60);
 
-            // 4. Anchor it so it resizes if the window changes size
+            
             _logBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
-            // 5. Visual Styling (Optional: Remove border for cleaner look)
+            
             _logBox.BorderStyle = BorderStyle.None;
             _logBox.Font = new Font("Segoe UI", 9);
         }
@@ -64,7 +64,6 @@ namespace School_Clinic
             string timestamp = DateTime.Now.ToString("MMM dd - hh:mm tt");
             string logEntry = $"[{timestamp}] {action}: {medicineName}";
 
-            // Add to top of list
             _logBox.Items.Insert(0, logEntry);
         }
 
@@ -225,10 +224,9 @@ namespace School_Clinic
             if (listView1.Columns.Count == 0)
             {
                 listView1.Columns.Add("Medicine Name", 200);
-                listView1.Columns.Add("Qty", 50);
+                listView1.Columns.Add("Quantity", 60);
             }
 
-           
 
             SetupLogFeature();
 
@@ -276,6 +274,7 @@ namespace School_Clinic
 
         private void saveEditBtn_Click(object sender, EventArgs e)
         {
+
             List<string> medList = new List<string>();
 
             foreach (ListViewItem item in listView1.Items)
