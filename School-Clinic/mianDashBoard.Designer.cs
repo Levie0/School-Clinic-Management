@@ -1636,7 +1636,6 @@ namespace School_Clinic
             materialCard3.Controls.Add(materialLabel9);
             materialCard3.Controls.Add(tableLayoutPanel4);
             materialCard3.Depth = 0;
-            materialCard3.Dock = DockStyle.Top;
             materialCard3.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard3.Location = new Point(0, 0);
             materialCard3.Margin = new Padding(12, 10, 12, 10);
@@ -1822,7 +1821,7 @@ namespace School_Clinic
             // 
             pictureBox2.Anchor = AnchorStyles.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(303, 6);
+            pictureBox2.Location = new Point(298, 6);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(93, 89);
