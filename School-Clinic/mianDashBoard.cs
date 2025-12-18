@@ -33,14 +33,17 @@ namespace School_Clinic
         private const int PLUS_STEP_AMOUNT = 30;
         private const int MAX_QUANTITY = 120;
 
+
+
         public mianDashBoard(Form1 callingForm)
         {
-            InitializeComponent();
+            InitializeComponent(GetPanel3());
             var skin = MaterialSkinManager.Instance;
             skin.AddFormToManage(this);
             skin.Theme = MaterialSkinManager.Themes.LIGHT;
             skin.ColorScheme = new ColorScheme(Primary.Cyan800, Primary.Cyan900, Primary.Cyan500, Accent.Blue700, TextShade.WHITE);
             materialLabel1.UseAccent = true;
+
         }
 
         private ListBox _logBox; // The list that holds the text
@@ -197,6 +200,7 @@ namespace School_Clinic
             // NEW: Clear the ListView so it is empty for the next student
             listView1.Items.Clear();
             listView1.Items.Clear();
+
         }
 
         //Tig load sa na save nga Data(Ayaw Hilabti)
@@ -237,6 +241,10 @@ namespace School_Clinic
                 listView1.Columns.Add("Qty", 50);
             }
 
+            addmedic.SendToBack();
+            addmedic.Visible = false;
+            removeMedicBtn.SendToBack();
+            removeMedicBtn.Visible = false;
 
 
             SetupLogFeature();
@@ -833,49 +841,7 @@ namespace School_Clinic
 
         private void addMedicineBtn_Click(object sender, EventArgs e)
         {
-            if (materialComboBox1.SelectedIndex == -1)
-            {
-                MessageBox.Show("Please select a medicine.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int qtyNeeded;
-            if (!int.TryParse(materialMaskedTextBox1.Text, out qtyNeeded) || qtyNeeded <= 0)
-            {
-                MessageBox.Show("Please enter a valid quantity (greater than 0).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string selectedName = materialComboBox1.SelectedItem.ToString();
-            var item = _inventory.FirstOrDefault(x => x.Name == selectedName);
-
-            if (item != null)
-            {
-                if (item.Quantity < qtyNeeded)
-                {
-                    MessageBox.Show($"Not enough stock! Only {item.Quantity} left.", "Stock Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                item.Quantity -= qtyNeeded;
-
-                // --- LOGGING ---
-                if (item.Quantity == 0)
-                {
-                    LogActivity("Out of Stock", item.Name);
-                }
-
-                ListViewItem lvi = new ListViewItem(item.Name);
-                lvi.SubItems.Add(qtyNeeded.ToString());
-                listView1.Items.Add(lvi);
-
-                SaveInventory();
-                RefreshInventoryUI();
-                UpdateDashboardStats();
-
-                panel2.Visible = false;
-                MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //this event handler has no use 
         }
 
         private void popupPanel_Click(object sender, EventArgs e)
@@ -904,7 +870,7 @@ namespace School_Clinic
 
         private void closePanelBtn_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
+            //panel2.Visible = false;
         }
 
         private void closepopupPanel_Click(object sender, EventArgs e)
@@ -951,5 +917,64 @@ namespace School_Clinic
         {
 
         }
+
+        private void addMedicineBtn_Click_1(object sender, EventArgs e)
+        {
+            if (materialComboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a medicine.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int qtyNeeded;
+            if (!int.TryParse(materialMaskedTextBox1.Text, out qtyNeeded) || qtyNeeded <= 0)
+            {
+                MessageBox.Show("Please enter a valid quantity (greater than 0).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string selectedName = materialComboBox1.SelectedItem.ToString();
+            var item = _inventory.FirstOrDefault(x => x.Name == selectedName);
+
+            if (item != null)
+            {
+                if (item.Quantity < qtyNeeded)
+                {
+                    MessageBox.Show($"Not enough stock! Only {item.Quantity} left.", "Stock Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                item.Quantity -= qtyNeeded;
+
+                // --- LOGGING ---
+                if (item.Quantity == 0)
+                {
+                    LogActivity("Out of Stock", item.Name);
+                }
+
+                ListViewItem lvi = new ListViewItem(item.Name);
+                lvi.SubItems.Add(qtyNeeded.ToString());
+                listView1.Items.Add(lvi);
+
+                SaveInventory();
+                RefreshInventoryUI();
+                UpdateDashboardStats();
+
+                panel2.Visible = false;
+                MessageBox.Show("Medicine added and stock updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void closePanelBtn_Click_2(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }
