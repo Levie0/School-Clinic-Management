@@ -907,7 +907,7 @@ namespace School_Clinic
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-
+            //ll
         }
 
         private void addMedicineBtn_Click_1(object sender, EventArgs e)
